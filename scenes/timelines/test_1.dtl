@@ -1,0 +1,10 @@
+[style name="DefaultStyle"]
+join Julia right [animation="Slide From Right" length="1.0"]
+join Eric left [animation="Slide From Left" length="1.0"]
+Eric: Ayo Girl! Weed?
+update Eric (Eric2) [length="0.3"]
+update Julia (Julia2) [animation="Shake X"]
+Julia: No, please...
+leave Julia [animation="Slide To Right"]
+leave Eric [animation="Slide To Left"]
+[signal arg="DialogueEnded"]

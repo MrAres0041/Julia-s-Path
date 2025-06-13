@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn6yh46vn2srj"]
+
+[ext_resource type="Script" uid="uid://cv8uwpe68ryum" path="res://scripts/dialogue_manager.gd" id="1_2x26m"]
+
+[node name="DialogueManager" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_2x26m")

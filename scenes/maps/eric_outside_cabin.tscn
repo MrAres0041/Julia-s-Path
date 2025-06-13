@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://cyrpixacnhsva"]
+
+[ext_resource type="Texture2D" uid="uid://dxgcf5n6874dr" path="res://assets/maps/under/outside_cabin.png" id="1_p2bmh"]
+[ext_resource type="PackedScene" uid="uid://d1wqlmfexqt02" path="res://scenes/chars/player.tscn" id="2_c2ga1"]
+[ext_resource type="PackedScene" uid="uid://ct51pokrlosvf" path="res://scenes/utilities/scene_changer.tscn" id="3_h231v"]
+[ext_resource type="PackedScene" uid="uid://bf3thd8vbwydb" path="res://scenes/utilities/camera_manager.tscn" id="5_c2ga1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0b4q"]
+texture = ExtResource("1_p2bmh")
+0:0/size_in_atlas = Vector2i(98, 78)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pktsg"]
+sources/0 = SubResource("TileSetAtlasSource_h0b4q")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfbpj"]
+size = Vector2(243.5, 52)
+
+[node name="eric_outside_cabin" type="Node2D"]
+
+[node name="CameraManager" parent="." instance=ExtResource("5_c2ga1")]
+position = Vector2(1083, 793)
+zoom = Vector2(0.6, 0.6)
+
+[node name="Unver" type="TileMapLayer" parent="CameraManager"]
+position = Vector2(-1083, -793)
+tile_map_data = PackedByteArray(0, 0, 65, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_pktsg")
+
+[node name="player" parent="CameraManager" instance=ExtResource("2_c2ga1")]
+position = Vector2(122, -142)
+scale = Vector2(1.7, 1.7)
+
+[node name="SceneChanger1" parent="CameraManager" instance=ExtResource("3_h231v")]
+position = Vector2(105, -246)
+SCENE = "uid://ddn5ljui1qm8u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/SceneChanger1"]
+position = Vector2(15, 45)
+shape = SubResource("RectangleShape2D_vfbpj")
+
+[node name="SceneChanger2" parent="CameraManager" instance=ExtResource("3_h231v")]
+position = Vector2(105, -128)
+SCENE = "uid://0bp7won6te0s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/SceneChanger2"]
+position = Vector2(-536, -447)
+shape = SubResource("RectangleShape2D_vfbpj")

@@ -1,0 +1,51 @@
+class_name Player extends CharacterBody2D
+
+@export var base_speed: int
+
+var can_talk:bool = false
+var speed: int
+var input: Vector2 = Vector2.ZERO
+var talk_area: Area2D
+var can_walk: bool = false
+
+func _ready() -> void:
+	Dialogic.signal_event.connect(DialogicHandler)
+
+
+func _physics_process(delta: float) -> void:
+	speed = base_speed
+	var playerInput = GetInput()
+	
+	$TalkManager.Look_At_This(playerInput)
+	
+	if Input.is_action_just_pressed("dialogic_default_action") and can_talk:
+		if !$TalkManager.talking:
+			talk_area.Execute_Dialogue()
+			$TalkManager.talking = true
+	
+	velocity = speed * playerInput
+	
+	if !$TalkManager.talking and can_walk:
+		move_and_slide()
+
+func GetInput():
+	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	input.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+	return input.normalized()
+
+func DialogicHandler(i):
+	if i == "DialogueEnded":
+		$TalkManager.talking = false
+
+
+func _on_talk_manager_area_entered(area: Area2D) -> void:
+	talk_area = area
+	can_talk = true
+
+func _on_talk_manager_area_exited(area: Area2D) -> void:
+	talk_area = null
+	can_talk = false
+
+
+func _on_timer_timeout() -> void:
+	can_walk = true

@@ -1,0 +1,297 @@
+[gd_scene load_steps=14 format=4 uid="uid://ddn5ljui1qm8u"]
+
+[ext_resource type="PackedScene" uid="uid://bf3thd8vbwydb" path="res://scenes/utilities/camera_manager.tscn" id="1_88wiy"]
+[ext_resource type="Texture2D" uid="uid://bdes88a18r0tj" path="res://assets/maps/under/cabin.png" id="1_y7yjr"]
+[ext_resource type="Texture2D" uid="uid://buu0qrsa5jva7" path="res://assets/maps/over/cabin_over.png" id="2_hjyel"]
+[ext_resource type="PackedScene" uid="uid://dpx875fklum1r" path="res://scenes/chars/eric.tscn" id="3_54eqg"]
+[ext_resource type="PackedScene" uid="uid://d1wqlmfexqt02" path="res://scenes/chars/player.tscn" id="3_hjyel"]
+[ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="4_88wiy"]
+[ext_resource type="PackedScene" uid="uid://ct51pokrlosvf" path="res://scenes/utilities/scene_changer.tscn" id="7_gjgi4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgoj1"]
+texture = ExtResource("1_y7yjr")
+0:0/size_in_atlas = Vector2i(81, 45)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_54eqg"]
+sources/0 = SubResource("TileSetAtlasSource_bgoj1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88wiy"]
+texture = ExtResource("2_hjyel")
+19:1/0 = 0
+20:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+34:1/0 = 0
+35:1/0 = 0
+36:1/0 = 0
+37:1/0 = 0
+38:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:2/0 = 0
+35:2/0 = 0
+36:2/0 = 0
+37:2/0 = 0
+38:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+27:3/0 = 0
+32:3/0 = 0
+33:3/0 = 0
+34:3/0 = 0
+35:3/0 = 0
+36:3/0 = 0
+37:3/0 = 0
+38:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+32:4/0 = 0
+33:4/0 = 0
+34:4/0 = 0
+35:4/0 = 0
+36:4/0 = 0
+37:4/0 = 0
+38:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+26:5/0 = 0
+32:5/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+35:5/0 = 0
+36:5/0 = 0
+37:5/0 = 0
+38:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+26:6/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+34:6/0 = 0
+35:6/0 = 0
+36:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+26:7/0 = 0
+32:7/0 = 0
+33:7/0 = 0
+34:7/0 = 0
+35:7/0 = 0
+36:7/0 = 0
+37:7/0 = 0
+38:7/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+32:8/0 = 0
+33:8/0 = 0
+34:8/0 = 0
+35:8/0 = 0
+36:8/0 = 0
+37:8/0 = 0
+38:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+27:9/0 = 0
+32:9/0 = 0
+33:9/0 = 0
+34:9/0 = 0
+35:9/0 = 0
+36:9/0 = 0
+37:9/0 = 0
+38:9/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+32:10/0 = 0
+33:10/0 = 0
+34:10/0 = 0
+35:10/0 = 0
+36:10/0 = 0
+37:10/0 = 0
+38:10/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+32:11/0 = 0
+33:11/0 = 0
+34:11/0 = 0
+35:11/0 = 0
+36:11/0 = 0
+37:11/0 = 0
+38:11/0 = 0
+32:12/0 = 0
+33:12/0 = 0
+34:12/0 = 0
+35:12/0 = 0
+36:12/0 = 0
+37:12/0 = 0
+38:12/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5w4fs"]
+sources/0 = SubResource("TileSetAtlasSource_88wiy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4fs"]
+size = Vector2(56, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8l1j"]
+size = Vector2(24, 57)
+
+[node name="EricCabin" type="Node2D"]
+
+[node name="CameraManager" parent="." instance=ExtResource("1_88wiy")]
+position = Vector2(640, 382)
+
+[node name="Under" type="TileMapLayer" parent="CameraManager"]
+position = Vector2(-640, -382)
+tile_map_data = PackedByteArray("AAAmABEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_54eqg")
+
+[node name="Over" type="TileMapLayer" parent="CameraManager"]
+position = Vector2(-640, -382)
+tile_map_data = PackedByteArray("AAAoABoAAAACAAIAAAAoABsAAAACAAMAAAAoABwAAAACAAQAAAAoAB0AAAACAAUAAAAoAB4AAAACAAYAAAApABoAAAADAAIAAAApABsAAAADAAMAAAApABwAAAADAAQAAAApAB0AAAADAAUAAAApAB4AAAADAAYAAAAqABoAAAAEAAIAAAAqABsAAAAEAAMAAAAqABwAAAAEAAQAAAAqAB0AAAAEAAUAAAAqAB4AAAAEAAYAAAArABoAAAAFAAIAAAArABsAAAAFAAMAAAArABwAAAAFAAQAAAArAB0AAAAFAAUAAAArAB4AAAAFAAYAAAAsABoAAAAGAAIAAAAsABsAAAAGAAMAAAAsABwAAAAGAAQAAAAsAB0AAAAGAAUAAAAsAB4AAAAGAAYAAAAzABcAAAAJAAkAAAA0ABIAAAAKAAQAAAA0ABMAAAAKAAUAAAA0ABQAAAAKAAYAAAA0ABUAAAAKAAcAAAA0ABYAAAAKAAgAAAA0ABcAAAAKAAkAAAA0ABgAAAAKAAoAAAA0ABkAAAAKAAsAAAA1ABIAAAALAAQAAAA1ABMAAAALAAUAAAA1ABQAAAALAAYAAAA1ABUAAAALAAcAAAA1ABYAAAALAAgAAAA1ABcAAAALAAkAAAA1ABgAAAALAAoAAAA1ABkAAAALAAsAAAA2ABIAAAAMAAQAAAA2ABMAAAAMAAUAAAA2ABQAAAAMAAYAAAA2ABUAAAAMAAcAAAA2ABYAAAAMAAgAAAA2ABcAAAAMAAkAAAA2ABgAAAAMAAoAAAA2ABkAAAAMAAsAAAA3ABIAAAANAAQAAAA3ABMAAAANAAUAAAA3ABQAAAANAAYAAAA3ABUAAAANAAcAAAA3ABYAAAANAAgAAAA3ABcAAAANAAkAAAA3ABgAAAANAAoAAAA4ABIAAAAOAAQAAAA4ABMAAAAOAAUAAAA4ABQAAAAOAAYAAAA4ABUAAAAOAAcAAAA4ABYAAAAOAAgAAAA4ABcAAAAOAAkAAAA4ABgAAAAOAAoAAAA5ABIAAAAPAAQAAAA5ABMAAAAPAAUAAAA5ABQAAAAPAAYAAAA5ABUAAAAPAAcAAAA5ABYAAAAPAAgAAAA5ABcAAAAPAAkAAAA5ABgAAAAPAAoAAAA6ABMAAAAQAAUAAAA6ABQAAAAQAAYAAAA6ABUAAAAQAAcAAAA6ABYAAAAQAAgAAAA6ABcAAAAQAAkAAAA6ABgAAAAQAAoAAAA7ABMAAAARAAUAAAA7ABQAAAARAAYAAAA7ABUAAAARAAcAAAA7ABYAAAARAAgAAAA7ABcAAAARAAkAAAA7ABgAAAARAAoAAAA8ABEAAAASAAMAAAA8ABIAAAASAAQAAAA8ABMAAAASAAUAAAA8ABQAAAASAAYAAAA8ABUAAAASAAcAAAA8ABYAAAASAAgAAAA8ABcAAAASAAkAAAA8ABgAAAASAAoAAAA9AA8AAAATAAEAAAA9ABAAAAATAAIAAAA9ABEAAAATAAMAAAA9ABIAAAATAAQAAAA9ABMAAAATAAUAAAA9ABQAAAATAAYAAAA9ABUAAAATAAcAAAA9ABYAAAATAAgAAAA9ABcAAAATAAkAAAA9ABgAAAATAAoAAAA9ABkAAAATAAsAAAA+AA8AAAAUAAEAAAA+ABAAAAAUAAIAAAA+ABEAAAAUAAMAAAA+ABIAAAAUAAQAAAA+ABMAAAAUAAUAAAA+ABQAAAAUAAYAAAA+ABUAAAAUAAcAAAA+ABYAAAAUAAgAAAA+ABcAAAAUAAkAAAA+ABgAAAAUAAoAAAA+ABkAAAAUAAsAAAA/ABMAAAAVAAUAAAA/ABQAAAAVAAYAAAA/ABUAAAAVAAcAAAA/ABYAAAAVAAgAAAA/ABcAAAAVAAkAAAA/ABgAAAAVAAoAAAAPABQAAAABAAkAAAAPABUAAAABAAoAAAAQABQAAAACAAkAAAAQABUAAAACAAoAAAAVABcAAAABAAkAAAAVABgAAAABAAoAAAAWABcAAAACAAkAAAAWABgAAAACAAoAAAA=")
+tile_set = SubResource("TileSet_5w4fs")
+
+[node name="Eric" parent="CameraManager" instance=ExtResource("3_54eqg")]
+position = Vector2(339, -128)
+
+[node name="DialogueManager" parent="CameraManager/Eric" instance=ExtResource("4_88wiy")]
+position = Vector2(-652.667, -169.333)
+scale = Vector2(0.666667, 0.666667)
+timeline = "test_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/Eric/DialogueManager"]
+position = Vector2(980, 256)
+shape = SubResource("RectangleShape2D_5w4fs")
+
+[node name="player" parent="CameraManager" instance=ExtResource("3_hjyel")]
+position = Vector2(379, -203)
+scale = Vector2(1.3, 1.3)
+
+[node name="SceneChanger" parent="CameraManager" instance=ExtResource("7_gjgi4")]
+position = Vector2(-640, -382)
+SCENE = "uid://cyrpixacnhsva"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/SceneChanger"]
+position = Vector2(1084, 214.5)
+shape = SubResource("RectangleShape2D_g8l1j")
+
+[node name="Borders" type="StaticBody2D" parent="CameraManager"]
+position = Vector2(-640, -382)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CameraManager/Borders"]
+polygon = PackedVector2Array(217, 115, 215, 512, 768, 510, 770, 412, 1035, 409, 1033, 247, 1114, 247, 1111, 182, 1037, 180, 1036, 130, 1001, 117, 462, 118, 461, 179, 374, 179, 374, 119, 221, 118, 220, 3, 1147, 8, 1139, 571, 178, 543, 194, 113)

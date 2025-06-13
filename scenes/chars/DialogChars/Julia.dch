@@ -1,0 +1,40 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.929688, 0.924921, 0.624634, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "DefaultStyle",
+"suffix": ""
+},
+&"default_portrait": "Julia1",
+&"description": "",
+&"display_name": "Julia",
+&"mirror": false,
+&"nicknames": ["Julia"],
+&"offset": Vector2(100, 0),
+&"portraits": {
+"Julia1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Julia/J2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+},
+"Julia2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Julia/J7.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 0.7
+}
