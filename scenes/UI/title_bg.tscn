@@ -1,0 +1,172 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5sf6lvb3gj3e"]
+
+[ext_resource type="Texture2D" uid="uid://b4kuwidc6gox" path="res://assets/ui/bg.png" id="1_b0wu7"]
+[ext_resource type="Script" uid="uid://cl8cjdtmqu0as" path="res://scripts/ui/title_bg.gd" id="1_qyaso"]
+[ext_resource type="Texture2D" uid="uid://cyc1byql8s4hn" path="res://assets/ui/tree_l.png" id="2_08rhu"]
+[ext_resource type="Texture2D" uid="uid://cejpuvy88y2e" path="res://assets/ui/tree_r.png" id="3_t453k"]
+[ext_resource type="Texture2D" uid="uid://bcwvmlu8lufc2" path="res://assets/ui/fade.png" id="4_t453k"]
+[ext_resource type="Texture2D" uid="uid://1th43r42t2am" path="res://assets/ui/Name.png" id="6_1rma7"]
+
+[sub_resource type="Animation" id="Animation_qyaso"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-500, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tree_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(550, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t453k"]
+resource_name = "enter"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree_L:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-500, 0), Vector2(-500, 0), Vector2(100, 0), Vector2(92, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tree_R:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 0), Vector2(550, 0), Vector2(80, 0), Vector2(92, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1rma7"]
+_data = {
+&"RESET": SubResource("Animation_qyaso"),
+&"enter": SubResource("Animation_t453k")
+}
+
+[node name="title_bg" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qyaso")
+
+[node name="BG" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_right = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b0wu7")
+expand_mode = 3
+
+[node name="Tree_L" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_right = -684.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_08rhu")
+expand_mode = 3
+
+[node name="Tree_R" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 550.0
+offset_right = 366.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_t453k")
+expand_mode = 3
+
+[node name="Fade" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_right = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_t453k")
+expand_mode = 3
+
+[node name="Name" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = -25.0
+offset_right = -92.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_1rma7")
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1rma7")
+}

@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://gci5r2vrqium"]
+
+[ext_resource type="FontFile" uid="uid://71vpqk221ctn" path="res://assets/fonts/The Macabre.otf" id="1_uwpf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvbtq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf1w2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2p27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngj32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrfvh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bm8t2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uwpf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jstl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfcbk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5d4ag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eciin"]
+
+[resource]
+Button/colors/font_color = Color(0.847059, 0.847059, 0.541176, 1)
+Button/colors/font_disabled_color = Color(0.64, 0.64, 0.48, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0.36, 0.36, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_uwpf8")
+Button/styles/disabled = SubResource("StyleBoxEmpty_rvbtq")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_pf1w2")
+Button/styles/focus = SubResource("StyleBoxEmpty_e2p27")
+Button/styles/hover = SubResource("StyleBoxEmpty_ngj32")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_yrfvh")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_bm8t2")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uwpf8")
+Button/styles/normal = SubResource("StyleBoxEmpty_5jstl")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_tfcbk")
+Button/styles/pressed = SubResource("StyleBoxEmpty_5d4ag")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_eciin")

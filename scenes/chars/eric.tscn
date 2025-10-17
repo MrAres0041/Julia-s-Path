@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpx875fklum1r"]
 
-[ext_resource type="Texture2D" uid="uid://cqpbpgwm7v55i" path="res://assets/sprites/Eric1.png" id="1_yhwj2"]
+[ext_resource type="Texture2D" uid="uid://b6u4ytmycg2ud" path="res://assets/sprites/Eric/Eric2.png" id="1_0pyln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30itl"]
-size = Vector2(44, 42)
+size = Vector2(77.3333, 85.3333)
 
 [node name="Eric" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
@@ -11,9 +11,9 @@ collision_layer = 2
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_yhwj2")
+texture = ExtResource("1_0pyln")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
+position = Vector2(0, 85.3333)
 shape = SubResource("RectangleShape2D_30itl")

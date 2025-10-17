@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1wqlmfexqt02"]
 
 [ext_resource type="Script" uid="uid://deul77iwudcc7" path="res://scripts/player.gd" id="1_o781t"]
-[ext_resource type="Texture2D" uid="uid://yak7dub84gat" path="res://assets/sprites/Julia/Julia1.png" id="2_wyvug"]
+[ext_resource type="Texture2D" uid="uid://b3rnqeq1yhqp4" path="res://assets/sprites/Julia/Jilia1.png" id="2_wyvug"]
 [ext_resource type="Script" uid="uid://bo3gxv4e1h6df" path="res://scripts/talk_manager.gd" id="3_wyvug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o781t"]
-size = Vector2(38, 28)
+size = Vector2(88, 69)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyvug"]
-size = Vector2(10, 39)
+size = Vector2(24, 160)
 
 [node name="player" type="CharacterBody2D"]
 collision_mask = 15
@@ -20,7 +20,7 @@ base_speed = 200
 texture = ExtResource("2_wyvug")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 22)
+position = Vector2(0, 94.5)
 shape = SubResource("RectangleShape2D_o781t")
 
 [node name="Timer" type="Timer" parent="."]
@@ -34,7 +34,7 @@ collision_mask = 8
 script = ExtResource("3_wyvug")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TalkManager"]
-position = Vector2(0, 27.5)
+position = Vector2(0, 88)
 shape = SubResource("RectangleShape2D_wyvug")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
