@@ -1,0 +1,4 @@
+[style name="DefaultStyle"]
+join Narrator right
+The note is empty, the function works.
+set {GPlayer.is_talking} = false

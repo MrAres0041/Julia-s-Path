@@ -1,13 +1,12 @@
 class_name TalkManager extends Area2D
 
-var talking:bool = false
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)
 	
 func DialogicHandler(i):
 	if i == "DialogueEnded":
-		talking = false
+		GPlayer.is_talking = false
 
 func Look_At_This(dir:Vector2):
 	match dir:

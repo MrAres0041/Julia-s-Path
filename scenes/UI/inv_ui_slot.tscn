@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://baoht13ixa6uy"]
+
+[ext_resource type="Texture2D" uid="uid://dumat6v0r12ap" path="res://assets/ui/UI_f.png" id="1_a3qdg"]
+[ext_resource type="Script" uid="uid://dlvh4jh061ok6" path="res://scripts/ui/inv_ui_slot.gd" id="1_dmkqm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmkqm"]
+atlas = ExtResource("1_a3qdg")
+region = Rect2(184, 144, 72, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmkqm"]
+size = Vector2(63, 63)
+
+[node name="inv_UI_slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(71, 72)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1209.0
+offset_bottom = -728.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dmkqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.6, 0.6, 0.6, 1)
+texture = SubResource("AtlasTexture_dmkqm")
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(35.5, 36.5)
+shape = SubResource("RectangleShape2D_dmkqm")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(71, 72)
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 72.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

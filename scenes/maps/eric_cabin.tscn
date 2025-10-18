@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://ddn5ljui1qm8u"]
+[gd_scene load_steps=12 format=4 uid="uid://ddn5ljui1qm8u"]
 
+[ext_resource type="PackedScene" uid="uid://ckhnwfq86xdns" path="res://scenes/UI/inv_ui.tscn" id="1_5w4fs"]
 [ext_resource type="Texture2D" uid="uid://bdes88a18r0tj" path="res://assets/maps/under/cabin.png" id="1_y7yjr"]
 [ext_resource type="Texture2D" uid="uid://buu0qrsa5jva7" path="res://assets/maps/over/cabin_over.png" id="2_hjyel"]
 [ext_resource type="PackedScene" uid="uid://dpx875fklum1r" path="res://scenes/chars/eric.tscn" id="3_54eqg"]
 [ext_resource type="PackedScene" uid="uid://d1wqlmfexqt02" path="res://scenes/chars/player.tscn" id="3_hjyel"]
 [ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="4_88wiy"]
-[ext_resource type="PackedScene" uid="uid://ct51pokrlosvf" path="res://scenes/utilities/scene_changer.tscn" id="7_gjgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgoj1"]
 texture = ExtResource("1_y7yjr")
@@ -247,9 +247,6 @@ sources/0 = SubResource("TileSetAtlasSource_88wiy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4fs"]
 size = Vector2(56, 92)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8l1j"]
-size = Vector2(24, 57)
-
 [node name="EricCabin" type="Node2D"]
 
 [node name="Under" type="TileMapLayer" parent="."]
@@ -277,14 +274,14 @@ shape = SubResource("RectangleShape2D_5w4fs")
 position = Vector2(586, 195)
 scale = Vector2(0.35, 0.35)
 
-[node name="SceneChanger" parent="." instance=ExtResource("7_gjgi4")]
-SCENE = "uid://cyrpixacnhsva"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneChanger"]
-position = Vector2(1084, 214.5)
-shape = SubResource("RectangleShape2D_g8l1j")
-
 [node name="Borders" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders"]
 polygon = PackedVector2Array(217, 115, 215, 512, 768, 510, 770, 412, 1035, 409, 1033, 247, 1114, 247, 1111, 182, 1037, 180, 1036, 130, 1001, 117, 462, 118, 461, 179, 374, 179, 374, 119, 221, 118, 220, 3, 1147, 8, 1139, 571, 178, 543, 194, 113)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="inv_UI" parent="Camera2D/CanvasLayer" instance=ExtResource("1_5w4fs")]

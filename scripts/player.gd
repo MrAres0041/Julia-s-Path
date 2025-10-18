@@ -1,7 +1,10 @@
 class_name Player extends CharacterBody2D
 
-@export var base_speed: int
 
+@export var base_speed: int
+@export var inv:Inventory
+
+var inv_open:bool = false
 var can_talk:bool = false
 var speed: int
 var input: Vector2 = Vector2.ZERO
@@ -18,14 +21,19 @@ func _physics_process(delta: float) -> void:
 	
 	$TalkManager.Look_At_This(playerInput)
 	
-	if Input.is_action_just_pressed("dialogic_default_action") and can_talk:
-		if !$TalkManager.talking:
+	if Input.is_action_just_pressed("dialogic_default_action") and can_talk and !inv_open:
+		if !GPlayer.is_talking:
 			talk_area.Execute_Dialogue()
-			$TalkManager.talking = true
+			GPlayer.is_talking = true
+	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
+		inv_changer()
+	if Input.is_action_just_pressed("back") and inv_open:
+		inv_open = false
+		can_walk = true
 	
 	velocity = speed * playerInput
 	
-	if !$TalkManager.talking and can_walk:
+	if can_walk and !GPlayer.is_talking:
 		move_and_slide()
 
 func GetInput():
@@ -35,7 +43,7 @@ func GetInput():
 
 func DialogicHandler(i):
 	if i == "DialogueEnded":
-		$TalkManager.talking = false
+		GPlayer.is_talking = false
 
 
 func _on_talk_manager_area_entered(area: Area2D) -> void:
@@ -46,6 +54,13 @@ func _on_talk_manager_area_exited(area: Area2D) -> void:
 	talk_area = null
 	can_talk = false
 
-
 func _on_timer_timeout() -> void:
 	can_walk = true
+
+func inv_changer():
+	if inv_open:
+		inv_open = false
+		can_walk = true
+	else:
+		inv_open = true
+		can_walk = false
