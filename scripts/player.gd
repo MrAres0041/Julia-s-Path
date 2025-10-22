@@ -10,6 +10,7 @@ var speed: int
 var input: Vector2 = Vector2.ZERO
 var talk_area: Area2D
 var can_walk: bool = false
+var can_change: bool = true
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)

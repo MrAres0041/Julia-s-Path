@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk7lhdryqp712"]
+
+[ext_resource type="Script" uid="uid://bo71obylyucq2" path="res://scripts/ui/cam_movement.gd" id="1_kpreg"]
+
+[node name="Cam_Movement" type="Node2D" node_paths=PackedStringArray("cam", "markers")]
+script = ExtResource("1_kpreg")
+cam = NodePath("")
+markers = [NodePath(""), NodePath(""), NodePath("")]
