@@ -4,11 +4,8 @@ class_name CamMovement
 @export var cam:Camera2D
 @export var markers:Array[Marker2D]
 
-func _ready() -> void:
-	cam.global_position = markers[0].global_position
-	cam.zoom = Vector2(2,2)
 
-func _teleport(numCam:int, player:CharacterBody2D):
+func _teleport(numCam:int, player:CharacterBody2D, scaleCam:Vector2):
 	var new_pos:Vector2
 	match numCam:
 		0:
@@ -19,4 +16,5 @@ func _teleport(numCam:int, player:CharacterBody2D):
 			new_pos = markers[0].global_position
 
 	cam.global_position = new_pos
+	cam.zoom = scaleCam
 	player.global_position = new_pos
