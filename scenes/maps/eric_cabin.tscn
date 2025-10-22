@@ -284,9 +284,8 @@ scale = Vector2(0.35, 0.35)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders"]
 polygon = PackedVector2Array(217, 115, 215, 512, 768, 510, 770, 412, 1035, 409, 1033, 247, 1114, 247, 1111, 182, 1037, 180, 1036, 130, 1001, 117, 462, 118, 461, 179, 374, 179, 374, 119, 221, 118, 220, 3, 1147, 8, 1139, 571, 178, 543, 194, 113)
 
-[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "markers") instance=ExtResource("6_gjgi4")]
+[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("6_gjgi4")]
 cam = NodePath("Camera2D")
-markers = [NodePath("0"), NodePath("1"), NodePath("2")]
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(639, 319)
@@ -304,24 +303,25 @@ position = Vector2(411, 264)
 [node name="2" type="Marker2D" parent="Cam_Movement"]
 position = Vector2(415, 453)
 
-[node name="Cam_Detector1" parent="Cam_Movement" instance=ExtResource("8_f3l1a")]
+[node name="Cam_Detector1" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
 position = Vector2(898, 279)
+cam = NodePath("../1")
 scaleCam = 2.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector1"]
 shape = SubResource("RectangleShape2D_gjgi4")
 
-[node name="Cam_Detector2" parent="Cam_Movement" instance=ExtResource("8_f3l1a")]
+[node name="Cam_Detector2" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
 position = Vector2(411, 296)
-numCam = 2
+cam = NodePath("../2")
 scaleCam = 2.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector2"]
 shape = SubResource("RectangleShape2D_gjgi4")
 
-[node name="Cam_Detector3" parent="Cam_Movement" instance=ExtResource("8_f3l1a")]
+[node name="Cam_Detector3" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
 position = Vector2(416, 482)
-numCam = 0
+cam = NodePath("../0")
 scaleCam = 2.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector3"]

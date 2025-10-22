@@ -39,42 +39,42 @@ sources/0 = SubResource("TileSetAtlasSource_28v14")
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
 
-[node name="player" parent="." instance=ExtResource("3_bruh4")]
+[node name="Cam_Movement" parent="." instance=ExtResource("1_3hmkl")]
+y_sort_enabled = true
+
+[node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
 y_sort_enabled = false
 position = Vector2(124, 128)
 
-[node name="J_Room" type="Node" parent="."]
+[node name="J_Room" type="Node" parent="Cam_Movement"]
 
-[node name="j_room_border" type="TileMapLayer" parent="J_Room"]
+[node name="j_room_border" type="TileMapLayer" parent="Cam_Movement/J_Room"]
 scale = Vector2(1.1, 1.1)
 tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 13, 0, 3, 0, 0, 0)
 tile_set = SubResource("TileSet_4ecay")
 
-[node name="j_room" type="TileMapLayer" parent="J_Room"]
+[node name="j_room" type="TileMapLayer" parent="Cam_Movement/J_Room"]
 z_index = -500
 scale = Vector2(1.1, 1.1)
 tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 13, 0, 3, 0, 0, 0)
 tile_set = SubResource("TileSet_c5r8j")
 
-[node name="j_props" type="TileMapLayer" parent="J_Room"]
+[node name="j_props" type="TileMapLayer" parent="Cam_Movement/J_Room"]
 y_sort_enabled = true
 scale = Vector2(1.1, 1.1)
 tile_map_data = PackedByteArray(0, 0, 9, 0, 14, 0, 0, 0, 59, 0, 1, 0, 0, 0, 21, 0, 15, 0, 0, 0, 60, 0, 14, 0, 0, 0)
 tile_set = SubResource("TileSet_mf6ci")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="J_Room"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Cam_Movement/J_Room"]
 collision_layer = 16
 collision_mask = 19
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="J_Room/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Room/StaticBody2D"]
 polygon = PackedVector2Array(123, 0, 291, 1, 291, 28, 429, 31, 430, 282, 309, 280, 307, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
-
-[node name="Cam_Movement" parent="." instance=ExtResource("1_3hmkl")]
-y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-2, 92)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.7, 0.7)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Cam_Movement/Camera2D"]
 

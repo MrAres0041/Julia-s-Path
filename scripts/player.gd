@@ -1,5 +1,6 @@
 class_name Player extends CharacterBody2D
 
+@onready var animation_tree: AnimationTree = $AnimationTree
 
 @export var base_speed: int
 @export var inv:Inventory
@@ -11,9 +12,11 @@ var input: Vector2 = Vector2.ZERO
 var talk_area: Area2D
 var can_walk: bool = false
 var can_change: bool = true
+var last_facing_dir:Vector2 = Vector2(1,0)
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)
+	$AnimationPlayer.play("walk_r")
 
 
 func _physics_process(delta: float) -> void:
@@ -31,11 +34,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("back") and inv_open:
 		inv_open = false
 		can_walk = true
+
 	
 	velocity = speed * playerInput
 	
 	if can_walk and !GPlayer.is_talking:
 		move_and_slide()
+	
+	_walk_animation()
 
 func GetInput():
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -65,3 +71,12 @@ func inv_changer():
 	else:
 		inv_open = true
 		can_walk = false
+
+func _walk_animation():
+	var idle = !velocity
+	
+	if !idle:
+		last_facing_dir = velocity
+	
+	animation_tree.set("parameters/Idle/blend_position", last_facing_dir)
+	animation_tree.set("parameters/walk/blend_position", last_facing_dir)
