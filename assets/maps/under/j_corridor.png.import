@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dadwre0s4u3la"
-path="res://.godot/imported/J10_R.png-fd85dbcbd4327e99886eb76659c2f3a2.ctex"
+uid="uid://b4d1l6ellxc2r"
+path="res://.godot/imported/j_corridor.png-d4fd8d50f1e7f7e84207defa239ab4fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/Julia/J10_R.png"
-dest_files=["res://.godot/imported/J10_R.png-fd85dbcbd4327e99886eb76659c2f3a2.ctex"]
+source_file="res://assets/maps/under/j_corridor.png"
+dest_files=["res://.godot/imported/j_corridor.png-d4fd8d50f1e7f7e84207defa239ab4fb.ctex"]
 
 [params]
 

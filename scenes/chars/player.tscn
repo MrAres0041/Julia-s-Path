@@ -6,23 +6,26 @@
 [ext_resource type="Script" uid="uid://bo3gxv4e1h6df" path="res://scripts/talk_manager.gd" id="3_wyvug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o781t"]
-size = Vector2(88, 69)
+size = Vector2(88, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyvug"]
 size = Vector2(24, 160)
 
 [node name="player" type="CharacterBody2D"]
-collision_mask = 15
+y_sort_enabled = true
+collision_mask = 31
 motion_mode = 1
 script = ExtResource("1_o781t")
-base_speed = 200
+base_speed = 250
 inv = ExtResource("2_t25bx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-1, -61)
 texture = ExtResource("2_wyvug")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 94.5)
+position = Vector2(-1, 34.5)
 shape = SubResource("RectangleShape2D_o781t")
 
 [node name="Timer" type="Timer" parent="."]
@@ -32,6 +35,7 @@ one_shot = true
 autostart = true
 
 [node name="TalkManager" type="Area2D" parent="."]
+position = Vector2(-1, -61)
 collision_mask = 8
 script = ExtResource("3_wyvug")
 

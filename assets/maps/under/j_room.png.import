@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvm1gb8jx0w25"
-path="res://.godot/imported/J5_R.png-50069b367e7357e011727234c94bbb71.ctex"
+uid="uid://bqkeipv250mj"
+path="res://.godot/imported/j_room.png-75e00e72a9002cdbdda0c18e73f15b75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/Julia/J5_R.png"
-dest_files=["res://.godot/imported/J5_R.png-50069b367e7357e011727234c94bbb71.ctex"]
+source_file="res://assets/maps/under/j_room.png"
+dest_files=["res://.godot/imported/j_room.png-75e00e72a9002cdbdda0c18e73f15b75.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mx6c08gfndo6"
-path="res://.godot/imported/J12_R.png-5fb49042780281220ba01361566cd3c1.ctex"
+uid="uid://c5hxnemujl6e8"
+path="res://.godot/imported/props_sheet.png-77ddadeced94589a83e4746e65af5e83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/Julia/J12_R.png"
-dest_files=["res://.godot/imported/J12_R.png-5fb49042780281220ba01361566cd3c1.ctex"]
+source_file="res://assets/maps/over/props_sheet.png"
+dest_files=["res://.godot/imported/props_sheet.png-77ddadeced94589a83e4746e65af5e83.ctex"]
 
 [params]
 

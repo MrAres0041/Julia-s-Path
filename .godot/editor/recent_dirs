@@ -1,3 +1,7 @@
+res://assets/maps/under/Borders
+res://scenes/acts
+res://assets/maps/over
+res://assets/maps/under
 res://scenes/UI
 res://scripts/ui
 res://scripts/globals
@@ -16,8 +20,4 @@ res://assets/portraits/Ashley
 res://
 res://assets/fonts
 res://assets/ui/VisualNovelTextbox
-res://assets/ui
-res://assets/sprites
-res://assets/portraits/Eric
-res://assets/styles
 C:/Users/Equipo/Documents/dialogues

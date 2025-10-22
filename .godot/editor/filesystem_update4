@@ -1,11 +1,7 @@
-res://scenes/chars/DialogChars/Julia.dch
-res://assets/styles/DefaultStyle.tres
-res://scenes/timelines/phone1.dtl
-res://assets/ui/VisualNovelTextbox/custom_visual_novel_textbox.tscn
+res://scenes/maps/eric_cabin.tscn
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
-res://resources/items/inventory.tres
-res://scenes/maps/eric_cabin.tscn
-res://scenes/UI/cam_detector.tscn
-res://scripts/ui/cam_detector.gd
-res://scripts/ui/cam_movement.gd
+res://assets/styles/DefaultStyle.tres
+res://scenes/UI/cam_movement.tscn
+res://scenes/acts/act_1.tscn
+res://scenes/chars/player.tscn

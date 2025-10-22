@@ -131,6 +131,7 @@ back={
 2d_physics/layer_2="NPC"
 2d_physics/layer_3="Objects"
 2d_physics/layer_4="Speaker"
+2d_physics/layer_5="Walls"
 
 [rendering]
 
