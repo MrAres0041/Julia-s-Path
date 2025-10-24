@@ -1,15 +1,18 @@
 extends Area2D
 class_name CamDetector
 
-#@export var numCam:int
+@export var player_location:Marker2D
 @export var cam:Marker2D
-@export var scaleCam:float = 1.0
+@export var scalePlayer:float = 1.0
+@export var zoomCam:float = 1.0
 
 
 func _on_body_shape_entered(body_rid: RID, body: CharacterBody2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.can_change == true:
-		get_parent()._teleport(cam, body, Vector2(scaleCam,scaleCam))
+		get_parent().get_parent()._teleport(cam, player_location, body, Vector2(scalePlayer,scalePlayer), Vector2(zoomCam,zoomCam))
 		body.can_change = false
+	else:
+		body.can_change = true
 
 
 func _on_body_shape_exited(body_rid: RID, body: CharacterBody2D, body_shape_index: int, local_shape_index: int) -> void:

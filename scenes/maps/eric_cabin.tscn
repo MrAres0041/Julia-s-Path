@@ -294,35 +294,39 @@ position = Vector2(639, 319)
 
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("1_5w4fs")]
 
-[node name="0" type="Marker2D" parent="Cam_Movement"]
+[node name="Node" type="Node" parent="Cam_Movement"]
+
+[node name="Cam_Detector1" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
+position = Vector2(898, 279)
+player_location = NodePath("../../Node2/1")
+cam = NodePath("../../Node2/1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector1"]
+shape = SubResource("RectangleShape2D_gjgi4")
+
+[node name="Cam_Detector2" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
+position = Vector2(411, 296)
+player_location = NodePath("../../Node2/2")
+cam = NodePath("../../Node2/2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector2"]
+shape = SubResource("RectangleShape2D_gjgi4")
+
+[node name="Cam_Detector3" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
+position = Vector2(416, 482)
+player_location = NodePath("../../Node2/0")
+cam = NodePath("../../Node2/0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector3"]
+shape = SubResource("RectangleShape2D_gjgi4")
+
+[node name="Node2" type="Node" parent="Cam_Movement"]
+
+[node name="0" type="Marker2D" parent="Cam_Movement/Node2"]
 position = Vector2(898, 245)
 
-[node name="1" type="Marker2D" parent="Cam_Movement"]
+[node name="1" type="Marker2D" parent="Cam_Movement/Node2"]
 position = Vector2(411, 264)
 
-[node name="2" type="Marker2D" parent="Cam_Movement"]
+[node name="2" type="Marker2D" parent="Cam_Movement/Node2"]
 position = Vector2(415, 453)
-
-[node name="Cam_Detector1" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(898, 279)
-cam = NodePath("../1")
-scaleCam = 2.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector1"]
-shape = SubResource("RectangleShape2D_gjgi4")
-
-[node name="Cam_Detector2" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(411, 296)
-cam = NodePath("../2")
-scaleCam = 2.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector2"]
-shape = SubResource("RectangleShape2D_gjgi4")
-
-[node name="Cam_Detector3" parent="Cam_Movement" node_paths=PackedStringArray("cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(416, 482)
-cam = NodePath("../0")
-scaleCam = 2.0
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Cam_Detector3"]
-shape = SubResource("RectangleShape2D_gjgi4")
