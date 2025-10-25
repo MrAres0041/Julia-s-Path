@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=23 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://ckhnwfq86xdns" path="res://scenes/UI/inv_ui.tscn" id="5_c5r8j"]
 [ext_resource type="PackedScene" uid="uid://ci4mw2twocy13" path="res://scenes/UI/cam_detector.tscn" id="6_ev3ej"]
 [ext_resource type="Texture2D" uid="uid://b4d1l6ellxc2r" path="res://assets/maps/under/j_corridor.png" id="8_amb7k"]
+[ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="9_amb7k"]
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
+[ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -54,6 +56,9 @@ sources/0 = SubResource("TileSetAtlasSource_28v14")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddspx"]
 size = Vector2(73, 74.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
+size = Vector2(82, 62)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev3ej"]
 size = Vector2(44, 108)
 
@@ -85,11 +90,12 @@ tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
 y_sort_enabled = false
-position = Vector2(124, 128)
+position = Vector2(-174, 94)
 
 [node name="J_Room" type="Node" parent="Cam_Movement"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cam_Movement/J_Room"]
+visible = false
 collision_layer = 16
 collision_mask = 19
 
@@ -112,6 +118,16 @@ position = Vector2(-2, 92)
 
 [node name="player_location0" type="Marker2D" parent="Cam_Movement/J_Room"]
 position = Vector2(209, 35)
+
+[node name="Items" type="Node" parent="Cam_Movement/J_Room"]
+
+[node name="trashCan" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(-185, -165)
+timeline = "phone1"
+item = ExtResource("10_te4vh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/trashCan"]
+shape = SubResource("RectangleShape2D_te4vh")
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-2, 92)

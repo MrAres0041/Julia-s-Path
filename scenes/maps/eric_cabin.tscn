@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dpx875fklum1r" path="res://scenes/chars/eric.tscn" id="3_54eqg"]
 [ext_resource type="PackedScene" uid="uid://d1wqlmfexqt02" path="res://scenes/chars/player.tscn" id="3_hjyel"]
 [ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="4_88wiy"]
+[ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="5_gjgi4"]
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="6_gjgi4"]
-[ext_resource type="PackedScene" uid="uid://ci4mw2twocy13" path="res://scenes/UI/cam_detector.tscn" id="8_f3l1a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgoj1"]
 texture = ExtResource("1_y7yjr")
@@ -249,8 +249,8 @@ sources/0 = SubResource("TileSetAtlasSource_88wiy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4fs"]
 size = Vector2(56, 92)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjgi4"]
-size = Vector2(92, 28)
+[sub_resource type="CircleShape2D" id="CircleShape2D_gjgi4"]
+radius = 14.0357
 
 [node name="EricCabin" type="Node2D"]
 
@@ -270,6 +270,7 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(-652.667, -169.333)
 scale = Vector2(0.666667, 0.666667)
 timeline = "test_1"
+item = ExtResource("5_gjgi4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Eric/DialogueManager"]
 position = Vector2(980, 256)
@@ -294,39 +295,11 @@ position = Vector2(639, 319)
 
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("1_5w4fs")]
 
-[node name="Node" type="Node" parent="Cam_Movement"]
+[node name="DialogueManager" parent="." instance=ExtResource("4_88wiy")]
+position = Vector2(852, 315)
+timeline = "test_1"
+item = ExtResource("5_gjgi4")
 
-[node name="Cam_Detector1" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(898, 279)
-player_location = NodePath("../../Node2/1")
-cam = NodePath("../../Node2/1")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector1"]
-shape = SubResource("RectangleShape2D_gjgi4")
-
-[node name="Cam_Detector2" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(411, 296)
-player_location = NodePath("../../Node2/2")
-cam = NodePath("../../Node2/2")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector2"]
-shape = SubResource("RectangleShape2D_gjgi4")
-
-[node name="Cam_Detector3" parent="Cam_Movement/Node" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("8_f3l1a")]
-position = Vector2(416, 482)
-player_location = NodePath("../../Node2/0")
-cam = NodePath("../../Node2/0")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/Node/Cam_Detector3"]
-shape = SubResource("RectangleShape2D_gjgi4")
-
-[node name="Node2" type="Node" parent="Cam_Movement"]
-
-[node name="0" type="Marker2D" parent="Cam_Movement/Node2"]
-position = Vector2(898, 245)
-
-[node name="1" type="Marker2D" parent="Cam_Movement/Node2"]
-position = Vector2(411, 264)
-
-[node name="2" type="Marker2D" parent="Cam_Movement/Node2"]
-position = Vector2(415, 453)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueManager"]
+position = Vector2(136, 6)
+shape = SubResource("CircleShape2D_gjgi4")

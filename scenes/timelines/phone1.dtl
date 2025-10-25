@@ -1,4 +1,10 @@
 [style name="DefaultStyle"]
-join Narrator right
-The note is empty, the function works.
-set {GPlayer.is_talking} = false
+join Julia (JuliaSad0) right
+Narrator: The phone awaits on the corner.
+Narrator: It's image, cold and dusty, both tempts and terrifies your bones.
+join Julia (JuliaSad1) right
+[wait time="1.0"]
+Narrator: "You have 215 new voice mails."
+leave Julia
+Narrator: You hang it up again, for your own sake.
+[signal arg="DialogueEnded"]

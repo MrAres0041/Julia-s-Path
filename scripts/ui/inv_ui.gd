@@ -10,6 +10,7 @@ var is_open:bool = false
 func _ready() -> void:
 	visible = false
 	_update_slots()
+	Dialogic.signal_event.connect(DialogicHandler)
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
@@ -31,3 +32,7 @@ func vis_inv():
 	else:
 		animation_player.play("exit")
 		is_open = false
+
+func DialogicHandler(i):
+	if i == "ItemAdded":
+		_update_slots()

@@ -3,6 +3,12 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/chars/player.tscn
-res://scripts/ui/cam_movement.gd
-res://scripts/ui/cam_detector.gd
 res://scenes/maps/eric_cabin.tscn
+res://scenes/utilities/dialogue_manager.tscn
+res://scenes/UI/inv_ui_slot.tscn
+res://resources/items/inventory.tres
+res://resources/inventory.gd
+res://scripts/dialogue_manager.gd
+res://scenes/timelines/phone1.dtl
+res://scripts/ui/inv_ui.gd
+res://scenes/timelines/test_1.dtl

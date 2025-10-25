@@ -5,3 +5,5 @@
 [node name="DialogueManager" type="Area2D"]
 collision_layer = 8
 script = ExtResource("1_2x26m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
