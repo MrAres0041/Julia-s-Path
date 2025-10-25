@@ -247,7 +247,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_xv662")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(0.323764, -0.351648)
+parameters/Idle/blend_position = Vector2(-0.0031898, 0.622047)
 parameters/walk/blend_position = Vector2(0.226475, -0.736264)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

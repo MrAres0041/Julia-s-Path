@@ -45,7 +45,7 @@ sources/2 = SubResource("TileSetAtlasSource_amb7k")
 texture = ExtResource("2_bruh4")
 59:1/size_in_atlas = Vector2i(17, 12)
 59:1/0 = 0
-59:1/0/y_sort_origin = -50
+59:1/0/y_sort_origin = -115
 60:14/size_in_atlas = Vector2i(4, 5)
 60:14/0 = 0
 60:14/0/y_sort_origin = 15
@@ -65,11 +65,13 @@ size = Vector2(44, 108)
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("1_3hmkl")]
+[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player") instance=ExtResource("1_3hmkl")]
 y_sort_enabled = true
 cam = NodePath("Camera2D")
+player = NodePath("player")
 
-[node name="Maps" type="Node" parent="Cam_Movement"]
+[node name="Maps" type="Node2D" parent="Cam_Movement"]
+y_sort_enabled = true
 
 [node name="map_borders" type="TileMapLayer" parent="Cam_Movement/Maps"]
 scale = Vector2(1.1, 1.1)
@@ -89,8 +91,7 @@ tile_map_data = PackedByteArray(0, 0, 9, 0, 14, 0, 0, 0, 59, 0, 1, 0, 0, 0, 21, 
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
-y_sort_enabled = false
-position = Vector2(-174, 94)
+position = Vector2(-36, 207)
 
 [node name="J_Room" type="Node" parent="Cam_Movement"]
 
@@ -156,7 +157,10 @@ position = Vector2(3, 5)
 shape = SubResource("RectangleShape2D_ev3ej")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cam_Movement/J_Corridor"]
+visible = false
 position = Vector2(1854, -4)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Corridor/StaticBody2D"]
 polygon = PackedVector2Array(-712, 58, -561, 56, -562, 86, -457, 88, -457, 68, -420, 68, -420, 54, -275, 53, -275, 67, -150, 67, -148, 96, 170, 93, 170, 63, 303, 64, 304, 53, 449, 53, 450, 64, 615, 63, 615, 195, -741, 195, -739, 249, 740, 218, 715, -166, -734, -165, -732, 59)
+
+[node name="Items" type="Node" parent="Cam_Movement/J_Corridor"]

@@ -5,6 +5,7 @@ const INV = preload("res://resources/items/inventory.tres")
 @export var sprite:Texture2D
 @export var timeline:String
 @export var item:Inv_Item
+@export var autoDestruction:bool = true
 
 @onready var ended:bool = false
 
@@ -20,5 +21,5 @@ func Execute_Dialogue():
 	ended = true
 
 func DialogueHandler(i):
-	if i == "DialogueEnded" and ended:
+	if i == "DialogueEnded" and ended and autoDestruction:
 		get_tree().queue_delete(self)
