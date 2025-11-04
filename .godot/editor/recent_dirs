@@ -1,4 +1,5 @@
 res://assets/portraits/Julia
+res://scenes/timelines
 res://assets/maps/under/Borders
 res://assets/maps/under
 res://scenes/acts
@@ -7,7 +8,6 @@ res://scenes/UI
 res://scripts/ui
 res://scripts/globals
 res://scenes/chars/DialogChars
-res://scenes/timelines
 res://resources/items
 res://resources
 res://scenes/utilities/themes

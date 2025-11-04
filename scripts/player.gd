@@ -16,7 +16,6 @@ var last_facing_dir:Vector2 = Vector2(1,0)
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)
-	$AnimationPlayer.play("walk_r")
 
 
 func _physics_process(delta: float) -> void:

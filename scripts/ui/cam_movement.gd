@@ -7,11 +7,12 @@ class_name CamMovement
 var newCamera:Vector2
 var newCamScale:Vector2
 
-func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2):
+func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2, new_speed:int):
 	if !nCam.global_position==null:
 		player.global_position = player_location.global_position
 		player.scale = scale_player
 		player.can_walk = false
+		player.base_speed = new_speed
 		newCamera = nCam.global_position
 		newCamScale = scaleCam
 		_fadeOut(nCam,scaleCam)

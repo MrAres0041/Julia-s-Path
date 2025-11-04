@@ -1,0 +1,13 @@
+[style name="DefaultStyle"]
+join Julia (JuliaHappy) right
+Narrator: Your mom fell asleep on the couch yet again.
+Narrator: Work has been very demanding these last few months.
+update Julia (JuliaHappy1)
+Narrator: Life hasn't been easy since...
+[wait time="1.5"]
+update Julia (JuliaWorried)
+[wait time="1.5"]
+Narrator: Well, you really can't remember the time when life was easy.
+update Julia (JuliaDefault)
+Narrator: Perhaps it would be better not to think too much about it.
+[signal arg="DialogueEnded"]

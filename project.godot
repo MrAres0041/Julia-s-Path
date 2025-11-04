@@ -28,6 +28,7 @@ directories/dch_directory={
 "Narrator": "res://scenes/chars/DialogChars/Narrator.dch"
 }
 directories/dtl_directory={
+"mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl"
 }

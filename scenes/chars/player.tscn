@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bo3gxv4e1h6df" path="res://scripts/talk_manager.gd" id="3_wyvug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o781t"]
-size = Vector2(88, 49)
+size = Vector2(126, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyvug"]
 size = Vector2(24, 160)

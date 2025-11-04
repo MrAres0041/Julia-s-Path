@@ -35,6 +35,15 @@
 "scale": 1,
 "scene": ""
 },
+"JuliaHappy1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Julia/J8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "JuliaSad0": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Julia/J6.png\""
@@ -51,6 +60,15 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1.0,
+"scene": ""
+},
+"JuliaWorried": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Julia/J5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
 "scene": ""
 }
 },
