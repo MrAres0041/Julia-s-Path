@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.929412, 0.92549, 0.717647, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "GloriaDefault",
+&"description": "",
+&"display_name": "Gloria",
+&"mirror": false,
+&"nicknames": ["Gloria"],
+&"offset": Vector2(-50, 0),
+&"portraits": {
+"GloriaDefault": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/J_Mom1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 0.8
+}

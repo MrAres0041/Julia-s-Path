@@ -1,6 +1,7 @@
 extends Area2D
 class_name CamDetector
 
+@export var audio:AudioStreamPlayer
 @export var player_location:Marker2D
 @export var cam:Marker2D
 @export var scalePlayer:float = 1.0
@@ -14,6 +15,8 @@ func _on_body_shape_entered(body_rid: RID, body: CharacterBody2D, body_shape_ind
 		body.can_change = false
 	else:
 		body.can_change = true
+	if audio:
+		audio.play()
 
 
 func _on_body_shape_exited(body_rid: RID, body: CharacterBody2D, body_shape_index: int, local_shape_index: int) -> void:

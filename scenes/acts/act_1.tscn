@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=35 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
 [ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
+[ext_resource type="PackedScene" uid="uid://cqffskyptfq1b" path="res://scenes/utilities/audio_manager.tscn" id="15_7mp2q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -94,13 +95,13 @@ size = Vector2(20, 100)
 size = Vector2(20, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bssua"]
-size = Vector2(96, 163)
+size = Vector2(96, 158)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mp2q"]
-size = Vector2(62, 123)
+size = Vector2(62, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi35y"]
-size = Vector2(82, 135)
+size = Vector2(82, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvun"]
 size = Vector2(42, 100)
@@ -237,34 +238,33 @@ position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_707qt")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Living/Props"]
-polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -31, 3923, -31, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -170, 3429, -170, 3429, -181, 3518, -181, 3519, -171, 3924, -172, 3924, -115, 3987, -115, 3987, -141, 4297, -143, 4297, -154, 4362, -153, 4361, -135, 4452, -133, 4452, -114, 4491, -114, 4491, -24, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
+polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -144, 4297, -143, 4297, -154, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4491, -114, 4491, -24, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
-position = Vector2(4178, 205.5)
+position = Vector2(4178, 208)
 shape = SubResource("RectangleShape2D_bssua")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
-position = Vector2(4288, 202.5)
+position = Vector2(4288, 204)
 shape = SubResource("RectangleShape2D_7mp2q")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
-position = Vector2(4388, 191.5)
+position = Vector2(4388, 208.5)
 shape = SubResource("RectangleShape2D_xi35y")
 
 [node name="Interactions" type="Node2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true
 
 [node name="MomSleeping" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
-position = Vector2(4204, 185)
+position = Vector2(4199, 185)
 timeline = "mom_sleep1"
 autoDestruction = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
 y_sort_enabled = true
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("13_707qt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
@@ -277,3 +277,6 @@ zoom = Vector2(0.7, 0.7)
 [node name="CanvasLayer" type="CanvasLayer" parent="Cam_Movement/Camera2D"]
 
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("5_c5r8j")]
+
+[node name="AudioManager" parent="." instance=ExtResource("15_7mp2q")]
+StartMusic = "JHouse"

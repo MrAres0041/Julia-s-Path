@@ -2,10 +2,7 @@ res://scenes/acts/act_1.tscn
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
-res://scenes/utilities/dialogue_manager.tscn
-res://scenes/UI/cam_movement.tscn
-res://scenes/chars/player.tscn
-res://scenes/timelines/mom_sleep1.dtl
-res://scenes/chars/DialogChars/Narrator.dch
-res://scenes/chars/DialogChars/Julia.dch
-res://scripts/ui/cam_movement.gd
+res://scenes/UI/cam_detector.tscn
+res://scenes/utilities/audio_manager.tscn
+res://scripts/globals/g_audio.gd
+res://scripts/audio_manager.gd

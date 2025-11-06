@@ -4,7 +4,6 @@
 
 [node name="Cam_Detector1" type="Area2D"]
 script = ExtResource("1_wkm62")
-numCam = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

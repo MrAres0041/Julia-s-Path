@@ -1,5 +1,6 @@
 [style name="DefaultStyle"]
 join Julia (JuliaHappy) right
+join Gloria left
 Narrator: Your mom fell asleep on the couch yet again.
 Narrator: Work has been very demanding these last few months.
 update Julia (JuliaHappy1)

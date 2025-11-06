@@ -19,7 +19,7 @@
 &"portraits": {
 "JuliaDefault": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J2.png\""
+"image": "\"res://assets/portraits/Julia/J13.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "JuliaHappy": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J10.png\""
+"image": "\"res://assets/portraits/Julia/J12.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -37,7 +37,7 @@
 },
 "JuliaHappy1": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J8.png\""
+"image": "\"res://assets/portraits/Julia/J3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +46,7 @@
 },
 "JuliaSad0": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J6.png\""
+"image": "\"res://assets/portraits/Julia/J15.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -55,7 +55,7 @@
 },
 "JuliaSad1": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J7.png\""
+"image": "\"res://assets/portraits/Julia/J1.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -64,7 +64,7 @@
 },
 "JuliaWorried": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Julia/J5.png\""
+"image": "\"res://assets/portraits/Julia/J7.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

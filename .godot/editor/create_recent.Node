@@ -1,4 +1,8 @@
+AudioStreamPlayer
 Node2D
+DirectionalLight2D
+LightOccluder2D
+PointLight2D
 CollisionShape2D
 Sprite2D
 CollisionPolygon2D
@@ -8,7 +12,3 @@ Node
 AnimationPlayer
 TileMapLayer
 AnimationTree
-Camera2D
-TileMap
-Area2D
-Panel

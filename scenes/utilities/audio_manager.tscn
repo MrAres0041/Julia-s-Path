@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqffskyptfq1b"]
+
+[ext_resource type="Script" uid="uid://drjeij8aw82kh" path="res://scripts/audio_manager.gd" id="1_pet4t"]
+[ext_resource type="AudioStream" uid="uid://dejdtqi7sljnv" path="res://assets/audio/music/Scattle - It's Safe Now.mp3" id="2_imw6h"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_1ioei"]
+clip_count = 1
+clip_0/name = &"JHouse"
+clip_0/stream = ExtResource("2_imw6h")
+clip_0/auto_advance = 0
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_pet4t")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_1ioei")
+bus = &"music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"sfx"
