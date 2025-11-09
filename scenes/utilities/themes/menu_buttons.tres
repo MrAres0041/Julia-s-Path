@@ -43,3 +43,7 @@ Button/styles/normal = SubResource("StyleBoxEmpty_5jstl")
 Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_tfcbk")
 Button/styles/pressed = SubResource("StyleBoxEmpty_5d4ag")
 Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_eciin")
+Label/colors/font_color = Color(0.847059, 0.847059, 0.541176, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_uwpf8")

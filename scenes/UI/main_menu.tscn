@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbs2n3jjsran"]
+[gd_scene load_steps=11 format=3 uid="uid://cbs2n3jjsran"]
 
 [ext_resource type="Script" uid="uid://djn0j6o275tsb" path="res://scripts/ui/main_menu.gd" id="1_qwnig"]
 [ext_resource type="PackedScene" uid="uid://c5sf6lvb3gj3e" path="res://scenes/UI/title_bg.tscn" id="2_yonvy"]
@@ -10,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:visible")
+tracks/0/path = NodePath("Main_Menu:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("Main_Menu:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -67,6 +67,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_5jstl"]
 resource_name = "enter"
@@ -74,7 +98,7 @@ length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:visible")
+tracks/0/path = NodePath("Main_Menu:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -86,7 +110,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("Main_Menu:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -150,7 +174,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer:modulate")
+tracks/2/path = NodePath("Main_Menu:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -162,7 +186,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer:visible")
+tracks/3/path = NodePath("Main_Menu:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -184,11 +208,115 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ngj32"]
+resource_name = "enter_options"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main_Menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main_Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bm8t2"]
+resource_name = "exit_options"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main_Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main_Menu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e2p27"]
 _data = {
 &"RESET": SubResource("Animation_tfcbk"),
 &"enter": SubResource("Animation_5jstl"),
-&"exit": SubResource("Animation_e2p27")
+&"enter_options": SubResource("Animation_ngj32"),
+&"exit": SubResource("Animation_e2p27"),
+&"exit_options": SubResource("Animation_bm8t2")
 }
 
 [node name="Main_Menu" type="Control"]
@@ -218,7 +346,7 @@ expand_mode = 3
 [node name="title_bg" parent="." instance=ExtResource("2_yonvy")]
 layout_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Main_Menu" type="VBoxContainer" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -236,27 +364,152 @@ grow_vertical = 2
 theme = ExtResource("3_5jstl")
 alignment = 1
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="Play" type="Button" parent="Main_Menu"]
 layout_mode = 2
 text = "Play"
 
-[node name="Continue" type="Button" parent="VBoxContainer"]
+[node name="Continue" type="Button" parent="Main_Menu"]
 layout_mode = 2
 disabled = true
 text = "Continue"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="Main_Menu"]
 layout_mode = 2
 text = "Options"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="Main_Menu"]
 layout_mode = 2
 text = "Exit"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -194.0
+offset_right = 345.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -116.0
+offset_right = 331.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_5jstl")
+alignment = 1
+
+[node name="SoundOption" type="HBoxContainer" parent="Panel/Options"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Panel/Options/SoundOption"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/Options/SoundOption/Labels"]
+layout_mode = 2
+text = "Master Volume:"
+
+[node name="Label3" type="Label" parent="Panel/Options/SoundOption/Labels"]
+layout_mode = 2
+text = "Music Volume:"
+
+[node name="Label2" type="Label" parent="Panel/Options/SoundOption/Labels"]
+layout_mode = 2
+text = "SFX Volume:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Options/SoundOption"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Master" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+value = 50.0
+
+[node name="Music" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+value = 50.0
+
+[node name="SFX" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+value = 50.0
+
+[node name="ResolutionOption" type="HBoxContainer" parent="Panel/Options"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Options/ResolutionOption"]
+layout_mode = 2
+text = "Resolution:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Options/ResolutionOption"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="1280" type="Button" parent="Panel/Options/ResolutionOption/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "1280 x 800"
+
+[node name="1600" type="Button" parent="Panel/Options/ResolutionOption/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "1600 x 900"
+
+[node name="1980" type="Button" parent="Panel/Options/ResolutionOption/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "1980 x 1080"
+
+[node name="Screen" type="HBoxContainer" parent="Panel/Options"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Options/Screen"]
+layout_mode = 2
+text = "Fullscreen:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Options/Screen"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CheckBox" type="CheckButton" parent="Panel/Options/Screen/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Options"]
+layout_mode = 2
+alignment = 2
+
+[node name="Back" type="Button" parent="Panel/Options/HBoxContainer"]
+layout_mode = 2
+text = "Back"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_e2p27")
 }
 
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Main_Menu/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main_Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Main_Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel/Options/HBoxContainer/Back" to="." method="_on_back_pressed"]
