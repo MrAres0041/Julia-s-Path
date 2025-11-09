@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Julia's Path"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/image="uid://cxc6haeobvfht"
 config/icon="res://icon.svg"
 
 [autoload]
