@@ -1,3 +1,4 @@
+res://scripts/ui
 res://scenes/utilities
 res://scripts
 res://assets/portraits/Gloria
@@ -11,7 +12,6 @@ res://assets/maps/under/Borders
 res://assets/maps/under
 res://scenes/acts
 res://assets/maps/over
-res://scripts/ui
 res://resources/items
 res://resources
 res://scenes/utilities/themes

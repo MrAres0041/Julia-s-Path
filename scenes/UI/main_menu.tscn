@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbs2n3jjsran"]
+[gd_scene load_steps=13 format=3 uid="uid://cbs2n3jjsran"]
 
 [ext_resource type="Script" uid="uid://djn0j6o275tsb" path="res://scripts/ui/main_menu.gd" id="1_qwnig"]
 [ext_resource type="PackedScene" uid="uid://c5sf6lvb3gj3e" path="res://scenes/UI/title_bg.tscn" id="2_yonvy"]
 [ext_resource type="Theme" uid="uid://gci5r2vrqium" path="res://scenes/utilities/themes/menu_buttons.tres" id="3_5jstl"]
 [ext_resource type="Texture2D" uid="uid://1th43r42t2am" path="res://assets/ui/Name.png" id="4_tfcbk"]
+[ext_resource type="Script" uid="uid://dvus8oo4ckcmx" path="res://scripts/ui/options.gd" id="5_e2p27"]
+[ext_resource type="PackedScene" uid="uid://cqffskyptfq1b" path="res://scenes/utilities/audio_manager.tscn" id="6_ngj32"]
 
 [sub_resource type="Animation" id="Animation_tfcbk"]
 length = 0.001
@@ -144,6 +146,57 @@ tracks/3/keys = {
 "values": [Vector2(92, -25), Vector2(92, -25), Vector2(92, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ngj32"]
+resource_name = "enter_options"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main_Menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main_Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_e2p27"]
 resource_name = "exit"
 length = 3.0
@@ -206,57 +259,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ngj32"]
-resource_name = "enter_options"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Main_Menu:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Main_Menu:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_bm8t2"]
@@ -396,6 +398,7 @@ offset_right = 345.0
 offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_5jstl")
 
 [node name="Options" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -412,6 +415,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_5jstl")
 alignment = 1
+script = ExtResource("5_e2p27")
 
 [node name="SoundOption" type="HBoxContainer" parent="Panel/Options"]
 layout_mode = 2
@@ -440,17 +444,20 @@ alignment = 1
 [node name="Master" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-value = 50.0
+max_value = 6.0
+value = 2.0
 
 [node name="Music" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-value = 50.0
+max_value = 6.0
+value = 2.0
 
 [node name="SFX" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-value = 50.0
+max_value = 6.0
+value = 2.0
 
 [node name="ResolutionOption" type="HBoxContainer" parent="Panel/Options"]
 layout_mode = 2
@@ -509,7 +516,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_e2p27")
 }
 
+[node name="AudioManager" parent="." instance=ExtResource("6_ngj32")]
+
 [connection signal="pressed" from="Main_Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main_Menu/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Main_Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="Panel/Options/SoundOption/VBoxContainer/Master" to="Panel/Options" method="_on_master_value_changed"]
+[connection signal="value_changed" from="Panel/Options/SoundOption/VBoxContainer/Music" to="Panel/Options" method="_on_music_value_changed"]
+[connection signal="value_changed" from="Panel/Options/SoundOption/VBoxContainer/SFX" to="Panel/Options" method="_on_sfx_value_changed"]
+[connection signal="pressed" from="Panel/Options/ResolutionOption/HBoxContainer/1280" to="Panel/Options" method="_on_1280_pressed"]
+[connection signal="pressed" from="Panel/Options/ResolutionOption/HBoxContainer/1600" to="Panel/Options" method="_on_1600_pressed"]
+[connection signal="pressed" from="Panel/Options/ResolutionOption/HBoxContainer/1980" to="Panel/Options" method="_on_1980_pressed"]
+[connection signal="toggled" from="Panel/Options/Screen/HBoxContainer/CheckBox" to="Panel/Options" method="_on_check_box_toggled"]
 [connection signal="pressed" from="Panel/Options/HBoxContainer/Back" to="." method="_on_back_pressed"]
