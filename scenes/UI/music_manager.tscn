@@ -1,13 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgchnf1y65dqi"]
 
-[ext_resource type="AudioStream" uid="uid://dejdtqi7sljnv" path="res://assets/audio/music/Scattle - It's Safe Now.mp3" id="1_yvlsu"]
-
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_tyxn8"]
-stream_count = 1
-stream_0 = ExtResource("1_yvlsu")
+[ext_resource type="AudioStream" uid="uid://dejdtqi7sljnv" path="res://assets/audio/music/Scattle - It's Safe Now.mp3" id="1_pxxh6"]
+[ext_resource type="Script" uid="uid://bwtgbvx7ciya3" path="res://scripts/music_manager.gd" id="2_26ni4"]
 
 [node name="MusicManager" type="AudioStreamPlayer"]
-stream = SubResource("AudioStreamPlaylist_tyxn8")
-volume_db = -30.0
+stream = ExtResource("1_pxxh6")
 autoplay = true
 bus = &"music"
+parameters/looping = true
+script = ExtResource("2_26ni4")

@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
 [ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
-[ext_resource type="PackedScene" uid="uid://cqffskyptfq1b" path="res://scenes/utilities/audio_manager.tscn" id="15_7mp2q"]
+[ext_resource type="PackedScene" uid="uid://bgchnf1y65dqi" path="res://scenes/UI/music_manager.tscn" id="15_bssua"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -278,5 +278,4 @@ zoom = Vector2(0.7, 0.7)
 
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("5_c5r8j")]
 
-[node name="AudioManager" parent="." instance=ExtResource("15_7mp2q")]
-StartMusic = "JHouse"
+[node name="MusicManager" parent="." instance=ExtResource("15_bssua")]

@@ -1,3 +1,4 @@
+AudioStreamPlayer
 HBoxContainer
 Button
 Panel
@@ -11,4 +12,3 @@ VBoxContainer
 VSplitContainer
 CenterContainer
 ProgressBar
-AudioStreamPlayer

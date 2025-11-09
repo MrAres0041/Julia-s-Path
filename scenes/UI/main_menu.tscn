@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://gci5r2vrqium" path="res://scenes/utilities/themes/menu_buttons.tres" id="3_5jstl"]
 [ext_resource type="Texture2D" uid="uid://1th43r42t2am" path="res://assets/ui/Name.png" id="4_tfcbk"]
 [ext_resource type="Script" uid="uid://dvus8oo4ckcmx" path="res://scripts/ui/options.gd" id="5_e2p27"]
-[ext_resource type="PackedScene" uid="uid://cqffskyptfq1b" path="res://scenes/utilities/audio_manager.tscn" id="6_ngj32"]
+[ext_resource type="PackedScene" uid="uid://bgchnf1y65dqi" path="res://scenes/UI/music_manager.tscn" id="6_ngj32"]
 
 [sub_resource type="Animation" id="Animation_tfcbk"]
 length = 0.001
@@ -92,6 +92,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MusicManager:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_5jstl"]
@@ -259,6 +271,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MusicManager:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
 }
 
 [sub_resource type="Animation" id="Animation_bm8t2"]
@@ -445,7 +469,6 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
-value = 2.0
 
 [node name="Music" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
@@ -516,7 +539,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_e2p27")
 }
 
-[node name="AudioManager" parent="." instance=ExtResource("6_ngj32")]
+[node name="MusicManager" parent="." instance=ExtResource("6_ngj32")]
 
 [connection signal="pressed" from="Main_Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main_Menu/Options" to="." method="_on_options_pressed"]
@@ -529,3 +552,4 @@ libraries = {
 [connection signal="pressed" from="Panel/Options/ResolutionOption/HBoxContainer/1980" to="Panel/Options" method="_on_1980_pressed"]
 [connection signal="toggled" from="Panel/Options/Screen/HBoxContainer/CheckBox" to="Panel/Options" method="_on_check_box_toggled"]
 [connection signal="pressed" from="Panel/Options/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -8,7 +8,9 @@ class_name OptionsMenu
 @onready var check_box: CheckButton = $Screen/HBoxContainer/CheckBox
 
 func _ready() -> void:
-	pass
+	master.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(0)))
+	music.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(1)))
+	sfx.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(2)))
 	
 func _on_1280_pressed() -> void:
 	DisplayServer.window_set_size(Vector2(1280, 800))

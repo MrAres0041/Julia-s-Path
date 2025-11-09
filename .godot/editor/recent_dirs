@@ -1,11 +1,11 @@
+res://scenes/UI
+res://scripts
 res://scripts/ui
 res://scenes/utilities
-res://scripts
 res://assets/portraits/Gloria
 res://scenes/chars/DialogChars
 res://assets/portraits/Julia
 res://assets/audio/sfx
-res://scenes/UI
 res://scripts/globals
 res://scenes/timelines
 res://assets/maps/under/Borders

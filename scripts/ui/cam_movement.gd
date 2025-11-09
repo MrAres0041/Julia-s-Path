@@ -2,10 +2,14 @@ extends Node2D
 class_name CamMovement
 
 @export var cam:Camera2D
-@export var player:CharacterBody2D
+@export var player:Player
 
 var newCamera:Vector2
 var newCamScale:Vector2
+
+func _ready() -> void:
+		player.can_walk = false
+		$AnimationPlayer.play("enterScene")
 
 func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2, new_speed:int):
 	if !nCam.global_position==null:
@@ -27,5 +31,5 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		cam.global_position = newCamera
 		cam.zoom = newCamScale
 		$AnimationPlayer.play("fadeIn")
-	if anim_name == "fadeIn":
+	if anim_name == "fadeIn" or "enterScene":
 		player.can_walk = true

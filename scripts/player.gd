@@ -60,8 +60,6 @@ func _on_talk_manager_area_exited(area: Area2D) -> void:
 	talk_area = null
 	can_talk = false
 
-func _on_timer_timeout() -> void:
-	can_walk = true
 
 func inv_changer():
 	if inv_open:
