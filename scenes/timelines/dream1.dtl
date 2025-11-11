@@ -1,0 +1,37 @@
+[style]
+audio music_dialogic "res://assets/audio/music/Enter the Clown.mp3"
+[wait time="3.0"]
+Narrator: Everynight you have the same dream.
+[wait time="3.0"]
+join DreamAndrew center [animation="Fade In"]
+[wait time="2.0"]
+Narrator: It starts with a boy...
+[wait time="2.0"]
+Narrator: ...the ghost of someone you once loved.
+Narrator: You can't see his face, but you know him very well.
+Narrator: ...would recognize that look anywhere.
+[wait time="2.0"]
+DreamAndrew (Talking): Why are you crying?
+update DreamAndrew (DefaultAndrew)
+[wait time="2.0"]
+DreamAndrew (Talking): Thought it was you the one who didn't want to see me anymore.
+DreamAndrew (DefaultAndrew): You should be happy...
+[wait time="1.0"]
+update DreamAndrew (Mocking) [mirrored="true"]
+DreamAndrew: No more Andy nor his deranged sister, right?
+update DreamAndrew (Mocking2) [mirrored="true"]
+[wait time="2.0"]
+update DreamAndrew (Talking) [mirrored="false"]
+DreamAndrew: Ugh... come on, quit it already.
+DreamAndrew (Resigned): Gosh... It's aways the same with you.
+DreamAndrew (DefaultAndrew): Always the little girl complaining about everything.
+DreamAndrew (Mocking): Crying for things that are just inside YOUR HEAD.
+[wait time="2.0"]
+update DreamAndrew (DefaultAndrew) [mirrored="true"]
+[wait time="2.0"]
+DreamAndrew (Talking): You'll get over it.
+update DreamAndrew (DefaultAndrew)
+[wait time="2.0"]
+DreamAndrew (Talking): Eventually...
+DreamAndrew: It's not like this is the first time...
+DreamAndrew (Mocking): Bad things tend to happen to those you love, huh?

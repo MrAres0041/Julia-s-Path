@@ -1,0 +1,85 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.538113, 0.742188, 0.495758, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "DefaultStyle",
+"suffix": ""
+},
+&"default_portrait": "DefaultAndrew",
+&"description": "",
+&"display_name": "Andrew",
+&"mirror": false,
+&"nicknames": ["Andrew"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Angry2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"DefaultAndrew": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB0.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mocking": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mocking2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Resigned": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talking": {
+"export_overrides": {
+"image": "\"res://assets/portraits/DreamChars/DreamAndrew/AB3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 0.9
+}

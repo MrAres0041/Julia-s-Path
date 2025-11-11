@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwby3h1pohniw"
+path="res://.godot/imported/Enter the Clown.mp3-6f0db9d8480bb0119a4690845ac740d0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Enter the Clown.mp3"
+dest_files=["res://.godot/imported/Enter the Clown.mp3-6f0db9d8480bb0119a4690845ac740d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

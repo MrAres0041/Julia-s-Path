@@ -25,12 +25,14 @@ GAudio="*res://scripts/globals/g_audio.gd"
 [dialogic]
 
 directories/dch_directory={
+"DreamAndrew": "res://scenes/chars/DialogChars/DreamAndrew.dch",
 "Eric": "res://scenes/chars/DialogChars/Eric.dch",
 "Gloria": "res://scenes/chars/DialogChars/Gloria.dch",
 "Julia": "res://scenes/chars/DialogChars/Julia.dch",
 "Narrator": "res://scenes/chars/DialogChars/Narrator.dch"
 }
 directories/dtl_directory={
+"dream1": "res://scenes/timelines/dream1.dtl",
 "mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl"
