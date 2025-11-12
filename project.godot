@@ -26,6 +26,8 @@ GAudio="*res://scripts/globals/g_audio.gd"
 
 directories/dch_directory={
 "DreamAndrew": "res://scenes/chars/DialogChars/DreamAndrew.dch",
+"DreamNina": "res://scenes/chars/DialogChars/DreamNina.dch",
+"Echo": "res://scenes/chars/DialogChars/Echo.dch",
 "Eric": "res://scenes/chars/DialogChars/Eric.dch",
 "Gloria": "res://scenes/chars/DialogChars/Gloria.dch",
 "Julia": "res://scenes/chars/DialogChars/Julia.dch",

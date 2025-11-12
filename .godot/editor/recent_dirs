@@ -1,5 +1,8 @@
-res://assets/portraits/DreamChars/DreamAndrew
+res://assets/maps/under
+res://assets/portraits/Others
 res://scenes/chars/DialogChars
+res://assets/portraits/DreamChars/DreamNina
+res://assets/portraits/DreamChars/DreamAndrew
 res://assets/audio/music
 res://scenes/timelines
 res://scenes/acts
@@ -14,10 +17,7 @@ res://assets/portraits/Julia
 res://assets/audio/sfx
 res://scripts/globals
 res://assets/maps/under/Borders
-res://assets/maps/under
 res://assets/maps/over
 res://resources/items
 res://resources
-res://scenes/utilities/themes
-res://assets/sprites/Eric
 C:/Users/Equipo/Documents/dialogues
