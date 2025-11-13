@@ -7,7 +7,7 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "DefaultStyle",
 "suffix": ""
 },
 &"default_portrait": "GloriaDefault",
@@ -15,7 +15,7 @@
 &"display_name": "Gloria",
 &"mirror": false,
 &"nicknames": ["Gloria"],
-&"offset": Vector2(-50, 0),
+&"offset": Vector2(0, 0),
 &"portraits": {
 "GloriaDefault": {
 "export_overrides": {

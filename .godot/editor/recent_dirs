@@ -1,3 +1,5 @@
+res://assets/portraits/Gloria
+res://assets/sprites/Julia
 res://assets/maps/under
 res://assets/portraits/Others
 res://scenes/chars/DialogChars
@@ -12,12 +14,10 @@ res://scenes/UI
 res://scripts
 res://scripts/ui
 res://scenes/utilities
-res://assets/portraits/Gloria
 res://assets/portraits/Julia
 res://assets/audio/sfx
 res://scripts/globals
 res://assets/maps/under/Borders
 res://assets/maps/over
 res://resources/items
-res://resources
 C:/Users/Equipo/Documents/dialogues
