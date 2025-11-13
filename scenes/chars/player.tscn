@@ -187,23 +187,24 @@ blend_point_1/node = SubResource("AnimationNodeAnimation_xv662")
 blend_point_1/pos = Vector2(1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t25bx"]
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r04vw"]
 advance_mode = 2
-advance_expression = "!velocity"
+advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4yrg8"]
 advance_mode = 2
-advance_expression = "velocity"
+advance_condition = &"walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t25bx"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xv662"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_4yrg8")
 states/Idle/position = Vector2(368, 59)
+states/Start/position = Vector2(191, 100)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_rqvr5")
 states/walk/position = Vector2(368, 149)
-transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_t25bx"), "walk", "Idle", SubResource("AnimationNodeStateMachineTransition_r04vw"), "Idle", "walk", SubResource("AnimationNodeStateMachineTransition_4yrg8")]
+transitions = ["walk", "Idle", SubResource("AnimationNodeStateMachineTransition_r04vw"), "Idle", "walk", SubResource("AnimationNodeStateMachineTransition_4yrg8"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_t25bx")]
 
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -247,8 +248,10 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_xv662")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.0031898, 0.622047)
-parameters/walk/blend_position = Vector2(0.226475, -0.736264)
+parameters/conditions/idle = false
+parameters/conditions/walking = false
+parameters/Idle/blend_position = 0.1
+parameters/walk/blend_position = 0.0838887
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="TalkManager" to="." method="_on_talk_manager_area_entered"]

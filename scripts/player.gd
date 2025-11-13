@@ -22,6 +22,7 @@ func _physics_process(delta: float) -> void:
 	speed = base_speed
 	var playerInput = GetInput()
 	
+	
 	$TalkManager.Look_At_This(playerInput)
 	
 	if Input.is_action_just_pressed("dialogic_default_action") and can_talk and !inv_open:
@@ -34,13 +35,15 @@ func _physics_process(delta: float) -> void:
 		inv_open = false
 		can_walk = true
 
-	
-	velocity = speed * playerInput
+	if playerInput:
+		velocity = speed * playerInput
+	else:
+		velocity = Vector2.ZERO
 	
 	if can_walk and !GPlayer.is_talking:
 		move_and_slide()
 	
-	_walk_animation()
+	_walk_animation(playerInput)
 
 func GetInput():
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -51,7 +54,6 @@ func DialogicHandler(i):
 	if i == "DialogueEnded":
 		GPlayer.is_talking = false
 
-
 func _on_talk_manager_area_entered(area: Area2D) -> void:
 	talk_area = area
 	can_talk = true
@@ -59,7 +61,6 @@ func _on_talk_manager_area_entered(area: Area2D) -> void:
 func _on_talk_manager_area_exited(area: Area2D) -> void:
 	talk_area = null
 	can_talk = false
-
 
 func inv_changer():
 	if inv_open:
@@ -69,11 +70,16 @@ func inv_changer():
 		inv_open = true
 		can_walk = false
 
-func _walk_animation():
-	var idle = !velocity
+func _walk_animation(player_dir:Vector2):
 	
-	if !idle:
-		last_facing_dir = velocity
+	if velocity == Vector2.ZERO or GPlayer.is_talking or inv_open:
+		animation_tree["parameters/conditions/idle"] = true
+		animation_tree["parameters/conditions/walking"] = false
+	else:
+		animation_tree["parameters/conditions/idle"] = false
+		animation_tree["parameters/conditions/walking"] = true
+		
+		animation_tree["parameters/Idle/blend_position"] = player_dir
+		animation_tree["parameters/walk/blend_position"] = player_dir
 	
-	animation_tree.set("parameters/Idle/blend_position", last_facing_dir)
-	animation_tree.set("parameters/walk/blend_position", last_facing_dir)
+	
