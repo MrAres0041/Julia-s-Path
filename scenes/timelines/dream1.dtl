@@ -10,7 +10,7 @@ Narrator: ...would recognize that look anywhere.
 [wait time="2.0" skippable="true"]
 join DreamAndrew center [animation="Fade In"]
 [wait time="2.0" skippable="true"]
-Narrator: ...the ghost of someone you once loved.
+Narrator: It's like a ghost...[input] the ghost of someone you once loved.
 [wait time="2.0" skippable="true"]
 DreamAndrew (Talking): Why are you crying?
 update DreamAndrew (DefaultAndrew)
@@ -24,10 +24,10 @@ DreamAndrew: No more Andy nor his weird sister, right?
 update DreamAndrew (DefaultAndrew)
 [wait time="2.0" skippable="true"]
 update DreamAndrew (Talking) [mirrored="false"]
-DreamAndrew: Ugh... come on, quit it already.
-DreamAndrew (Resigned): Gosh... It's aways the same with you.
+DreamAndrew: Ugh... [input] Come on, quit it already.
+DreamAndrew (Resigned): Gosh, it's always the same with you.
 DreamAndrew (DefaultAndrew): Always the little girl complaining about everything.
-DreamAndrew (Mocking): Crying for things that are just inside YOUR HEAD.
+DreamAndrew (Mocking): Crying for things that are just inside[i] your head.
 [wait time="2.0" skippable="true"]
 update DreamAndrew (DefaultAndrew) [mirrored="true"]
 [wait time="2.0" skippable="true"]
@@ -88,8 +88,8 @@ Narrator: Not a face, not a silhouette, not even an idea of what he could look.
 Narrator: But somehow...
 Narrator: You know him.
 [wait time="2.0" skippable="true"]
-Narrator: Someone with eyes like fire, but with a voice that feels...
-Narrator: ...strangely soothing.
+Narrator: Those eyes, that voice, the whole being just felt...
+Narrator: ...sad.
 [wait time="2.0" skippable="true"]
 Echo: You're gorgeous.
 Echo: A flowe borned un a field of thorns.

@@ -1,7 +1,8 @@
+res://assets/fonts
+res://assets/portraits/Others
 res://assets/portraits/Gloria
 res://assets/sprites/Julia
 res://assets/maps/under
-res://assets/portraits/Others
 res://scenes/chars/DialogChars
 res://assets/portraits/DreamChars/DreamNina
 res://assets/portraits/DreamChars/DreamAndrew
@@ -19,5 +20,4 @@ res://assets/audio/sfx
 res://scripts/globals
 res://assets/maps/under/Borders
 res://assets/maps/over
-res://resources/items
 C:/Users/Equipo/Documents/dialogues
