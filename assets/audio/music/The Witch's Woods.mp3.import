@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckj8jxikk4va4"
+path="res://.godot/imported/The Witch's Woods.mp3-c490f5363c571fda61843abec2c6a23e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/The Witch's Woods.mp3"
+dest_files=["res://.godot/imported/The Witch's Woods.mp3-c490f5363c571fda61843abec2c6a23e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

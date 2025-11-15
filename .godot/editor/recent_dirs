@@ -1,3 +1,4 @@
+res://assets/ui
 res://assets/portraits/Gloria
 res://assets/fonts
 res://assets/portraits/Others
@@ -10,7 +11,6 @@ res://assets/audio/music
 res://scenes/timelines
 res://scenes/acts
 res://scripts/acts
-res://assets/ui
 res://scenes/UI
 res://scripts
 res://scripts/ui

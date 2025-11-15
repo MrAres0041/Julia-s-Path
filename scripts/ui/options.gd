@@ -14,16 +14,20 @@ func _ready() -> void:
 	
 func _on_1280_pressed() -> void:
 	DisplayServer.window_set_size(Vector2(1280, 800))
+	get_window().move_to_center()
 	#get_viewport().size = Vector2(1600,900)
 
 
 func _on_1600_pressed() -> void:
 	#get_viewport().size = Vector2(1600,900)
 	DisplayServer.window_set_size(Vector2(1600,900))
+	get_window().move_to_center()
+
 
 func _on_1980_pressed() -> void:
 	#get_viewport().size = Vector2(1980,1080)
 	DisplayServer.window_set_size(Vector2(1980,1080))
+	get_window().move_to_center()
 
 	
 func _on_check_box_toggled(toggled_on: bool) -> void:
