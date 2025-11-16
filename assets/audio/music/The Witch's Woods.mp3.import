@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/The Witch's Woods.mp3-c490f5363c571fda61843ab
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

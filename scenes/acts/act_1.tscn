@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=36 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
 [ext_resource type="PackedScene" uid="uid://bgchnf1y65dqi" path="res://scenes/UI/music_manager.tscn" id="15_bssua"]
+[ext_resource type="PackedScene" uid="uid://dpcbf6g8klkre" path="res://scenes/UI/audio_manager.tscn" id="16_7mp2q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -148,8 +149,10 @@ collision_mask = 19
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Room/StaticBody2D"]
 polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 429, 31, 430, 282, 309, 280, 307, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
 
-[node name="cam_0" parent="Cam_Movement/J_Room" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("6_ev3ej")]
+[node name="cam_0" parent="Cam_Movement/J_Room" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(17, 14)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
 player_location = NodePath("../../J_Corridor/player_location1")
 cam = NodePath("../../J_Corridor/1")
 scalePlayer = 0.85
@@ -186,8 +189,10 @@ position = Vector2(1229, 123)
 [node name="player_location1_1" type="Marker2D" parent="Cam_Movement/J_Corridor"]
 position = Vector2(2437, 126)
 
-[node name="Cam_Detector1" parent="Cam_Movement/J_Corridor" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("6_ev3ej")]
+[node name="Cam_Detector1" parent="Cam_Movement/J_Corridor" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(1170, 123)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
 player_location = NodePath("../../J_Room/player_location0")
 cam = NodePath("../../J_Room/0")
 zoomCam = 0.7
@@ -200,7 +205,7 @@ shape = SubResource("RectangleShape2D_ev3ej")
 position = Vector2(2427, 125)
 player_location = NodePath("../../J_Living/player_location2")
 cam = NodePath("../../J_Living/2")
-scalePlayer = 0.5
+scalePlayer = 0.49
 zoomCam = 0.9
 new_speed = 200
 
@@ -238,9 +243,10 @@ position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_707qt")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Living/Props"]
-polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -144, 4297, -143, 4297, -154, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4491, -114, 4491, -24, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
+polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4491, -114, 4491, -24, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
 position = Vector2(4178, 208)
@@ -264,7 +270,7 @@ autoDestruction = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
 y_sort_enabled = true
-scale = Vector2(0.55, 0.55)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_707qt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
@@ -280,3 +286,5 @@ zoom = Vector2(0.7, 0.7)
 
 [node name="MusicManager" parent="." instance=ExtResource("15_bssua")]
 StartingPlaylist = "JuliaHouse0"
+
+[node name="AudioManager" parent="." instance=ExtResource("16_7mp2q")]

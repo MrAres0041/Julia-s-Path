@@ -6,5 +6,3 @@
 autoplay = true
 bus = &"music"
 script = ExtResource("2_26ni4")
-
-[connection signal="finished" from="." to="." method="_on_finished"]

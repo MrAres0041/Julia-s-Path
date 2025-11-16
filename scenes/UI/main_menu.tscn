@@ -540,7 +540,7 @@ libraries = {
 }
 
 [node name="MusicManager" parent="." instance=ExtResource("6_ngj32")]
-StartingPlaylist = "menu"
+StartingPlaylist = "Testing"
 
 [connection signal="pressed" from="Main_Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main_Menu/Options" to="." method="_on_options_pressed"]

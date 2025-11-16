@@ -1,3 +1,5 @@
+res://scenes/UI
+res://scripts
 res://assets/ui
 res://assets/portraits/Gloria
 res://assets/fonts
@@ -11,8 +13,6 @@ res://assets/audio/music
 res://scenes/timelines
 res://scenes/acts
 res://scripts/acts
-res://scenes/UI
-res://scripts
 res://scripts/ui
 res://scenes/utilities
 res://assets/portraits/Julia

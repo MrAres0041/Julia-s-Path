@@ -1,5 +1,5 @@
-AnimatedSprite2D
 AudioStreamPlayer
+AnimatedSprite2D
 HBoxContainer
 Button
 Panel
@@ -12,4 +12,3 @@ HSlider
 VBoxContainer
 VSplitContainer
 CenterContainer
-ProgressBar
