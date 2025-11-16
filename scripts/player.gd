@@ -5,12 +5,9 @@ class_name Player extends CharacterBody2D
 @export var base_speed: int
 @export var inv:Inventory
 
-var inv_open:bool = false
-var can_talk:bool = false
 var speed: int
 var input: Vector2 = Vector2.ZERO
 var talk_area: Area2D
-var can_walk: bool = false
 var can_change: bool = true
 var last_facing_dir:Vector2 = Vector2(1,0)
 
@@ -25,22 +22,21 @@ func _physics_process(delta: float) -> void:
 	
 	$TalkManager.Look_At_This(playerInput)
 	
-	if Input.is_action_just_pressed("dialogic_default_action") and can_talk and !inv_open:
-		if !GPlayer.is_talking:
-			talk_area.Execute_Dialogue()
-			GPlayer.is_talking = true
+	if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking:
+		talk_area.Execute_Dialogue()
+		GPlayer.is_talking = true
 	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
 		inv_changer()
-	if Input.is_action_just_pressed("back") and inv_open:
-		inv_open = false
-		can_walk = true
+	if Input.is_action_just_pressed("back") and GPlayer.inv_open:
+		GPlayer.inv_open = false
+		GPlayer.can_walk = true
 
 	if playerInput:
 		velocity = speed * playerInput
 	else:
 		velocity = Vector2.ZERO
 	
-	if can_walk and !GPlayer.is_talking:
+	if GPlayer.can_walk and !GPlayer.is_talking:
 		move_and_slide()
 	
 	_walk_animation(playerInput)
@@ -56,23 +52,23 @@ func DialogicHandler(i):
 
 func _on_talk_manager_area_entered(area: Area2D) -> void:
 	talk_area = area
-	can_talk = true
+	GPlayer.can_talk = true
 
 func _on_talk_manager_area_exited(area: Area2D) -> void:
 	talk_area = null
-	can_talk = false
+	GPlayer.can_talk = false
 
 func inv_changer():
-	if inv_open:
-		inv_open = false
-		can_walk = true
+	if GPlayer.inv_open:
+		GPlayer.inv_open = false
+		GPlayer.can_walk = true
 	else:
-		inv_open = true
-		can_walk = false
+		GPlayer.inv_open = true
+		GPlayer.can_walk = false
 
 func _walk_animation(player_dir:Vector2):
 	
-	if velocity == Vector2.ZERO or GPlayer.is_talking or inv_open:
+	if velocity == Vector2.ZERO or GPlayer.is_talking or GPlayer.inv_open or !GPlayer.can_walk:
 		animation_tree["parameters/conditions/idle"] = true
 		animation_tree["parameters/conditions/walking"] = false
 	else:

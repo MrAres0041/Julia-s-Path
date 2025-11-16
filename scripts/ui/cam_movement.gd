@@ -8,14 +8,14 @@ var newCamera:Vector2
 var newCamScale:Vector2
 
 func _ready() -> void:
-		player.can_walk = false
+		GPlayer.can_walk = false
 		$AnimationPlayer.play("enterScene")
 
 func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2, new_speed:int):
 	if !nCam.global_position==null:
 		player.global_position = player_location.global_position
 		player.scale = scale_player
-		player.can_walk = false
+		GPlayer.can_walk = false
 		player.base_speed = new_speed
 		newCamera = nCam.global_position
 		newCamScale = scaleCam
@@ -32,4 +32,4 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		cam.zoom = newCamScale
 		$AnimationPlayer.play("fadeIn")
 	if anim_name == "fadeIn" or "enterScene":
-		player.can_walk = true
+		GPlayer.can_walk = true

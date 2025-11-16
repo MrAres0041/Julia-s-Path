@@ -5,7 +5,7 @@ class_name inv_ui
 @onready var inv:Inventory = preload("res://resources/items/inventory.tres")
 @onready var slots: Array = $Inv/GridContainer.get_children()
 
-var is_open:bool = false
+#var is_open:bool = false
 
 func _ready() -> void:
 	visible = false
@@ -15,10 +15,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
 		vis_inv()
-	if Input.is_action_just_pressed("back") and is_open and !GPlayer.is_talking:
+	if Input.is_action_just_pressed("back") and GPlayer.inv_open and !GPlayer.is_talking:
 		animation_player.play("exit")
-		is_open = false
-
 
 func _update_slots():
 	for i in range(min(inv.items.size(), slots.size())):
@@ -27,11 +25,9 @@ func _update_slots():
 func vis_inv():
 	if visible == false:
 		visible = true
-		is_open = true
 		animation_player.play("enter")
 	else:
 		animation_player.play("exit")
-		is_open = false
 
 func DialogicHandler(i):
 	if i == "ItemAdded":

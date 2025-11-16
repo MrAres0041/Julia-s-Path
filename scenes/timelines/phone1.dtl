@@ -10,3 +10,4 @@ Narrator: "You have 215 new voice mails."
 leave Julia
 Narrator: You hang it up again, for your own sake.
 [signal arg="DialogueEnded"]
+[wait time="0.3"]

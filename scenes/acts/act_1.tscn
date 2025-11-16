@@ -81,7 +81,7 @@ texture = ExtResource("2_bruh4")
 sources/0 = SubResource("TileSetAtlasSource_28v14")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddspx"]
-size = Vector2(73, 74.5)
+size = Vector2(73, 60.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
 size = Vector2(82, 62)
@@ -137,7 +137,7 @@ tile_map_data = PackedByteArray(0, 0, 9, 0, 14, 0, 0, 0, 59, 0, 1, 0, 0, 0, 21, 
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
-position = Vector2(-36, 207)
+position = Vector2(-140, 77)
 
 [node name="J_Room" type="Node2D" parent="Cam_Movement"]
 
@@ -147,7 +147,7 @@ collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Room/StaticBody2D"]
-polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 429, 31, 430, 282, 309, 280, 307, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
+polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 429, 31, 429, 308, 307, 307, 307, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
 
 [node name="cam_0" parent="Cam_Movement/J_Room" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(17, 14)
@@ -159,7 +159,7 @@ scalePlayer = 0.85
 zoomCam = 0.7
 
 [node name="CollisionShape1" type="CollisionShape2D" parent="Cam_Movement/J_Room/cam_0"]
-position = Vector2(191.5, -11.25)
+position = Vector2(191.5, -18.25)
 shape = SubResource("RectangleShape2D_ddspx")
 
 [node name="0" type="Marker2D" parent="Cam_Movement/J_Room"]
@@ -170,12 +170,12 @@ position = Vector2(209, 35)
 
 [node name="Items" type="Node" parent="Cam_Movement/J_Room"]
 
-[node name="trashCan" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+[node name="Phone" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(-185, -165)
 timeline = "phone1"
 item = ExtResource("10_te4vh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/trashCan"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Phone"]
 shape = SubResource("RectangleShape2D_te4vh")
 
 [node name="J_Corridor" type="Node2D" parent="Cam_Movement"]
