@@ -469,18 +469,19 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
+value = 3.0
 
 [node name="Music" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
-value = 2.0
+value = 3.0
 
 [node name="SFX" type="HSlider" parent="Panel/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
-value = 2.0
+value = 3.0
 
 [node name="ResolutionOption" type="HBoxContainer" parent="Panel/Options"]
 layout_mode = 2
@@ -540,7 +541,7 @@ libraries = {
 }
 
 [node name="MusicManager" parent="." instance=ExtResource("6_ngj32")]
-StartingPlaylist = "Testing"
+StartingPlaylist = "menu"
 
 [connection signal="pressed" from="Main_Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main_Menu/Options" to="." method="_on_options_pressed"]

@@ -15,8 +15,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
 		vis_inv()
+		inv_changer()
 	if Input.is_action_just_pressed("back") and GPlayer.inv_open and !GPlayer.is_talking:
 		animation_player.play("exit")
+		GPlayer.inv_open = false
+		GPlayer.can_walk = true
 
 func _update_slots():
 	for i in range(min(inv.items.size(), slots.size())):
@@ -32,3 +35,11 @@ func vis_inv():
 func DialogicHandler(i):
 	if i == "ItemAdded":
 		_update_slots()
+
+func inv_changer():
+	if GPlayer.inv_open:
+		GPlayer.inv_open = false
+		GPlayer.can_walk = true
+	else:
+		GPlayer.inv_open = true
+		GPlayer.can_walk = false

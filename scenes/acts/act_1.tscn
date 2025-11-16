@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=37 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
 [ext_resource type="PackedScene" uid="uid://bgchnf1y65dqi" path="res://scenes/UI/music_manager.tscn" id="15_bssua"]
+[ext_resource type="PackedScene" uid="uid://jopcj20kd7ck" path="res://scenes/UI/game_menu.tscn" id="15_xi35y"]
 [ext_resource type="PackedScene" uid="uid://dpcbf6g8klkre" path="res://scenes/UI/audio_manager.tscn" id="16_7mp2q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
@@ -84,7 +85,7 @@ sources/0 = SubResource("TileSetAtlasSource_28v14")
 size = Vector2(73, 60.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
-size = Vector2(82, 62)
+size = Vector2(95, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev3ej"]
 size = Vector2(44, 108)
@@ -138,6 +139,7 @@ tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
 position = Vector2(-140, 77)
+initial_facing = Vector2(1, 0)
 
 [node name="J_Room" type="Node2D" parent="Cam_Movement"]
 
@@ -176,6 +178,7 @@ timeline = "phone1"
 item = ExtResource("10_te4vh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Phone"]
+position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_te4vh")
 
 [node name="J_Corridor" type="Node2D" parent="Cam_Movement"]
@@ -283,6 +286,8 @@ zoom = Vector2(0.7, 0.7)
 [node name="CanvasLayer" type="CanvasLayer" parent="Cam_Movement/Camera2D"]
 
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("5_c5r8j")]
+
+[node name="GameMenu" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("15_xi35y")]
 
 [node name="MusicManager" parent="." instance=ExtResource("15_bssua")]
 StartingPlaylist = "JuliaHouse0"

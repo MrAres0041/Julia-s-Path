@@ -4,33 +4,27 @@ class_name Player extends CharacterBody2D
 
 @export var base_speed: int
 @export var inv:Inventory
+@export var initial_facing:Vector2 = Vector2.ZERO
 
 var speed: int
 var input: Vector2 = Vector2.ZERO
 var talk_area: Area2D
 var can_change: bool = true
-var last_facing_dir:Vector2 = Vector2(1,0)
 
 func _ready() -> void:
+	_setFacing(initial_facing)
 	Dialogic.signal_event.connect(DialogicHandler)
-
 
 func _physics_process(delta: float) -> void:
 	speed = base_speed
 	var playerInput = GetInput()
-	
 	
 	$TalkManager.Look_At_This(playerInput)
 	
 	if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking:
 		talk_area.Execute_Dialogue()
 		GPlayer.is_talking = true
-	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
-		inv_changer()
-	if Input.is_action_just_pressed("back") and GPlayer.inv_open:
-		GPlayer.inv_open = false
-		GPlayer.can_walk = true
-
+		
 	if playerInput:
 		velocity = speed * playerInput
 	else:
@@ -58,14 +52,6 @@ func _on_talk_manager_area_exited(area: Area2D) -> void:
 	talk_area = null
 	GPlayer.can_talk = false
 
-func inv_changer():
-	if GPlayer.inv_open:
-		GPlayer.inv_open = false
-		GPlayer.can_walk = true
-	else:
-		GPlayer.inv_open = true
-		GPlayer.can_walk = false
-
 func _walk_animation(player_dir:Vector2):
 	
 	if velocity == Vector2.ZERO or GPlayer.is_talking or GPlayer.inv_open or !GPlayer.can_walk:
@@ -78,4 +64,7 @@ func _walk_animation(player_dir:Vector2):
 		animation_tree["parameters/Idle/blend_position"] = player_dir
 		animation_tree["parameters/walk/blend_position"] = player_dir
 	
-	
+
+func _setFacing(newInput:Vector2):
+	input = newInput
+	animation_tree["parameters/Idle/blend_position"] = input

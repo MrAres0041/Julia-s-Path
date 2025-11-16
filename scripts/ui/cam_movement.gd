@@ -8,7 +8,7 @@ var newCamera:Vector2
 var newCamScale:Vector2
 
 func _ready() -> void:
-		GPlayer.can_walk = false
+		#GPlayer.can_walk = false
 		$AnimationPlayer.play("enterScene")
 
 func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2, new_speed:int):

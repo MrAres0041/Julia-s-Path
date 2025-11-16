@@ -471,12 +471,6 @@ flip_h = true
 position = Vector2(-1, 45.5)
 shape = SubResource("RectangleShape2D_o781t")
 
-[node name="Timer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 0.5
-one_shot = true
-autostart = true
-
 [node name="TalkManager" type="Area2D" parent="."]
 position = Vector2(-1, -61)
 collision_mask = 8
@@ -500,6 +494,5 @@ parameters/conditions/walking = false
 parameters/Idle/blend_position = Vector2(0, 0.0134529)
 parameters/walk/blend_position = 0.0
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="TalkManager" to="." method="_on_talk_manager_area_entered"]
 [connection signal="area_exited" from="TalkManager" to="." method="_on_talk_manager_area_exited"]
