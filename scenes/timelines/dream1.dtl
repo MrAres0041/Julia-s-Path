@@ -1,10 +1,17 @@
 [style]
+[wait time="2.0"]
+- Skip introductory scene.
+	[wait time="2.0"]
+	[signal arg="DialogueEnded"]
+	[end_timeline]
+- Watch it whole...
+[wait time="2.0"]
 audio music_dialogic "res://assets/audio/music/Enter the Clown.mp3"
 [background arg="res://assets/maps/under/dreamBG.png" fade="2.0"]
 [wait time="3.0" skippable="true"]
-Narrator: Everynight you have the same dream.
+Narrator: Everynight you have the same [i]dream[/i].
 [wait time="3.0" skippable="true"]
-Narrator: It starts with a boy...
+Narrator: It starts with a boy.
 Narrator: You can't see his face, but you know him very well.
 Narrator: ...would recognize that look anywhere.
 [wait time="2.0" skippable="true"]

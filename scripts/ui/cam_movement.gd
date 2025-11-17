@@ -3,6 +3,8 @@ class_name CamMovement
 
 @export var cam:Camera2D
 @export var player:Player
+@export var firstPos:Marker2D
+@export var firstScale:Vector2 = Vector2(1,1)
 
 var newCamera:Vector2
 var newCamScale:Vector2
@@ -10,6 +12,8 @@ var newCamScale:Vector2
 func _ready() -> void:
 		#GPlayer.can_walk = false
 		$AnimationPlayer.play("enterScene")
+		cam.position = firstPos.position
+		cam.scale = firstScale
 
 func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, scale_player:Vector2, scaleCam:Vector2, new_speed:int):
 	if !nCam.global_position==null:

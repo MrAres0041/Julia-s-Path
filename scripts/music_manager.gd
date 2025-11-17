@@ -6,7 +6,6 @@ class_name MusicManager
 
 var playlist = {
 	"menu": [
-		
 		preload("res://assets/audio/music/The Witch's Woods.mp3"),
 		preload("res://assets/audio/music/Enter the Clown.mp3")
 	],
@@ -20,7 +19,6 @@ var currentIndex: int = 0
 
 
 func _ready() -> void:
-	AudioServer.set_bus_volume_db(1, GAudio.musicVol)
 	currentIndex = StartingIndex
 	playPlaylist(StartingPlaylist)
 

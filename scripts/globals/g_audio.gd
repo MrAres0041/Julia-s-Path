@@ -1,16 +1,16 @@
 extends Node
 class_name G_Audio
 
-#Default Values
-var currentMusic:String
-var masterVol:float = 0.0
-var musicVol:float = 0.0
-var sfxVol:float = 0.0
+const CONFIG_PATH:String = "res://settings.cfg"
 
-func setGlobalVol(newMusVol:float, newSFXVol:float, newMasterVol:float):
-	masterVol = newMasterVol
-	musicVol = newMusVol
-	sfxVol = newSFXVol
+func setMastVol(newMasterVol:float):
+	IndexConfigs.set_value("audio", "master_volume", newMasterVol)
+	IndexConfigs.save_config()
 
-func setGlobalMus(newMusic:String):
-	currentMusic = newMusic
+func setMusVol(newMusVol:float):
+	IndexConfigs.set_value("audio", "music_volume", newMusVol)
+	IndexConfigs.save_config()
+
+func setSFXVol(newSFXVol:float):
+	IndexConfigs.set_value("audio", "sfx_volume", newSFXVol)
+	IndexConfigs.save_config()

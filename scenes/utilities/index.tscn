@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bihh8abpu6m7b"]
+
+[ext_resource type="Script" uid="uid://dth2xim4mug6r" path="res://scripts/ui/indexConfigs.gd" id="1_srl5x"]
+
+[node name="IndexConfigs" type="Node2D"]
+script = ExtResource("1_srl5x")

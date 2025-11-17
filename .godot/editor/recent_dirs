@@ -1,9 +1,10 @@
 res://scripts/ui
+res://scenes/utilities
+res://assets/fonts
 res://scenes/UI
 res://scripts
 res://assets/ui
 res://assets/portraits/Gloria
-res://assets/fonts
 res://assets/portraits/Others
 res://assets/sprites/Julia
 res://assets/maps/under
@@ -14,7 +15,6 @@ res://assets/audio/music
 res://scenes/timelines
 res://scenes/acts
 res://scripts/acts
-res://scenes/utilities
 res://assets/portraits/Julia
 res://assets/audio/sfx
 res://scripts/globals

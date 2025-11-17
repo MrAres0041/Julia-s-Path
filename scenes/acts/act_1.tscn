@@ -111,10 +111,11 @@ size = Vector2(42, 100)
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player") instance=ExtResource("1_3hmkl")]
+[node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player", "firstPos") instance=ExtResource("1_3hmkl")]
 y_sort_enabled = true
 cam = NodePath("Camera2D")
 player = NodePath("player")
+firstPos = NodePath("J_Room/0")
 
 [node name="Maps" type="Node2D" parent="Cam_Movement"]
 y_sort_enabled = true
@@ -280,7 +281,7 @@ texture = ExtResource("13_707qt")
 shape = SubResource("RectangleShape2D_frvun")
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
-position = Vector2(-2, 92)
+position = Vector2(-1971, 65)
 zoom = Vector2(0.7, 0.7)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Cam_Movement/Camera2D"]
@@ -288,6 +289,7 @@ zoom = Vector2(0.7, 0.7)
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("5_c5r8j")]
 
 [node name="GameMenu" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("15_xi35y")]
+visible = false
 
 [node name="MusicManager" parent="." instance=ExtResource("15_bssua")]
 StartingPlaylist = "JuliaHouse0"

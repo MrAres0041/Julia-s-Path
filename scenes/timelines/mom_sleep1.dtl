@@ -8,7 +8,7 @@ Narrator: Life hasn't been easy since...
 [wait time="1.5"]
 update Julia (JuliaWorried)
 [wait time="1.5"]
-Narrator: Well, you really can't remember the time when life was easy.
+Narrator: Well, you really can't remember a time when life was easy.
 update Julia (JuliaDefault)
 Narrator: Perhaps it would be better not to think too much about it.
 leave Gloria [animation="Fade Out"]

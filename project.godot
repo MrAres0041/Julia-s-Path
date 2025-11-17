@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Julia's Cycle"
+run/main_scene="uid://bihh8abpu6m7b"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="uid://cxc6haeobvfht"
@@ -23,6 +24,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GSignals="*res://scripts/globals/g_signals.gd"
 GPlayer="*res://scripts/globals/g_player.gd"
 GAudio="*res://scripts/globals/g_audio.gd"
+IndexConfigs="*res://scripts/ui/indexConfigs.gd"
 
 [dialogic]
 
@@ -88,6 +90,8 @@ audio/channel_defaults={
 }
 variables={}
 text/input_action="dialogic_default_action"
+animations/join_default="Fade In"
+animations/leave_default="Fade Out"
 
 [display]
 
