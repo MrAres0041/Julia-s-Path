@@ -9,15 +9,15 @@
 audio music_dialogic "res://assets/audio/music/Enter the Clown.mp3"
 [background arg="res://assets/maps/under/dreamBG.png" fade="2.0"]
 [wait time="3.0" skippable="true"]
-Narrator: Everynight you have the same [i]dream[/i].
+Narrator: Everynight you have the same dream.
 [wait time="3.0" skippable="true"]
-Narrator: It starts with a boy.
+Narrator: It starts with a [u]boy[/u].
 Narrator: You can't see his face, but you know him very well.
 Narrator: ...would recognize that look anywhere.
 [wait time="2.0" skippable="true"]
 join DreamAndrew center [animation="Fade In"]
 [wait time="2.0" skippable="true"]
-Narrator: It's like a ghost...[input] the ghost of someone you once loved.
+Narrator: The ghost of someone you once loved.
 [wait time="2.0" skippable="true"]
 DreamAndrew (Talking): Why are you crying?
 update DreamAndrew (DefaultAndrew)
@@ -26,22 +26,22 @@ DreamAndrew (Talking): Thought it was you the one who didn't want to see me anym
 DreamAndrew (DefaultAndrew): You should be happy...
 [wait time="1.5" skippable="true"]
 update DreamAndrew (Mocking2) [mirrored="true"]
-DreamAndrew: No more Andy nor his weird sister, right?
+DreamAndrew: No more Andy or his weird sister, right?[input][br]Such a relief!
 [wait time="2.0" skippable="true"]
 update DreamAndrew (DefaultAndrew)
 [wait time="2.0" skippable="true"]
 update DreamAndrew (Talking) [mirrored="false"]
-DreamAndrew: Ugh... [input] Come on, quit it already.
+DreamAndrew: Ugh...[input][br]Come on, quit it already.
 DreamAndrew (Resigned): Gosh, it's always the same with you.
-DreamAndrew (DefaultAndrew): Always the little girl complaining about everything.
-DreamAndrew (Mocking): Crying for things that are just inside[i] your head.
+DreamAndrew (DefaultAndrew): Always the little girl complaining about [u]everything[/u].
+DreamAndrew (Mocking): Crying for things that are just inside [u]your head[/u].
+DreamAndrew (Mocking2): So pathetic...
 [wait time="2.0" skippable="true"]
 update DreamAndrew (DefaultAndrew) [mirrored="true"]
 [wait time="2.0" skippable="true"]
-DreamAndrew (Talking): You'll get over it.
+DreamAndrew (Talking): You'll get over it.[input][br]Eventually...
 update DreamAndrew (DefaultAndrew)
 [wait time="2.0" skippable="true"]
-DreamAndrew (Talking): Eventually...
 DreamAndrew: It's not like this is the first time anyway.
 DreamAndrew (DefaultAndrew): Bad things tend to happen to those you love, huh?
 update DreamAndrew rightmost [move_time="1.0"]
@@ -51,16 +51,14 @@ Narrator: Someone distant, a face you can barely remember.
 [wait time="2.0" skippable="true"]
 join DreamNina (NinaDefault) center [animation="Fade In" wait="true" mirrored="true"]
 [wait time="2.0" skippable="true"]
-Narrator: ...the memory of someone you once cherished.
+Narrator: The memory of someone you once cherished.
 [wait time="2.0" skippable="true"]
 DreamNina (Nervous): She always forgets...
-DreamNina: I always have to come just for her to remember.
+DreamNina: I always have to show up just so she remembers.
 update DreamNina (NinaDefault) center [mirrored="false"]
 [wait time="2.0" skippable="true"]
-DreamNina (Nervous): Why?
-DreamNina: Why do you keep trying to forget?
-DreamNina (Talk): Taking those disgusting pills that make you feel horrible...
-DreamNina: ...just to forget about us.
+DreamNina (Nervous): Why?[input][br]Why do you keep trying to bury it all?
+DreamNina (Talk): Taking those disgusting pills that make you feel awful…[input][br]...just to forget about us.
 update DreamNina (NinaDefault) center [mirrored="false"]
 [wait time="2.0" skippable="true"]
 DreamNina (Nervous): About me...
@@ -75,43 +73,55 @@ update DreamNina [mirrored="false"]
 DreamNina: That's alright...
 [wait time="2.0" skippable="true"]
 DreamNina (Mocking): I have new friends now.
-DreamNina: They all crawl and ooze!
-DreamNina: We spend the whole day playing, they really like to play.
+DreamNina: They all [u]crawl[/u] and [u]ooze[/u]!
+DreamNina: We play all day long, they just never seem to get tired.
 DreamNina (Nervous): They even told me they can't wait for you to join us.
-DreamNina: They really wanna play with you too.
+DreamNina: They really want to play with you too.
 update DreamNina (NinaDefault) [mirrored="false"]
 [wait time="2.0" skippable="true"]
 DreamNina (Nervous): Maybe then you'll be able to feel better.
 update DreamNina (NinaDefault) leftmost [mirrored="true" move_time="1.0"]
 [wait time="1.5" skippable="true"]
-Narrator: And finally, the last person.
+Narrator: And then one last person.
 Narrator: Or at least, that's what you assume...
 [wait time="2.0" skippable="true"]
 join Echo center [animation="Fade In" wait="true"]
 [wait time="2.0" skippable="true"]
-Narrator: This one is different, however.
+Narrator: This one feels different...
 Narrator: You can't see anything from him.
-Narrator: Not a face, not a silhouette, not even an idea of what he could look.
-Narrator: But somehow...
-Narrator: You know him.
+Narrator: Not a face,[input] not a silhouette,[input] not even an idea of what he or she might look like.
+Narrator: But somehow…[input] you feel like you know this person.
 [wait time="2.0" skippable="true"]
-Narrator: Those eyes, that voice, the whole being just felt...
-Narrator: ...sad.
+Echo (Default): What is your story, miserable one?
 [wait time="2.0" skippable="true"]
-Echo: You're gorgeous.
-Echo: A flowe borned un a field of thorns.
-Echo: My cursed rose...
+Echo (Sad): I see...
+Echo: A flower born in a field of thorns.[input][br]A [u]cursed daisy[/u].
+update Echo (Default)
 [wait time="2.0" skippable="true"]
-Echo: Cursed rose...
+Echo (Sus): How much has this world taken from you?
+Echo: Your heart?[input][br]Your happiness?[input][br]Your mind?
+Echo: Wasn't all [u]that[/u] enough?
+Echo (Sus): How cruel.
 leave DreamAndrew [animation="Fade Out" wait="true"]
-Echo: Cursed rose...
+Echo (Sus): My poor daisy...
 leave DreamNina [animation="Fade Out" wait="true"]
-Echo: Cursed rose...
+Echo: My poor... [u]poor[/u], cursed daisy...
 leave Echo [animation="Fade Out" wait="true"]
-audio music_dialogic - [fade="1.5"]
 [background fade="2.0"]
 [wait time="2.0"]
-Echo: ...
-Echo: Please, remember...
-Echo: If all the apples rot, then...
-Echo: ...the problem might be the tree.
+Echo: Please, remember these words...
+Echo: If all the apples rot...[input][br]then the problem might be on the tree.
+audio music_dialogic - [fade="2.5"]
+[wait time="3.0" skippable="true"]
+audio sfx_dialogic "res://assets/audio/sfx/alarm.ogg" [loop="true"]
+[wait time="2.0" skippable="true"]
+[background arg="res://assets/panels/1.png" fade="0.5" transition="Simple Fade"]
+[wait time="3.0" skippable="true"]
+[background arg="res://assets/panels/2.png" fade="0.5" transition="Simple Fade"]
+[wait_input]
+audio sfx_dialogic "res://assets/audio/sfx/switch.ogg" [loop="false"]
+[background arg="res://assets/panels/3.png" fade="0.2" transition="Push Down"]
+[wait_input]
+[background fade="0.0"]
+[wait time="2.0" skippable="true"]
+Narrator: And just like that...[input] another day beggins.

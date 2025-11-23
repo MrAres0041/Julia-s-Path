@@ -15,7 +15,7 @@ func _on_1280_pressed() -> void:
 	DisplayServer.window_set_size(Vector2(1280, 800))
 	get_window().move_to_center()
 	IndexConfigs.set_value("graphics", "width", 1280)
-	IndexConfigs.set_value("graphics", "height", 720)
+	IndexConfigs.set_value("graphics", "height", 800)
 
 
 func _on_1600_pressed() -> void:

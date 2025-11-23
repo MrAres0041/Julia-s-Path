@@ -1,8 +1,10 @@
-res://scenes/utilities/index.tscn
+res://scenes/acts/act_0.tscn
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
-res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/UI/main_menu.tscn
+res://scenes/timelines/dream1.dtl
 res://scripts/ui/indexConfigs.gd
 res://scripts/ui/options.gd
+res://scripts/ui/game_options.gd
+res://scenes/utilities/themes/menu_buttons.tres
+res://scenes/UI/game_menu.tscn

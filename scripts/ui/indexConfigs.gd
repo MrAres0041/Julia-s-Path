@@ -10,7 +10,7 @@ func _ready():
 	await load_or_create_config()
 	await set_vol()
 	await set_graph()
-	get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
+	#get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
 
 
 func load_or_create_config():
@@ -28,7 +28,7 @@ func set_defaults():
 	config.set_value("audio", "sfx_volume", 1.0)
 	config.set_value("graphics", "fullscreen", false)
 	config.set_value("graphics", "width", 1280)
-	config.set_value("graphics", "height", 720)
+	config.set_value("graphics", "height", 800)
 
 func save_config():
 	config.save(CONFIG_PATH)
