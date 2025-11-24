@@ -38,10 +38,16 @@ directories/dch_directory={
 "Narrator": "res://scenes/chars/DialogChars/Narrator.dch"
 }
 directories/dtl_directory={
+"bed_j": "res://scenes/timelines/bed_j.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",
+"frame_collection": "res://scenes/timelines/frame_collection.dtl",
+"guitar_frame": "res://scenes/timelines/guitar_frame.dtl",
+"locked_door_d": "res://scenes/timelines/locked_door_d.dtl",
 "mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
-"test_1": "res://scenes/timelines/test_1.dtl"
+"ropero_j": "res://scenes/timelines/ropero_j.dtl",
+"test_1": "res://scenes/timelines/test_1.dtl",
+"trash_j1": "res://scenes/timelines/trash_j1.dtl"
 }
 layout/style_directory={
 "DefaultStyle": "res://assets/styles/DefaultStyle.tres"

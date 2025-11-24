@@ -1,0 +1,4 @@
+Narrator: Some old memories.
+Narrator: Strange[input]— you always get serious chills whenever you look at the broken frame.[input][br]Your mom never told you why, but she insists on keeping it there...
+Narrator: Whatever the reason, you don’t feel like looking at it for too long.
+[signal arg="DialogueEnded"]

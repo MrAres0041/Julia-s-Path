@@ -1,3 +1,4 @@
+res://scenes/timelines
 res://assets/audio/sfx
 res://assets/panels
 res://scripts/ui
@@ -14,7 +15,6 @@ res://scenes/chars/DialogChars
 res://assets/portraits/DreamChars/DreamNina
 res://assets/portraits/DreamChars/DreamAndrew
 res://assets/audio/music
-res://scenes/timelines
 res://scenes/acts
 res://scripts/acts
 res://assets/portraits/Julia

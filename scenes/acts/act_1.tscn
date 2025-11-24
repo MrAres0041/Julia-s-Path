@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=43 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -87,11 +87,29 @@ size = Vector2(73, 60.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
 size = Vector2(95, 62)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghp2r"]
+size = Vector2(168, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jtyn"]
+size = Vector2(172, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vi8hp"]
+size = Vector2(56, 78)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev3ej"]
 size = Vector2(44, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6gj0"]
 size = Vector2(20, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8117"]
+size = Vector2(140, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cs5s"]
+size = Vector2(193, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp7ld"]
+size = Vector2(171, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_707qt"]
 size = Vector2(20, 80)
@@ -150,7 +168,7 @@ collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Room/StaticBody2D"]
-polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 429, 31, 429, 308, 307, 307, 307, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
+polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 434, 34, 433, 277, 291, 281, 290, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
 
 [node name="cam_0" parent="Cam_Movement/J_Room" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(17, 14)
@@ -181,6 +199,29 @@ item = ExtResource("10_te4vh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Phone"]
 position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_te4vh")
+
+[node name="Bed" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+timeline = "bed_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Bed"]
+position = Vector2(-338, 95)
+shape = SubResource("RectangleShape2D_ghp2r")
+
+[node name="Ropero" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(0, -55)
+timeline = "ropero_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Ropero"]
+position = Vector2(-10, 18.5)
+shape = SubResource("RectangleShape2D_6jtyn")
+
+[node name="Trash" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(377, 282)
+timeline = "trash_j1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Trash"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_vi8hp")
 
 [node name="J_Corridor" type="Node2D" parent="Cam_Movement"]
 
@@ -225,6 +266,29 @@ position = Vector2(1854, -4)
 polygon = PackedVector2Array(-712, 58, -561, 56, -562, 86, -457, 88, -457, 68, -420, 68, -420, 54, -275, 53, -275, 67, -150, 67, -148, 96, 170, 93, 170, 63, 303, 64, 304, 53, 449, 53, 450, 64, 615, 63, 615, 195, -741, 195, -739, 249, 740, 218, 715, -166, -734, -165, -732, 59)
 
 [node name="Items" type="Node" parent="Cam_Movement/J_Corridor"]
+
+[node name="LockedDoor" parent="Cam_Movement/J_Corridor/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(2230, 0)
+timeline = "locked_door_d"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Corridor/Items/LockedDoor"]
+shape = SubResource("RectangleShape2D_e8117")
+
+[node name="FrameCollection" parent="Cam_Movement/J_Corridor/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(1870, 0)
+timeline = "frame_collection"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Corridor/Items/FrameCollection"]
+position = Vector2(-5.5, 5)
+shape = SubResource("RectangleShape2D_2cs5s")
+
+[node name="GuitarFrame" parent="Cam_Movement/J_Corridor/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(1254, -28)
+timeline = "guitar_frame"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Corridor/Items/GuitarFrame"]
+position = Vector2(55.5, -12.5)
+shape = SubResource("RectangleShape2D_sp7ld")
 
 [node name="J_Living" type="Node2D" parent="Cam_Movement"]
 y_sort_enabled = true

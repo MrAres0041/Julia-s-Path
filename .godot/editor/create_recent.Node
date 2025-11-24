@@ -1,3 +1,4 @@
+CollisionShape2D
 CanvasLayer
 AnimationPlayer
 Button
@@ -11,5 +12,3 @@ CheckButton
 CheckBox
 Label
 MarginContainer
-Container
-HSlider
