@@ -11,6 +11,7 @@ var newCamScale:Vector2
 
 func _ready() -> void:
 		#GPlayer.can_walk = false
+		modulate = Color(1,1,1,0)
 		cam.position = firstPos.position
 		cam.zoom = firstScale.CamScale
 		$AnimationPlayer.play("enterScene")

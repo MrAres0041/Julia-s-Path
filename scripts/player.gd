@@ -24,6 +24,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking:
 		talk_area.Execute_Dialogue()
 		GPlayer.is_talking = true
+	
+	if Input.is_action_pressed("run"):
+		speed = speed*1.5
+	
+	if Input.is_action_just_released("run"):
+		speed = base_speed
 		
 	if playerInput:
 		velocity = speed * playerInput
