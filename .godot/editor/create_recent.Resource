@@ -1,2 +1,3 @@
+MapVariables
 Inventory
 Inv_Item

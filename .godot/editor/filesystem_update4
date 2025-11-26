@@ -3,5 +3,12 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
+res://resources/maps/map_vars.gd
+res://scripts/ui/cam_detector.gd
+res://resources/maps/J_Room.tres
 res://scenes/acts/act_0.tscn
 res://scenes/utilities/dialogue_manager.tscn
+res://resources/maps/J_Corridor.tres
+res://resources/maps/J_Bathroom.tres
+res://resources/maps/J_Living.tres
+res://scripts/ui/cam_movement.gd
