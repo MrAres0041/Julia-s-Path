@@ -4,10 +4,4 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_nam
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/acts/act_0.tscn
-res://scenes/UI/cam_movement.tscn
-res://scenes/timelines/bed_j.dtl
-res://scenes/timelines/trash_j1.dtl
-res://scenes/timelines/ropero_j.dtl
-res://scenes/timelines/locked_door_d.dtl
-res://scenes/timelines/frame_collection.dtl
-res://scenes/timelines/guitar_frame.dtl
+res://scenes/utilities/dialogue_manager.tscn

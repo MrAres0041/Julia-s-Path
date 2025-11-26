@@ -45,6 +45,7 @@ directories/dtl_directory={
 "locked_door_d": "res://scenes/timelines/locked_door_d.dtl",
 "mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
+"photograph": "res://scenes/timelines/photograph.dtl",
 "ropero_j": "res://scenes/timelines/ropero_j.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl",
 "trash_j1": "res://scenes/timelines/trash_j1.dtl"

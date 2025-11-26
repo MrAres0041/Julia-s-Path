@@ -109,18 +109,18 @@ Echo: My poor... [u]poor[/u], cursed daisy...
 leave Echo [animation="Fade Out" wait="true"]
 [background fade="2.0"]
 [wait time="2.0"]
-Echo: Please, remember these words...
-Echo: If all the apples rot...[input][br]then the problem might be on the tree.
+Echo: Please, remember...[input] I need you to remember...
+Echo: If all the apples rot...[input][br]Then the problem might be on the tree.
 audio music_dialogic - [fade="2.5"]
 [wait time="3.0" skippable="true"]
 audio sfx_dialogic "res://assets/audio/sfx/alarm.ogg" [loop="true"]
 [wait time="2.0" skippable="true"]
 [background arg="res://assets/panels/1.png" fade="0.5" transition="Simple Fade"]
 [wait time="3.0" skippable="true"]
-[background arg="res://assets/panels/2.png" fade="0.5" transition="Simple Fade"]
+[background arg="res://assets/panels/2.png" fade="0.2" transition="Push Left"]
 [wait_input]
 audio sfx_dialogic "res://assets/audio/sfx/switch.ogg" [loop="false"]
-[background arg="res://assets/panels/3.png" fade="0.2" transition="Push Down"]
+[background arg="res://assets/panels/3.png" fade="0.2" transition="Push Up"]
 [wait_input]
 [background fade="0.0"]
 [wait time="2.0" skippable="true"]

@@ -1,3 +1,5 @@
+res://assets/maps/under/Borders
+res://assets/maps/under
 res://scenes/timelines
 res://assets/audio/sfx
 res://assets/panels
@@ -10,7 +12,6 @@ res://assets/ui
 res://assets/portraits/Gloria
 res://assets/portraits/Others
 res://assets/sprites/Julia
-res://assets/maps/under
 res://scenes/chars/DialogChars
 res://assets/portraits/DreamChars/DreamNina
 res://assets/portraits/DreamChars/DreamAndrew
@@ -19,5 +20,4 @@ res://scenes/acts
 res://scripts/acts
 res://assets/portraits/Julia
 res://scripts/globals
-res://assets/maps/under/Borders
 C:/Users/Equipo/Documents/dialogues
