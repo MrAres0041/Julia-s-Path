@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=57 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -137,6 +137,15 @@ size = Vector2(171, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xx8qm"]
 size = Vector2(214, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyd8u"]
+size = Vector2(340, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tui3u"]
+size = Vector2(92, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_td3a4"]
+size = Vector2(62, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_707qt"]
 size = Vector2(20, 80)
@@ -366,6 +375,31 @@ mapProps = ExtResource("13_vi8hp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Cam_Detector1"]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_xx8qm")
+
+[node name="Items" type="Node" parent="Cam_Movement/J_Bathroom"]
+
+[node name="Shower" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(2129, -1112)
+timeline = "shower_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Shower"]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_wyd8u")
+
+[node name="Toiler" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(1381, -1194)
+timeline = "toiler_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Toiler"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_tui3u")
+
+[node name="Bottles" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(1683, -1157)
+timeline = "weird_bottles"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Bottles"]
+shape = SubResource("RectangleShape2D_td3a4")
 
 [node name="J_Living" type="Node2D" parent="Cam_Movement"]
 y_sort_enabled = true

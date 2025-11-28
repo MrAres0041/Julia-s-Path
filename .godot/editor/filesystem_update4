@@ -3,8 +3,12 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
+res://scenes/timelines/toiler_j.dtl
+res://scenes/chars/DialogChars/Narrator.dch
 res://scenes/acts/act_0.tscn
-res://scenes/utilities/dialogue_manager.tscn
-res://scripts/ui/cam_movement.gd
 res://scenes/chars/player.tscn
-res://scripts/player.gd
+res://scenes/utilities/dialogue_manager.tscn
+res://scenes/timelines/ropero_j.dtl
+res://scenes/timelines/shower_j.dtl
+res://scenes/timelines/weird_bottles.dtl
+res://scenes/timelines/trash_j1.dtl

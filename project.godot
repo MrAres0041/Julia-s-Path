@@ -47,8 +47,11 @@ directories/dtl_directory={
 "phone1": "res://scenes/timelines/phone1.dtl",
 "photograph": "res://scenes/timelines/photograph.dtl",
 "ropero_j": "res://scenes/timelines/ropero_j.dtl",
+"shower_j": "res://scenes/timelines/shower_j.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl",
-"trash_j1": "res://scenes/timelines/trash_j1.dtl"
+"toiler_j": "res://scenes/timelines/toiler_j.dtl",
+"trash_j1": "res://scenes/timelines/trash_j1.dtl",
+"weird_bottles": "res://scenes/timelines/weird_bottles.dtl"
 }
 layout/style_directory={
 "DefaultStyle": "res://assets/styles/DefaultStyle.tres"
