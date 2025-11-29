@@ -1,16 +1,13 @@
-[gd_scene load_steps=32 format=3 uid="uid://d1wqlmfexqt02"]
+[gd_scene load_steps=31 format=3 uid="uid://d1wqlmfexqt02"]
 
 [ext_resource type="Script" uid="uid://deul77iwudcc7" path="res://scripts/player.gd" id="1_o781t"]
 [ext_resource type="Resource" uid="uid://blpsffokh0v5h" path="res://resources/items/inventory.tres" id="2_t25bx"]
 [ext_resource type="Texture2D" uid="uid://b3rnqeq1yhqp4" path="res://assets/sprites/Julia/Jilia1.png" id="2_wyvug"]
-[ext_resource type="Script" uid="uid://bo3gxv4e1h6df" path="res://scripts/talk_manager.gd" id="3_wyvug"]
+[ext_resource type="PackedScene" uid="uid://5xdnqd538gwj" path="res://scenes/utilities/talk_manager.tscn" id="4_r04vw"]
 [ext_resource type="Texture2D" uid="uid://kje4bpfa83xj" path="res://assets/sprites/Julia/JiliaBack.png" id="5_r04vw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o781t"]
 size = Vector2(126, 49)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyvug"]
-size = Vector2(24, 160)
 
 [sub_resource type="Animation" id="Animation_r04vw"]
 length = 0.001
@@ -471,14 +468,8 @@ flip_h = true
 position = Vector2(-1, 45.5)
 shape = SubResource("RectangleShape2D_o781t")
 
-[node name="TalkManager" type="Area2D" parent="."]
+[node name="TalkManager" parent="." instance=ExtResource("4_r04vw")]
 position = Vector2(-1, -61)
-collision_mask = 8
-script = ExtResource("3_wyvug")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkManager"]
-position = Vector2(0, 88)
-shape = SubResource("RectangleShape2D_wyvug")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -493,6 +484,3 @@ parameters/conditions/idle = false
 parameters/conditions/walking = false
 parameters/Idle/blend_position = Vector2(0, 0.0134529)
 parameters/walk/blend_position = 0.0
-
-[connection signal="area_entered" from="TalkManager" to="." method="_on_talk_manager_area_entered"]
-[connection signal="area_exited" from="TalkManager" to="." method="_on_talk_manager_area_exited"]

@@ -127,7 +127,7 @@ size = Vector2(20, 100)
 size = Vector2(138, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8117"]
-size = Vector2(140, 154)
+size = Vector2(140, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cs5s"]
 size = Vector2(193, 96)
@@ -330,6 +330,7 @@ position = Vector2(2230, 0)
 timeline = "locked_door_d"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Corridor/Items/LockedDoor"]
+position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_e8117")
 
 [node name="FrameCollection" parent="Cam_Movement/J_Corridor/Items" instance=ExtResource("9_amb7k")]
