@@ -24,11 +24,11 @@ func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, 
 		player.base_speed = new_speed
 		newCamera = nCam.global_position
 		newCamScale = scaleCam
-		_fadeOut(nCam,scaleCam)
+		_fadeOut()
 	else:
 		print(nCam.global_position)
 	
-func _fadeOut(nCam, scaleCam):
+func _fadeOut():
 	$AnimationPlayer.play("fadeOut")
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

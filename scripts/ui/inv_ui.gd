@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("inv") and !GPlayer.is_talking:
 		vis_inv()
 		inv_changer()
-	if Input.is_action_just_pressed("back") and GPlayer.inv_open and !GPlayer.is_talking:
+	if Input.is_action_just_released("back") and GPlayer.inv_open and !GPlayer.is_talking:
 		animation_player.play("exit")
 		GPlayer.inv_open = false
 		GPlayer.can_walk = true

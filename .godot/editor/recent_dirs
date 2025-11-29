@@ -1,10 +1,11 @@
-res://scenes/utilities
+res://assets/panels
 res://scenes/timelines
+res://resources/items/
+res://scenes/utilities
 res://resources/maps/
 res://assets/maps/under/Borders
 res://assets/maps/under
 res://assets/audio/sfx
-res://assets/panels
 res://scripts/ui
 res://assets/fonts
 res://scenes/UI
@@ -19,5 +20,4 @@ res://assets/portraits/DreamChars/DreamAndrew
 res://assets/audio/music
 res://scenes/acts
 res://scripts/acts
-res://assets/portraits/Julia
 C:/Users/Equipo/Documents/dialogues
