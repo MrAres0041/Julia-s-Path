@@ -1,0 +1,2 @@
+Narrator: The phone rings...[input][br]But nobody answers.
+[signal arg="DialogueEnded"]

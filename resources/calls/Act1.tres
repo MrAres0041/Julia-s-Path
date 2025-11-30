@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CallList" load_steps=2 format=3 uid="uid://dq4qqlkrttkl1"]
+
+[ext_resource type="Script" uid="uid://cinojxh4ygqig" path="res://resources/callList.gd" id="1_rtfmh"]
+
+[resource]
+script = ExtResource("1_rtfmh")
+callist = Array[String](["111111"])
+dialogues = Array[String](["test_1"])
+metadata/_custom_type_script = "uid://cinojxh4ygqig"

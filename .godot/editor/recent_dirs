@@ -1,3 +1,7 @@
+res://resources/calls/
+res://resources/
+res://scenes/timelines/calls
+res://assets/styles
 res://assets/panels
 res://scenes/timelines
 res://resources/items/
@@ -16,8 +20,4 @@ res://assets/portraits/Others
 res://assets/sprites/Julia
 res://scenes/chars/DialogChars
 res://assets/portraits/DreamChars/DreamNina
-res://assets/portraits/DreamChars/DreamAndrew
-res://assets/audio/music
-res://scenes/acts
-res://scripts/acts
 C:/Users/Equipo/Documents/dialogues
