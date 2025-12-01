@@ -6,6 +6,9 @@ class_name padlocker
 @onready var textlabel: RichTextLabel = $RichTextLabel
 var lenght:int
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(DialogicHandler)
+
 func _physics_process(delta: float) -> void:
 	lenght = textlabel.get_parsed_text().length()
 	if lenght == 6:
@@ -57,3 +60,7 @@ func _on_button_9_pressed() -> void:
 func _playRandomSound():
 	$AudioManager.pitch_scale = (randf_range(0.8,1.1))
 	$AudioManager.playSFX("Phone",0)
+
+func DialogicHandler(i):
+	if i == "DialogueEnded":
+		queue_free()
