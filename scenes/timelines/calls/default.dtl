@@ -1,2 +1,3 @@
 Narrator: The phone rings...[input][br]But nobody answers.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

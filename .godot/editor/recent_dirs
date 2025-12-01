@@ -1,3 +1,4 @@
+res://scenes/UI
 res://resources/calls/
 res://resources/
 res://scenes/timelines/calls
@@ -12,7 +13,6 @@ res://assets/maps/under
 res://assets/audio/sfx
 res://scripts/ui
 res://assets/fonts
-res://scenes/UI
 res://scripts
 res://assets/ui
 res://assets/portraits/Gloria

@@ -1,13 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdynbb4po33x2"]
+[gd_scene load_steps=6 format=3 uid="uid://cdynbb4po33x2"]
 
 [ext_resource type="Script" uid="uid://c5wc725lv1cl7" path="res://scripts/ui/padlocker.gd" id="1_3w5m7"]
 [ext_resource type="Theme" uid="uid://dmo5g5h00lpnj" path="res://assets/styles/padlockerTheme.tres" id="1_n3hj5"]
 [ext_resource type="Texture2D" uid="uid://dmtw5il0h2gp4" path="res://assets/ui/PhoneKey.png" id="3_1y4r7"]
-[ext_resource type="Resource" uid="uid://dq4qqlkrttkl1" path="res://resources/calls/Act1.tres" id="3_jwfvc"]
 [ext_resource type="Texture2D" uid="uid://dwxviqk4ey5r1" path="res://assets/ui/PhoneUI.png" id="3_n3hj5"]
 [ext_resource type="PackedScene" uid="uid://dpcbf6g8klkre" path="res://scenes/UI/audio_manager.tscn" id="5_1y4r7"]
 
-[node name="padlocker" type="Control"]
+[node name="PadLocker" type="CanvasLayer"]
+script = ExtResource("1_3w5m7")
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,12 +17,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_n3hj5")
-script = ExtResource("1_3w5m7")
-callList = ExtResource("3_jwfvc")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+z_index = 1
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
 offset_left = 389.0
 offset_top = 153.0
 offset_right = 703.0
@@ -29,94 +29,102 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 2
+[node name="GridContainer" type="GridContainer" parent="Control"]
+z_index = 1
 offset_left = 380.0
 offset_top = 353.0
 offset_right = 712.0
 offset_bottom = 685.0
 columns = 3
 
-[node name="Button1" type="Button" parent="GridContainer"]
+[node name="Button1" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "1"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button2" type="Button" parent="GridContainer"]
+[node name="Button2" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "2"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button3" type="Button" parent="GridContainer"]
+[node name="Button3" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "3"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button4" type="Button" parent="GridContainer"]
+[node name="Button4" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "4"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button5" type="Button" parent="GridContainer"]
+[node name="Button5" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "5"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button6" type="Button" parent="GridContainer"]
+[node name="Button6" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "6"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button7" type="Button" parent="GridContainer"]
+[node name="Button7" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "7"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button8" type="Button" parent="GridContainer"]
+[node name="Button8" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "8"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="Button9" type="Button" parent="GridContainer"]
+[node name="Button9" type="Button" parent="Control/GridContainer"]
 layout_mode = 2
 text = "9"
 icon = ExtResource("3_1y4r7")
 flat = true
 icon_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 0
+[node name="TextureRect" type="TextureRect" parent="Control"]
 offset_left = 1.0
 offset_right = 1281.0
 offset_bottom = 800.0
 mouse_filter = 2
 texture = ExtResource("3_n3hj5")
 
-[node name="AudioManager" parent="." instance=ExtResource("5_1y4r7")]
+[node name="AudioManager" parent="Control" instance=ExtResource("5_1y4r7")]
 
-[connection signal="pressed" from="GridContainer/Button1" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="GridContainer/Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="GridContainer/Button6" to="." method="_on_button_6_pressed"]
-[connection signal="pressed" from="GridContainer/Button7" to="." method="_on_button_7_pressed"]
-[connection signal="pressed" from="GridContainer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[node name="Panel" type="Panel" parent="Control"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="Control/GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Button9" to="." method="_on_button_9_pressed"]

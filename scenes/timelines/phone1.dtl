@@ -1,13 +1,3 @@
 [style name="DefaultStyle"]
-join Julia (JuliaDefault) right
-Narrator: The phone awaits on the corner.
-join Julia (JuliaSad0) right
-Narrator: It's image, cold and dusty, both tempts and terrifies your bones.
-join Julia (JuliaSad1) right
-audio sfx_dialogic "res://assets/audio/sfx/phone.ogg"
-[wait time="3.0"]
 Narrator: "You have 215 new voice mails."
-leave Julia
-Narrator: You hang it up again, for your own sake.
-[signal arg="DialogueEnded"]
-[wait time="0.3"]
+do GPSignals.SummonPhone("Act1")

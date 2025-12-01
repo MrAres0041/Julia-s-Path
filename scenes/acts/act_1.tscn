@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=57 format=3 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://cdiaqc5cexjxp" path="res://assets/maps/under/j_bathroom.png" id="8_frvun"]
 [ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="9_amb7k"]
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
-[ext_resource type="Resource" uid="uid://d2u0kgfbqqyoj" path="res://resources/items/item_test.tres" id="10_te4vh"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
 [ext_resource type="Resource" uid="uid://cbawodteqhpt3" path="res://resources/maps/J_Corridor.tres" id="13_vi8hp"]
 [ext_resource type="Resource" uid="uid://cr0f7lfird0ip" path="res://resources/maps/J_Room.tres" id="15_6jtyn"]
@@ -231,7 +230,7 @@ position = Vector2(209, 35)
 [node name="Phone" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(-185, -165)
 timeline = "phone1"
-item = ExtResource("10_te4vh")
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Phone"]
 position = Vector2(6.5, 0)

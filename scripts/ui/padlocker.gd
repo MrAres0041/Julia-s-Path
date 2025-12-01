@@ -1,9 +1,11 @@
-extends Control
+extends CanvasLayer
 class_name padlocker
 
 @export var callList:CallList
 
-@onready var textlabel: RichTextLabel = $RichTextLabel
+@onready var textlabel: RichTextLabel = $Control/RichTextLabel
+@onready var L_AudioManager: AudioManager = $Control/AudioManager
+
 var lenght:int
 
 func _ready() -> void:
@@ -12,12 +14,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	lenght = textlabel.get_parsed_text().length()
 	if lenght == 6:
-		for call in callList.callist:
-			if textlabel.get_parsed_text() == call:
-				var index:int = callList.callist.find(call)
-				callList._callTheNumber(callList.dialogues[index])
-			else:
-				callList._callTheNumber("default")
+		if callList.callist.has(textlabel.get_parsed_text()):
+			for call in callList.callist:
+				if textlabel.get_parsed_text() == call:
+					var index:int = callList.callist.find(call)
+					callList._callTheNumber(callList.dialogues[index])
+		else:
+			callList._callTheNumber("default")
 
 		textlabel.text = ""
 
@@ -58,8 +61,8 @@ func _on_button_9_pressed() -> void:
 	_playRandomSound()
 
 func _playRandomSound():
-	$AudioManager.pitch_scale = (randf_range(0.8,1.1))
-	$AudioManager.playSFX("Phone",0)
+	L_AudioManager.pitch_scale = (randf_range(0.8,1.1))
+	L_AudioManager.playSFX("Phone",0)
 
 func DialogicHandler(i):
 	if i == "DialogueEnded":
