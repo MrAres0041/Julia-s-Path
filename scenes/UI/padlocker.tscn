@@ -21,6 +21,7 @@ theme = ExtResource("1_n3hj5")
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 z_index = 1
 custom_minimum_size = Vector2(0, 20)
+layout_mode = 0
 offset_left = 389.0
 offset_top = 153.0
 offset_right = 703.0
@@ -31,6 +32,7 @@ vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="Control"]
 z_index = 1
+layout_mode = 0
 offset_left = 380.0
 offset_top = 353.0
 offset_right = 712.0
@@ -101,6 +103,7 @@ flat = true
 icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 1281.0
 offset_bottom = 800.0

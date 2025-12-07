@@ -1,4 +1,4 @@
-Narrator: Look![input][br]The place where your heart rests…[input] in pieces.
+Narrator: Beneath dust and cockroachesrests lie the pieces of your heart.[input][br]And many bad drawings.
 Narrator: There’s also a note here.
 audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 Narrator: You picked up a note![input][br](You promised you wouldn’t do this to yourself, though…)

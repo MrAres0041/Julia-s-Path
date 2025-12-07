@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=64 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -10,10 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://bjdbvswk1teht" path="res://assets/maps/under/Borders/j_bathroom_border.png" id="5_ghp2r"]
 [ext_resource type="Texture2D" uid="uid://bot0eaj2or1ve" path="res://assets/maps/under/j_living.png" id="6_707qt"]
 [ext_resource type="PackedScene" uid="uid://ci4mw2twocy13" path="res://scenes/UI/cam_detector.tscn" id="6_ev3ej"]
+[ext_resource type="Texture2D" uid="uid://ccn20dea3oqhm" path="res://assets/maps/under/Borders/j_garage_border.png" id="7_nxw7d"]
 [ext_resource type="Texture2D" uid="uid://b4d1l6ellxc2r" path="res://assets/maps/under/j_corridor.png" id="8_amb7k"]
 [ext_resource type="Texture2D" uid="uid://cdiaqc5cexjxp" path="res://assets/maps/under/j_bathroom.png" id="8_frvun"]
 [ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="9_amb7k"]
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
+[ext_resource type="Texture2D" uid="uid://dtrfvgejx0rjn" path="res://assets/maps/under/j_garage.png" id="11_fkol3"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
 [ext_resource type="Resource" uid="uid://cbawodteqhpt3" path="res://resources/maps/J_Corridor.tres" id="13_vi8hp"]
 [ext_resource type="Resource" uid="uid://cr0f7lfird0ip" path="res://resources/maps/J_Room.tres" id="15_6jtyn"]
@@ -23,6 +25,7 @@
 [ext_resource type="Resource" uid="uid://ly4of8hqrepu" path="res://resources/maps/J_Living.tres" id="17_2cs5s"]
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
+[ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -46,11 +49,17 @@ texture = ExtResource("5_ghp2r")
 12:3/size_in_atlas = Vector2i(63, 44)
 12:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx8qm"]
+texture = ExtResource("7_nxw7d")
+15:2/size_in_atlas = Vector2i(54, 47)
+15:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_4ecay"]
 sources/0 = SubResource("TileSetAtlasSource_mf6ci")
 sources/2 = SubResource("TileSetAtlasSource_ev3ej")
 sources/1 = SubResource("TileSetAtlasSource_bssua")
 sources/3 = SubResource("TileSetAtlasSource_6jtyn")
+sources/4 = SubResource("TileSetAtlasSource_xx8qm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hmkl"]
 texture = ExtResource("1_crqd6")
@@ -67,6 +76,11 @@ texture = ExtResource("8_amb7k")
 1:5/size_in_atlas = Vector2i(83, 25)
 1:5/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyd8u"]
+texture = ExtResource("11_fkol3")
+15:2/size_in_atlas = Vector2i(54, 47)
+15:2/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghp2r"]
 texture = ExtResource("8_frvun")
 12:3/size_in_atlas = Vector2i(63, 44)
@@ -77,6 +91,7 @@ sources/0 = SubResource("TileSetAtlasSource_3hmkl")
 sources/2 = SubResource("TileSetAtlasSource_amb7k")
 sources/1 = SubResource("TileSetAtlasSource_7mp2q")
 sources/4 = SubResource("TileSetAtlasSource_ghp2r")
+sources/3 = SubResource("TileSetAtlasSource_wyd8u")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28v14"]
 texture = ExtResource("2_bruh4")
@@ -95,6 +110,15 @@ texture = ExtResource("2_bruh4")
 118:3/size_in_atlas = Vector2i(4, 9)
 118:3/0 = 0
 118:3/0/y_sort_origin = -50
+1:26/size_in_atlas = Vector2i(19, 25)
+1:26/0 = 0
+1:26/0/y_sort_origin = -160
+23:26/size_in_atlas = Vector2i(7, 22)
+23:26/0 = 0
+23:26/0/y_sort_origin = -55
+35:26/size_in_atlas = Vector2i(5, 25)
+35:26/0 = 0
+35:26/0/y_sort_origin = 100
 
 [sub_resource type="TileSet" id="TileSet_mf6ci"]
 sources/0 = SubResource("TileSetAtlasSource_28v14")
@@ -116,6 +140,9 @@ size = Vector2(56, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxw7d"]
 size = Vector2(80, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slgqg"]
+size = Vector2(144, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev3ej"]
 size = Vector2(44, 108)
@@ -150,6 +177,9 @@ size = Vector2(62, 60)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_707qt"]
 size = Vector2(20, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0dq0"]
+size = Vector2(31, 82)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bssua"]
 size = Vector2(96, 158)
 
@@ -178,19 +208,19 @@ y_sort_enabled = true
 [node name="map_borders" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = 1
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 13, 0, 3, 0, 0, 0, 104, 0, 255, 255, 2, 0, 1, 0, 5, 0, 0, 0, 222, 0, 0, 0, 1, 0, 5, 0, 2, 0, 0, 0, 102, 0, 194, 255, 3, 0, 12, 0, 3, 0, 0, 0)
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAxAQEABAAPAAIAAAA=")
 tile_set = SubResource("TileSet_4ecay")
 
 [node name="map_under" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = -500
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 13, 0, 3, 0, 0, 0, 104, 0, 255, 255, 2, 0, 1, 0, 5, 0, 0, 0, 222, 0, 0, 0, 1, 0, 5, 0, 2, 0, 0, 0, 102, 0, 194, 255, 4, 0, 12, 0, 3, 0, 0, 0)
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAxAQEAAwAPAAIAAAA=")
 tile_set = SubResource("TileSet_c5r8j")
 
 [node name="map_props" type="TileMapLayer" parent="Cam_Movement/Maps"]
 y_sort_enabled = true
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray(0, 0, 9, 0, 14, 0, 0, 0, 59, 0, 1, 0, 0, 0, 21, 0, 15, 0, 0, 0, 60, 0, 14, 0, 0, 0, 237, 0, 10, 0, 0, 0, 110, 0, 0, 0, 0, 0, 249, 0, 10, 0, 0, 0, 85, 0, 15, 0, 0, 0, 243, 0, 11, 0, 0, 0, 118, 0, 3, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAxAQUAAAABABoAAAAgAQsAAAAXABoAAABGAQcAAAAjABoAAAA=")
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
@@ -266,6 +296,13 @@ timeline = "photograph"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Photos"]
 shape = SubResource("RectangleShape2D_nxw7d")
+
+[node name="Book" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(163, 220)
+timeline = "notebook_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Book"]
+shape = SubResource("RectangleShape2D_slgqg")
 
 [node name="J_Corridor" type="Node2D" parent="Cam_Movement"]
 
@@ -422,13 +459,24 @@ mapProps = ExtResource("13_vi8hp")
 position = Vector2(-10, 0)
 shape = SubResource("RectangleShape2D_707qt")
 
+[node name="Cam_Detector2" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
+position = Vector2(4512, -74)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
+player_location = NodePath("../../J_Garage/player_location5")
+cam = NodePath("../../J_Garage/5")
+mapProps = ExtResource("21_fkol3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Cam_Detector2"]
+position = Vector2(-5.5, 5)
+shape = SubResource("RectangleShape2D_x0dq0")
+
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
-visible = false
 collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Living/Props"]
-polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4491, -114, 4491, -24, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
+polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4504, -114, 4506, -23, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
 position = Vector2(4178, 208)
@@ -457,6 +505,14 @@ texture = ExtResource("13_707qt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
 shape = SubResource("RectangleShape2D_frvun")
+
+[node name="J_Garage" type="Node2D" parent="Cam_Movement"]
+
+[node name="5" type="Marker2D" parent="Cam_Movement/J_Garage"]
+position = Vector2(5397, 63)
+
+[node name="player_location5" type="Marker2D" parent="Cam_Movement/J_Garage"]
+position = Vector2(5010, -62)
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-1971, 65)

@@ -46,6 +46,7 @@ directories/dtl_directory={
 "guitar_frame": "res://scenes/timelines/guitar_frame.dtl",
 "locked_door_d": "res://scenes/timelines/locked_door_d.dtl",
 "mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
+"notebook_j": "res://scenes/timelines/notebook_j.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
 "photograph": "res://scenes/timelines/photograph.dtl",
 "ropero_j": "res://scenes/timelines/ropero_j.dtl",
