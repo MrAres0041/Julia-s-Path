@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=66 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -51,8 +51,8 @@ texture = ExtResource("5_ghp2r")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xx8qm"]
 texture = ExtResource("7_nxw7d")
-15:2/size_in_atlas = Vector2i(54, 47)
-15:2/0 = 0
+14:0/size_in_atlas = Vector2i(48, 50)
+14:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4ecay"]
 sources/0 = SubResource("TileSetAtlasSource_mf6ci")
@@ -78,8 +78,9 @@ texture = ExtResource("8_amb7k")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyd8u"]
 texture = ExtResource("11_fkol3")
-15:2/size_in_atlas = Vector2i(54, 47)
-15:2/0 = 0
+71:23/0 = 0
+14:0/size_in_atlas = Vector2i(48, 50)
+14:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghp2r"]
 texture = ExtResource("8_frvun")
@@ -192,6 +193,12 @@ size = Vector2(82, 101)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvun"]
 size = Vector2(42, 100)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f707s"]
+size = Vector2(228, 298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d36ii"]
+size = Vector2(28, 82)
+
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
 
@@ -208,19 +215,19 @@ y_sort_enabled = true
 [node name="map_borders" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = 1
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAxAQEABAAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAyAQIABAAOAAAAAAA=")
 tile_set = SubResource("TileSet_4ecay")
 
 [node name="map_under" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = -500
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAxAQEAAwAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAyAQIAAwAOAAAAAAA=")
 tile_set = SubResource("TileSet_c5r8j")
 
 [node name="map_props" type="TileMapLayer" parent="Cam_Movement/Maps"]
 y_sort_enabled = true
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAxAQUAAAABABoAAAAgAQsAAAAXABoAAABGAQcAAAAjABoAAAA=")
+tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAyAQUAAAABABoAAABDAQgAAAAjABoAAAAlAQ8AAAAXABoAAAA=")
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
@@ -449,6 +456,9 @@ position = Vector2(3924, 60)
 [node name="player_location2" type="Marker2D" parent="Cam_Movement/J_Living"]
 position = Vector2(4054, 245)
 
+[node name="player_location2_1" type="Marker2D" parent="Cam_Movement/J_Living"]
+position = Vector2(4481, -61)
+
 [node name="Cam_Detector1" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(4030, 244)
 player_location = NodePath("../../J_Corridor/player_location1_1")
@@ -476,7 +486,7 @@ collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Living/Props"]
-polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -173, 3429, -173, 3429, -181, 3518, -181, 3518, -173, 3924, -172, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4504, -114, 4506, -23, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
+polygon = PackedVector2Array(4035, 201, 4033, 86, 3988, 86, 3988, -25, 3923, -25, 3923, 72, 3694, 74, 3695, 101, 3573, 101, 3572, 74, 3291, 76, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -161, 3429, -161, 3430, -171, 3518, -171, 3518, -161, 3924, -161, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4504, -114, 4506, -23, 4450, -24, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
 position = Vector2(4178, 208)
@@ -509,10 +519,34 @@ shape = SubResource("RectangleShape2D_frvun")
 [node name="J_Garage" type="Node2D" parent="Cam_Movement"]
 
 [node name="5" type="Marker2D" parent="Cam_Movement/J_Garage"]
-position = Vector2(5397, 63)
+position = Vector2(5397, 124)
 
 [node name="player_location5" type="Marker2D" parent="Cam_Movement/J_Garage"]
-position = Vector2(5010, -62)
+position = Vector2(5098, -19)
+
+[node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Garage"]
+visible = false
+collision_layer = 16
+collision_mask = 19
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Garage/Props"]
+polygon = PackedVector2Array(5095, -47, 5036, -49, 5036, 45, 5097, 46, 5097, 225, 5194, 226, 5195, 413, 5644, 413, 5653, 1, 5723, 2, 5723, -107, 5678, -108, 5677, -144, 5098, -142, 5096, -55, 5011, -59, 5019, -186, 5788, -181, 5783, 510, 5013, 478, 5018, -55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Props"]
+position = Vector2(5392, 88)
+shape = SubResource("RectangleShape2D_f707s")
+
+[node name="Cam_Detector1" parent="Cam_Movement/J_Garage" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
+position = Vector2(5072, 0)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
+player_location = NodePath("../../J_Living/player_location2_1")
+cam = NodePath("../../J_Living/2")
+mapProps = ExtResource("17_2cs5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Cam_Detector1"]
+position = Vector2(-13, -6)
+shape = SubResource("RectangleShape2D_d36ii")
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-1971, 65)
