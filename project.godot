@@ -43,6 +43,8 @@ directories/dtl_directory={
 "default": "res://scenes/timelines/calls/default.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",
 "frame_collection": "res://scenes/timelines/frame_collection.dtl",
+"fridge_j": "res://scenes/timelines/fridge_j.dtl",
+"gloria_room_j": "res://scenes/timelines/gloria_room_j.dtl",
 "guitar_frame": "res://scenes/timelines/guitar_frame.dtl",
 "locked_door_d": "res://scenes/timelines/locked_door_d.dtl",
 "mom_sleep1": "res://scenes/timelines/mom_sleep1.dtl",
@@ -54,6 +56,7 @@ directories/dtl_directory={
 "test_1": "res://scenes/timelines/test_1.dtl",
 "toiler_j": "res://scenes/timelines/toiler_j.dtl",
 "trash_j1": "res://scenes/timelines/trash_j1.dtl",
+"tv_j": "res://scenes/timelines/tv_j.dtl",
 "weird_bottles": "res://scenes/timelines/weird_bottles.dtl"
 }
 layout/style_directory={

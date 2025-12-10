@@ -1,0 +1,4 @@
+Narrator: The fridge is full of nothing.
+Narrator: No matter how many times you re-open it, it’s still empty.
+Narrator: Please stop.
+[signal arg="DialogueEnded"]

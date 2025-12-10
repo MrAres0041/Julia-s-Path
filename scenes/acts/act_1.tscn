@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=69 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -192,6 +192,15 @@ size = Vector2(82, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvun"]
 size = Vector2(42, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jg0i"]
+size = Vector2(76, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ceca"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntu76"]
+size = Vector2(64, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f707s"]
 size = Vector2(228, 298)
@@ -482,6 +491,7 @@ position = Vector2(-5.5, 5)
 shape = SubResource("RectangleShape2D_x0dq0")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
+visible = false
 collision_layer = 16
 collision_mask = 19
 
@@ -515,6 +525,29 @@ texture = ExtResource("13_707qt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/MomSleeping"]
 shape = SubResource("RectangleShape2D_frvun")
+
+[node name="Fridge" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(4405, -190)
+timeline = "fridge_j"
+autoDestruction = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/Fridge"]
+shape = SubResource("RectangleShape2D_0jg0i")
+
+[node name="GloriaRoom" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(3634, 127)
+timeline = "gloria_room_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/GloriaRoom"]
+shape = SubResource("RectangleShape2D_6ceca")
+
+[node name="TV" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(4386, 198)
+timeline = "tv_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/TV"]
+position = Vector2(3, -4)
+shape = SubResource("RectangleShape2D_ntu76")
 
 [node name="J_Garage" type="Node2D" parent="Cam_Movement"]
 
