@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://smuex3yjhyi3"
+path="res://.godot/imported/Spellbound (Music Box).mp3-7fb26376af94c5ea92284a02c44f4d0d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Spellbound (Music Box).mp3"
+dest_files=["res://.godot/imported/Spellbound (Music Box).mp3-7fb26376af94c5ea92284a02c44f4d0d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,9 +2,9 @@ Narrator: “A guy opens his door and gets shot.”
 Narrator: ”You think I’m that guy? No...”
 Narrator: “I’m the one who knocks!”
 join Julia (JuliaDefault) right
-Narrator: It’s that weird show again.[input][br]The one with the bald guy who sells drugs.
+Julia: It’s that weird show again.[input][br]The one with the bald guy who sells drugs.
 update Julia (JuliaWorried)
-Narrator: Andrew used to hate it because it was too dense, but Eric would probably love it.
+Julia: Andrew used to hate it because it was too dense, but Eric would probably love it.
 update Julia (JuliaHappy)
 Narrator: You can almost imagine him with a goatee like Walt.
 update Julia (JuliaHappy1)

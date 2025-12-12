@@ -1,0 +1,6 @@
+Narrator: It’s too early in the morning.
+Narrator: That dumb kid just missed the bus again.
+join Julia (JuliaHappy) right
+Narrator: It reminds you of your school days.[input][br]When Mom had to fight her morning hangover just to get you there on time.
+Narrator: The kid is crying but you don’t care.
+[signal arg="DialogueEnded"]

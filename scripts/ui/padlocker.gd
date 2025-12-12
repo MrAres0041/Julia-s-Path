@@ -15,9 +15,9 @@ func _physics_process(delta: float) -> void:
 	lenght = textlabel.get_parsed_text().length()
 	if lenght == 6:
 		if callList.callist.has(textlabel.get_parsed_text()):
-			for call in callList.callist:
-				if textlabel.get_parsed_text() == call:
-					var index:int = callList.callist.find(call)
+			for calli in callList.callist:
+				if textlabel.get_parsed_text() == calli:
+					var index:int = callList.callist.find(calli)
 					callList._callTheNumber(callList.dialogues[index])
 		else:
 			callList._callTheNumber("default")

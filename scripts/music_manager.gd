@@ -10,7 +10,8 @@ var playlist = {
 		preload("res://assets/audio/music/Enter the Clown.mp3")
 	],
 	"JuliaHouse0": [
-		preload("res://assets/audio/music/Scattle - It's Safe Now.mp3")
+		preload("res://assets/audio/music/Spellbound (Music Box).mp3"),
+		preload("res://assets/audio/music/Dusty Memories MP3.mp3")
 	],
 }
 
@@ -20,7 +21,9 @@ var currentIndex: int = 0
 
 func _ready() -> void:
 	currentIndex = StartingIndex
+	
 	playPlaylist(StartingPlaylist)
+	
 
 func playPlaylist(nombre:String):
 	if !playlist.has(nombre):
@@ -33,4 +36,8 @@ func playPlaylist(nombre:String):
 func _play_current_track():
 	var list = playlist[currentPlayList]
 	stream = list[currentIndex]
+	play()
+
+
+func _on_finished() -> void:
 	play()

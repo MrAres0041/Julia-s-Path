@@ -2,11 +2,11 @@ class_name GPhoneSignal extends Node
 
 const PADLOCKER = preload("res://scenes/UI/padlocker.tscn")
 
-var CallList = {
+var CallListed = {
 	"Act1" = preload("res://resources/calls/Act1.tres")
 }
 
 func SummonPhone(index):
 	var newLocker = PADLOCKER.instantiate()
-	newLocker.callList = CallList[index]
+	newLocker.callList = CallListed[index]
 	add_child(newLocker)

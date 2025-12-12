@@ -1,7 +1,7 @@
-join Julia right
+join Julia right [animation="Fade In" length="0.3"]
 Narrator: ...
+update Julia (JuliaSad0)
 Narrator: For some reason, you feel a knot in your stomach just by looking at the detergent and bleach.
-update Julia (JuliaSad1)
 Narrator: Who in the world keep putting them together like this?
 leave Julia [animation="Fade Out" length="0.3"]
 [signal arg="DialogueEnded"]

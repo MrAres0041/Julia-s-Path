@@ -4,8 +4,7 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/timelines/weird_bottles.dtl
+res://scenes/timelines/window_j.dtl
 res://scenes/UI/padlocker.tscn
-res://scenes/chars/DialogChars/Gloria.dch
-res://scenes/chars/DialogChars/Julia.dch
-res://scenes/chars/DialogChars/Echo.dch
+res://scenes/UI/music_manager.tscn
+res://scenes/timelines/front_door_j.dtl
