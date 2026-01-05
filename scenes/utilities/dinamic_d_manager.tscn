@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dahgkq5ta8h4v"]
+
+[ext_resource type="Script" uid="uid://bkefuwcajbm4x" path="res://scripts/dinamic_d_manager.gd" id="1_2chku"]
+
+[node name="DinamicDManager" type="Area2D"]
+script = ExtResource("1_2chku")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

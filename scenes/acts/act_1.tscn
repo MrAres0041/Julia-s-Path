@@ -1,9 +1,11 @@
-[gd_scene load_steps=72 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=76 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
+[ext_resource type="Script" uid="uid://bys8ahwcht2sl" path="res://scripts/main_events.gd" id="1_xx8qm"]
 [ext_resource type="Texture2D" uid="uid://dbkcdj62f16nh" path="res://assets/maps/under/Borders/j_room_border.png" id="2_28v14"]
 [ext_resource type="Texture2D" uid="uid://c5hxnemujl6e8" path="res://assets/maps/over/props_sheet.png" id="2_bruh4"]
+[ext_resource type="PackedScene" uid="uid://dahgkq5ta8h4v" path="res://scenes/utilities/dinamic_d_manager.tscn" id="2_wyd8u"]
 [ext_resource type="PackedScene" uid="uid://d1wqlmfexqt02" path="res://scenes/chars/player.tscn" id="3_bruh4"]
 [ext_resource type="Texture2D" uid="uid://bn1h3k4kn7ylq" path="res://assets/maps/under/Borders/j_living_border.png" id="3_t6gj0"]
 [ext_resource type="PackedScene" uid="uid://ckhnwfq86xdns" path="res://scenes/UI/inv_ui.tscn" id="5_c5r8j"]
@@ -26,6 +28,9 @@
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
 [ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eu7ww"]
+size = Vector2(20, 100)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -155,7 +160,7 @@ size = Vector2(44, 108)
 size = Vector2(20, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkol3"]
-size = Vector2(138, 19)
+size = Vector2(78, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8117"]
 size = Vector2(140, 100)
@@ -177,6 +182,9 @@ size = Vector2(92, 122)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td3a4"]
 size = Vector2(62, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_636fy"]
+size = Vector2(135, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_707qt"]
 size = Vector2(20, 80)
@@ -222,6 +230,17 @@ size = Vector2(28, 82)
 
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
+
+[node name="MainEvents" type="Node2D" parent="."]
+script = ExtResource("1_xx8qm")
+
+[node name="Pill1_False" parent="MainEvents" instance=ExtResource("2_wyd8u")]
+position = Vector2(2445, 136)
+timeline = "test_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Pill1_False"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_eu7ww")
 
 [node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player", "firstPos") instance=ExtResource("1_3hmkl")]
 y_sort_enabled = true
@@ -369,7 +388,7 @@ position = Vector2(18, 13)
 shape = SubResource("RectangleShape2D_t6gj0")
 
 [node name="Cam_Detector3" parent="Cam_Movement/J_Corridor" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
-position = Vector2(1505, 85)
+position = Vector2(1505, 63)
 audio = NodePath("../../../AudioManager")
 SelectedSFX = "Door"
 player_location = NodePath("../../J_Bathroom/player_location3")
@@ -381,7 +400,6 @@ position = Vector2(2, -0.5)
 shape = SubResource("RectangleShape2D_fkol3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cam_Movement/J_Corridor"]
-visible = false
 position = Vector2(1854, -4)
 collision_layer = 16
 collision_mask = 19
@@ -467,6 +485,14 @@ timeline = "weird_bottles"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Bottles"]
 shape = SubResource("RectangleShape2D_td3a4")
+
+[node name="Pills" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
+position = Vector2(1788, -1308)
+timeline = "test_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Pills"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_636fy")
 
 [node name="J_Living" type="Node2D" parent="Cam_Movement"]
 y_sort_enabled = true
@@ -577,6 +603,7 @@ shape = SubResource("RectangleShape2D_gudpr")
 [node name="Front_door" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
 position = Vector2(3473, -227)
 timeline = "front_door_j"
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/Front_door"]
 shape = SubResource("RectangleShape2D_it6eo")
