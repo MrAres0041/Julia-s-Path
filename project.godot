@@ -40,6 +40,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "AndyNote": "res://scenes/timelines/AndyNote.dtl",
 "bed_j": "res://scenes/timelines/bed_j.dtl",
+"car_no_pills": "res://scenes/timelines/car_no_pills.dtl",
+"car_pills": "res://scenes/timelines/car_pills.dtl",
 "default": "res://scenes/timelines/calls/default.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",
 "frame_collection": "res://scenes/timelines/frame_collection.dtl",
@@ -52,14 +54,17 @@ directories/dtl_directory={
 "notebook_j": "res://scenes/timelines/notebook_j.dtl",
 "phone1": "res://scenes/timelines/phone1.dtl",
 "photograph": "res://scenes/timelines/photograph.dtl",
+"pills1": "res://scenes/timelines/pills1.dtl",
 "ropero_j": "res://scenes/timelines/ropero_j.dtl",
 "shower_j": "res://scenes/timelines/shower_j.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl",
 "toiler_j": "res://scenes/timelines/toiler_j.dtl",
 "trash_j1": "res://scenes/timelines/trash_j1.dtl",
+"try_skip_pill": "res://scenes/timelines/try_skip_pill.dtl",
 "tv_j": "res://scenes/timelines/tv_j.dtl",
 "weird_bottles": "res://scenes/timelines/weird_bottles.dtl",
-"window_j": "res://scenes/timelines/window_j.dtl"
+"window_j": "res://scenes/timelines/window_j.dtl",
+"workbench": "res://scenes/timelines/workbench.dtl"
 }
 layout/style_directory={
 "DefaultStyle": "res://assets/styles/DefaultStyle.tres"
@@ -106,7 +111,12 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-variables={}
+variables={
+"Act1": {
+"keys_car_m": false,
+"pills_car": false
+}
+}
 text/input_action="dialogic_default_action"
 animations/join_default="Fade In"
 animations/leave_default="Fade Out"

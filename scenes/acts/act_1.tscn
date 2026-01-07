@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=78 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -228,6 +228,12 @@ size = Vector2(228, 298)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d36ii"]
 size = Vector2(28, 82)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0asix"]
+size = Vector2(20, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14e02"]
+size = Vector2(75, 118)
+
 [node name="Act1" type="Node2D"]
 y_sort_enabled = true
 
@@ -236,7 +242,7 @@ script = ExtResource("1_xx8qm")
 
 [node name="Pill1_False" parent="MainEvents" instance=ExtResource("2_wyd8u")]
 position = Vector2(2445, 136)
-timeline = "test_1"
+timeline = "try_skip_pill"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Pill1_False"]
 position = Vector2(0, 2)
@@ -488,7 +494,7 @@ shape = SubResource("RectangleShape2D_td3a4")
 
 [node name="Pills" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(1788, -1308)
-timeline = "test_1"
+timeline = "pills1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Pills"]
 position = Vector2(-1.5, 0)
@@ -639,6 +645,25 @@ mapProps = ExtResource("17_2cs5s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Cam_Detector1"]
 position = Vector2(-13, -6)
 shape = SubResource("RectangleShape2D_d36ii")
+
+[node name="Interactions" type="Node2D" parent="Cam_Movement/J_Garage"]
+
+[node name="Car_pills" parent="Cam_Movement/J_Garage/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(5300, -1)
+timeline = "car_pills"
+autoDestruction = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Interactions/Car_pills"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_0asix")
+
+[node name="DialogueManager" parent="Cam_Movement/J_Garage/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(5152, 272)
+timeline = "workbench"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Interactions/DialogueManager"]
+position = Vector2(3.5, 8)
+shape = SubResource("RectangleShape2D_14e02")
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-1971, 65)

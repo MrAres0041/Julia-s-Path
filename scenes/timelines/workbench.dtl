@@ -1,0 +1,8 @@
+Narrator: The workbench lies ahead, cold and forgotten as always.
+Narrator: Scattered on top are screws, nails, and tools.
+Narrator: This might come in handy...
+audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
+Narrator: You picked up a screwdriver!
+Narrator: Time to try one of Mom’s old tricks…
+set {Act1.pills_car} = true
+[signal arg="DialogueEnded"]

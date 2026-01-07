@@ -9,9 +9,10 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking:
-			talk_area.Execute_Dialogue()
+			#talk_area.Execute_Dialogue()
 			GPlayer.is_talking = true
 			$Sprite2D.visible = false
+			talk_area.Execute_Dialogue()
 	
 func DialogicHandler(i):
 	if i == "DialogueEnded":

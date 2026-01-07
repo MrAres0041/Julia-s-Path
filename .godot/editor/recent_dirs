@@ -1,6 +1,7 @@
+res://assets/audio/sfx
+res://scenes/timelines
 res://scenes/utilities
 res://scripts
-res://scenes/timelines
 res://resources/maps
 res://assets/maps/under/Borders
 res://assets/maps/under
@@ -12,7 +13,6 @@ res://assets/styles
 res://assets/panels
 res://resources/items/
 res://resources/maps/
-res://assets/audio/sfx
 res://scripts/ui
 res://assets/fonts
 res://assets/ui

@@ -1,0 +1,12 @@
+audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
+Narrator: You found your meds! (Boo...)
+Narrator: But the bottle is empty. (Yay!)
+join Julia (JuliaDefault) right
+Narrator: A small part of you felt relieved when you saw the clean bottom.
+update Julia (JuliaSad1)
+Narrator: However, the functional part knows you shouldn’t skip them under any circumstances.
+Narrator: Being a responsible human being and all that…
+leave Julia
+Narrator: You left some in the car the last time you went out. Better go check before Mom wakes up.
+[signal arg="DialogueEnded"]
+[signal arg="Pills1"]

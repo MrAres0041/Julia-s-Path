@@ -5,6 +5,8 @@ var pills_1_check:bool = false
 var pills_2_check:bool = false
 
 @onready var corridorExit: CamDetector = $"../Cam_Movement/J_Corridor/Cam_Detector2"
+@onready var car_pills: DialogueManager = $"../Cam_Movement/J_Garage/Interactions/Car_pills"
+
 @onready var pill_1_false: DinamicDManager = $Pill1_False
 
 func _ready() -> void:
@@ -16,9 +18,11 @@ func _ProgressHandler(i):
 		"Pills1":
 			_activateMonitor(corridorExit)
 			_killNode(pill_1_false)
+		"Pills2":
+			pass
 
 
-func _activateMonitor(trigger:CamDetector):
+func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true
 
 func _killNode(node):
