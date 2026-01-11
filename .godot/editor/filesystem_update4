@@ -1,4 +1,3 @@
-res://scenes/timelines/try_skip_pill.dtl
 res://scenes/acts/act_1.tscn
 res://resources/calls/Act1.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
@@ -6,10 +5,3 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_nam
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/utilities/dialogue_manager.tscn
-res://scenes/timelines/pills1.dtl
-res://scenes/timelines/car_no_pills.dtl
-res://scripts/main_events.gd
-res://scenes/timelines/car_pills.dtl
-res://scenes/chars/DialogChars/Julia.dch
-res://scenes/timelines/workbench.dtl
-res://scripts/talk_manager.gd

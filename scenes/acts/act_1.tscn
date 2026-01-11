@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=79 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -203,6 +203,10 @@ size = Vector2(82, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f5oh"]
 size = Vector2(256, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyd8u"]
+atlas = ExtResource("2_bruh4")
+region = Rect2(1834.66, 247.864, 100.589, 131.014)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvun"]
 size = Vector2(42, 100)
@@ -535,11 +539,11 @@ position = Vector2(-5.5, 6.5)
 shape = SubResource("RectangleShape2D_x0dq0")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
-visible = false
 collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Living/Props"]
+visible = false
 polygon = PackedVector2Array(4035, 201, 4033, 81, 3988, 81, 3987, -14, 3924, -15, 3923, 81, 3695, 82, 3695, 106, 3573, 106, 3572, 82, 3292, 82, 3292, -170, 3331, -171, 3330, -145, 3383, -144, 3383, -161, 3429, -161, 3430, -171, 3518, -171, 3518, -161, 3924, -161, 3924, -110, 3987, -109, 3987, -128, 4323, -128, 4322, -142, 4362, -153, 4361, -135, 4452, -135, 4452, -114, 4504, -114, 4506, -18, 4451, -19, 4451, 326, 4036, 323, 4037, 288, 3958, 338, 4619, 364, 4636, -126, 4488, -369, 3248, -361, 3225, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
@@ -557,6 +561,12 @@ shape = SubResource("RectangleShape2D_xi35y")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
 position = Vector2(4247, -7.5)
 shape = SubResource("RectangleShape2D_2f5oh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cam_Movement/J_Living/Props"]
+z_index = -1
+position = Vector2(3472, -219)
+scale = Vector2(1.05, 1.1)
+texture = SubResource("AtlasTexture_wyd8u")
 
 [node name="Interactions" type="Node2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true

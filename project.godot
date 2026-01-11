@@ -40,7 +40,6 @@ directories/dch_directory={
 directories/dtl_directory={
 "AndyNote": "res://scenes/timelines/AndyNote.dtl",
 "bed_j": "res://scenes/timelines/bed_j.dtl",
-"car_no_pills": "res://scenes/timelines/car_no_pills.dtl",
 "car_pills": "res://scenes/timelines/car_pills.dtl",
 "default": "res://scenes/timelines/calls/default.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",

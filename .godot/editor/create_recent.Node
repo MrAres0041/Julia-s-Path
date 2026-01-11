@@ -1,14 +1,14 @@
+Sprite2D
 CollisionShape2D
+StaticBody2D
 Node2D
 Area2D
 Marker2D
 CollisionPolygon2D
-StaticBody2D
 Panel
 CanvasLayer
 TextureRect
 Node
-Sprite2D
 AnimationPlayer
 Button
 VBoxContainer
