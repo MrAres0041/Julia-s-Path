@@ -1,29 +1,39 @@
 extends Node2D
 class_name MainEvents
 
-var pills_1_check:bool = false
-var pills_2_check:bool = false
 
 @onready var corridorExit: CamDetector = $"../Cam_Movement/J_Corridor/Cam_Detector2"
 @onready var car_pills: DialogueManager = $"../Cam_Movement/J_Garage/Interactions/Car_pills"
+@onready var mom_standing: Sprite2D = $"../Cam_Movement/J_Living/Props/Mom_Standing"
+@onready var mom_hitbox: CollisionShape2D = $"../Cam_Movement/J_Living/Props/MomHitbox"
+@onready var mom_sleeping: DialogueManager = $"../Cam_Movement/J_Living/Interactions/MomSleeping"
 
-@onready var pill_1_false: DinamicDManager = $Pill1_False
+@onready var mom_awake: DinamicDManager = $Mom_awake
+@onready var no_pills: DinamicDManager = $No_pills
 
 func _ready() -> void:
-	corridorExit.monitoring = false
+	_deactivateMonitor(corridorExit)
+	_deactivateMonitor(mom_awake)
 	Dialogic.signal_event.connect(_ProgressHandler)
 
 func _ProgressHandler(i):
 	match i:
-		"Pills1":
+		"NoPills1":
 			_activateMonitor(corridorExit)
-			_killNode(pill_1_false)
+			_killNode(no_pills)
 		"Pills2":
-			pass
-
+			mom_standing.visible = true
+			mom_hitbox.disabled = false
+			_activateMonitor(mom_awake)
+			_killNode(mom_sleeping)
 
 func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true
 
+func _deactivateMonitor(trigger:Area2D):
+	trigger.monitoring = false
+
 func _killNode(node):
-	get_tree().queue_delete(node)
+	if is_instance_valid(node):
+		remove_child(node)
+		node.queue_free()

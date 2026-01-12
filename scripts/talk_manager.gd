@@ -8,7 +8,7 @@ func _ready() -> void:
 	$AnimationPlayer.play("interaction")
 	
 func _physics_process(delta: float) -> void:
-		if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking:
+		if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking and talk_area:
 			#talk_area.Execute_Dialogue()
 			GPlayer.is_talking = true
 			$Sprite2D.visible = false

@@ -14,6 +14,8 @@ if {Act1.keys_car_m} == false:
 		leave Julia
 		Narrator: Better to deal with it later, right?
 		Narrator: For now, you go make breakfast.
+		set {Act1.keys_car_m} = true
+		[signal arg="Pills2"]
 	else:
 		Narrator: You pull the car handle, but the door doesn’t open.
 		Narrator: A closer look through the window reveals the keys resting comfortably on the passenger seat, next to the bottle of pills.
@@ -21,7 +23,6 @@ if {Act1.keys_car_m} == false:
 		Narrator: Images of your past self walking out without even checking come back to haunt you.
 		leave Julia
 		Narrator: You’d better find a way to open this thing before Mom wakes up, or you’ll be cleaning bathrooms until you hit your 30s.
-		set {Act1.keys_car_m} = true
 else:
 	Narrator: It isn't the time to travel anywhere, dear...
 [signal arg="DialogueEnded"]

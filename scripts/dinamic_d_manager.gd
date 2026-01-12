@@ -5,7 +5,6 @@ const INV = preload("res://resources/items/inventory.tres")
 
 @export var timeline:String
 @export var item:Inv_Item
-@export var autoDestruction:bool = false
 
 var can_dialogue:bool = true
 
@@ -22,8 +21,7 @@ func DialogueHandler(i):
 		GPlayer.can_walk = true
 		GPlayer.can_talk = true
 		GPlayer.is_talking = false
-		if autoDestruction:
-			get_tree().queue_delete(self)
+
 
 
 func _on_body_entered(body: Node2D) -> void:
