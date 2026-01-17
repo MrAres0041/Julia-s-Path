@@ -4,10 +4,6 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/timelines/car_pills.dtl
-res://scripts/main_events.gd
+res://scenes/timelines/mom_awake.dtl
+res://scenes/chars/DialogChars/Julia.dch
 res://scenes/utilities/dialogue_manager.tscn
-res://scripts/talk_manager.gd
-res://scenes/timelines/test_1.dtl
-res://scenes/timelines/pills1.dtl
-res://scripts/dinamic_d_manager.gd

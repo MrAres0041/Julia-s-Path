@@ -1,0 +1,9 @@
+[wait time="2.0"]
+join Gloria left [animation="Fade In"]
+join Julia right
+Gloria (Talk1): Hey, girl![input][br]Getting up early to fix the car, huh?
+update Gloria (GloriaDefault)
+Julia (JuliaTalk1): Ah…[input] No, I was just...
+update Gloria (Sus2)
+Julia (JuliaTalk3): I forgot something in the garage.
+Julia: My new cassette, that is....

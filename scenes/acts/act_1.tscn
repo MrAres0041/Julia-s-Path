@@ -252,7 +252,7 @@ script = ExtResource("1_xx8qm")
 
 [node name="Mom_awake" parent="MainEvents" instance=ExtResource("2_wyd8u")]
 position = Vector2(4494, -68)
-timeline = "test_1"
+timeline = "mom_awake"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Mom_awake"]
 position = Vector2(4.5, 0)

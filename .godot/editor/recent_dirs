@@ -1,5 +1,7 @@
-res://assets/audio/sfx
+res://assets/portraits/Julia
+res://assets/portraits/Gloria
 res://scenes/timelines
+res://assets/audio/sfx
 res://scenes/utilities
 res://scripts
 res://resources/maps
@@ -16,8 +18,6 @@ res://resources/maps/
 res://scripts/ui
 res://assets/fonts
 res://assets/ui
-res://assets/portraits/Gloria
 res://assets/portraits/Others
 res://assets/sprites/Julia
-res://scenes/chars/DialogChars
 C:/Users/Equipo/Documents/dialogues
