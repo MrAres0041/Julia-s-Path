@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4vuuca2icfuj"
-path="res://.godot/imported/J_Mom1.png-0446ac3afc991cfdd114a96acf05a357.ctex"
+uid="uid://dnbxrp4oc57ny"
+path="res://.godot/imported/G9.png-c4f24e55df4fb41b62572dded337e247.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/Gloria/J_Mom1.png"
-dest_files=["res://.godot/imported/J_Mom1.png-0446ac3afc991cfdd114a96acf05a357.ctex"]
+source_file="res://assets/portraits/Gloria/G9.png"
+dest_files=["res://.godot/imported/G9.png-c4f24e55df4fb41b62572dded337e247.ctex"]
 
 [params]
 

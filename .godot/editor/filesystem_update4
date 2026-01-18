@@ -1,3 +1,5 @@
+res://scenes/chars/DialogChars/Julia.dch
+res://scenes/chars/DialogChars/Gloria.dch
 res://scenes/acts/act_1.tscn
 res://resources/calls/Act1.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
@@ -5,5 +7,5 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_nam
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/timelines/mom_awake.dtl
-res://scenes/chars/DialogChars/Julia.dch
 res://scenes/utilities/dialogue_manager.tscn
+res://scenes/timelines/mom_sleep1.dtl

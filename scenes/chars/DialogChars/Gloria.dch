@@ -17,6 +17,24 @@
 &"nicknames": ["Gloria"],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G7.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"AngryTalk": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "GloriaDefault": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Gloria/G0.png\""
@@ -29,6 +47,15 @@
 "Happy1": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Gloria/G2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Serious1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G9.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -65,6 +92,33 @@
 "Talk1": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Gloria/G6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talk2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G12.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Worried1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G10.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Worried2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G11.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

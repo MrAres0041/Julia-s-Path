@@ -14,4 +14,3 @@ Narrator: Perhaps it would be better not to think too much about it.
 leave Gloria [animation="Fade Out" length="0.3"]
 leave Julia [animation="Fade Out" length="0.3"]
 [signal arg="DialogueEnded"]
-[wait time="0.3"]
