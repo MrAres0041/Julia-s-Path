@@ -1,0 +1,4 @@
+join Gloria (Serious1) left
+Gloria: I'll go...
+[signal arg="DialogueEnded"]
+[signal arg="Door_calling"]

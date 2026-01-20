@@ -42,6 +42,7 @@ directories/dtl_directory={
 "bed_j": "res://scenes/timelines/bed_j.dtl",
 "car_pills": "res://scenes/timelines/car_pills.dtl",
 "default": "res://scenes/timelines/calls/default.dtl",
+"door_call": "res://scenes/timelines/door_call.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",
 "frame_collection": "res://scenes/timelines/frame_collection.dtl",
 "fridge_j": "res://scenes/timelines/fridge_j.dtl",

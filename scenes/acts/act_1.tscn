@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=82 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -28,12 +28,16 @@
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
 [ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
+[ext_resource type="PackedScene" uid="uid://c73je45r6mo8o" path="res://scenes/utilities/npc_sample.tscn" id="24_tui3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_can1i"]
 size = Vector2(29, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eu7ww"]
 size = Vector2(20, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sn05"]
+size = Vector2(87, 22)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -207,9 +211,6 @@ size = Vector2(82, 101)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f5oh"]
 size = Vector2(256, 97)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6duos"]
-size = Vector2(112, 210)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wyd8u"]
 atlas = ExtResource("2_bruh4")
 region = Rect2(1834.66, 247.864, 100.589, 131.014)
@@ -250,20 +251,30 @@ y_sort_enabled = true
 [node name="MainEvents" type="Node2D" parent="."]
 script = ExtResource("1_xx8qm")
 
-[node name="Mom_awake" parent="MainEvents" instance=ExtResource("2_wyd8u")]
+[node name="Interactions" type="Node2D" parent="MainEvents"]
+
+[node name="Mom_awake" parent="MainEvents/Interactions" instance=ExtResource("2_wyd8u")]
 position = Vector2(4494, -68)
 timeline = "mom_awake"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Mom_awake"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Interactions/Mom_awake"]
 position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_can1i")
 
-[node name="No_pills" parent="MainEvents" instance=ExtResource("2_wyd8u")]
+[node name="No_pills" parent="MainEvents/Interactions" instance=ExtResource("2_wyd8u")]
 position = Vector2(2441, 137)
 timeline = "try_skip_pill"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/No_pills"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Interactions/No_pills"]
 shape = SubResource("RectangleShape2D_eu7ww")
+
+[node name="Door_call" parent="MainEvents/Interactions" instance=ExtResource("2_wyd8u")]
+position = Vector2(4046, 245)
+timeline = "door_call"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Interactions/Door_call"]
+position = Vector2(33.5, -80)
+shape = SubResource("RectangleShape2D_5sn05")
 
 [node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player", "firstPos") instance=ExtResource("1_3hmkl")]
 y_sort_enabled = true
@@ -551,6 +562,13 @@ mapProps = ExtResource("21_fkol3")
 position = Vector2(-5.5, 6.5)
 shape = SubResource("RectangleShape2D_x0dq0")
 
+[node name="NPCs" type="Node2D" parent="Cam_Movement/J_Living"]
+y_sort_enabled = true
+
+[node name="Gloria" parent="Cam_Movement/J_Living/NPCs" instance=ExtResource("24_tui3u")]
+position = Vector2(4045, -86)
+scale = Vector2(0.55, 0.55)
+
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true
 collision_layer = 16
@@ -576,20 +594,7 @@ shape = SubResource("RectangleShape2D_xi35y")
 position = Vector2(4247, -7.5)
 shape = SubResource("RectangleShape2D_2f5oh")
 
-[node name="MomHitbox" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
-position = Vector2(4037, -137.5)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_6duos")
-disabled = true
-
-[node name="Mom_Standing" type="Sprite2D" parent="Cam_Movement/J_Living/Props"]
-visible = false
-y_sort_enabled = true
-position = Vector2(4037, -171)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("13_707qt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cam_Movement/J_Living/Props"]
+[node name="Door" type="Sprite2D" parent="Cam_Movement/J_Living/Props"]
 z_index = -1
 position = Vector2(3472, -219)
 scale = Vector2(1.05, 1.1)
