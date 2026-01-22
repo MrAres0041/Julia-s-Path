@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://2b7nf2fglmtm"]
+
+[ext_resource type="Script" uid="uid://cj7g8osn00fff" path="res://scripts/path_guider_manager.gd" id="1_cq6nk"]
+
+[sub_resource type="Curve2D" id="Curve2D_1ibqm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 4045, -86, 0, 0, 0, 0, 4045, -53, 0, 0, 0, 0, 3467, -51, 0, 0, 0, 0, 3468, -150)
+}
+point_count = 4
+
+[node name="PathGuiderManager" type="Path2D"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_1ibqm")
+script = ExtResource("1_cq6nk")
+speed = 0.005

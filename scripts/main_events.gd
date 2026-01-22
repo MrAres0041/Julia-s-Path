@@ -12,7 +12,8 @@ class_name MainEvents
 @onready var no_pills: DinamicDManager = $Interactions/No_pills
 @onready var door_call: DinamicDManager = $Interactions/Door_call
 
-@onready var gloria: NPC_Sample = $"../Cam_Movement/J_Living/NPCs/Gloria"
+@onready var gloria_door: PathGuiderManager = $"../Cam_Movement/J_Living/NPCs/GloriaDoor"
+@onready var gloria: NPC_Sample = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D/Gloria"
 
 
 func _ready() -> void:
@@ -24,7 +25,6 @@ func _ready() -> void:
 func _ProgressHandler(i):
 	match i:
 		"NoPills1":
-			gloria._NPCVerifier()
 			_activateMonitor(corridorExit)
 			_killNode(no_pills)
 		"Pills2":
@@ -32,7 +32,7 @@ func _ProgressHandler(i):
 			_activateMonitor(mom_awake)
 			_killNode(mom_sleeping)
 		"Door_calling":
-			pass
+			gloria_door._startWalking()
 
 func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true

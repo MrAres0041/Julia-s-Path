@@ -3,13 +3,13 @@ class_name NPC_Sample
 
 var isActive:bool = true
 
-@export var path_follow:PathFollow2D
-@export var speed:float
+@export var sprite:Texture2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
-func _physics_process(delta: float) -> void:
-	#path_follow.progress_ratio += speed
-	pass
+func _ready() -> void:
+	$Sprite2D.texture = sprite
+	animation_player.play("idle_l")
 
 func _NPCVerifier():
 	if !isActive:
