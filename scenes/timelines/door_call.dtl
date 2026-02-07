@@ -1,4 +1,10 @@
 join Gloria (Serious1) left
 Gloria: I'll go...
-[signal arg="DialogueEnded"]
+leave Gloria
+[wait time="0.7"]
 [signal arg="Door_calling"]
+[wait time="3.5"]
+join Gloria (Angry) right
+Gloria: Who is this?
+[signal arg="OpenDoor"]
+[signal arg="DialogueEnded"]

@@ -1,11 +1,8 @@
+res://scenes/acts/act_1.tscn
 res://resources/calls/Act1.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/utilities/path_guider_manager.tscn
-res://scripts/path_guider_manager.gd
-res://scenes/acts/act_1.tscn
-res://scripts/npc_sample.gd
 res://scenes/utilities/npc_sample.tscn
-res://scripts/main_events.gd

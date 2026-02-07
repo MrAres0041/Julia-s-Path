@@ -6,6 +6,7 @@ class_name MainEvents
 @onready var car_pills: DialogueManager = $"../Cam_Movement/J_Garage/Interactions/Car_pills"
 @onready var mom_sleeping: DialogueManager = $"../Cam_Movement/J_Living/Interactions/MomSleeping"
 @onready var door_living: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
+@onready var door: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
 
 
 @onready var mom_awake: DinamicDManager = $Interactions/Mom_awake
@@ -33,6 +34,8 @@ func _ProgressHandler(i):
 			_killNode(mom_sleeping)
 		"Door_calling":
 			gloria_door._startWalking()
+		"OpenDoor":
+			door.visible = false
 
 func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true
