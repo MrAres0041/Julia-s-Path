@@ -7,9 +7,9 @@ class_name OptionsMenu
 @onready var sfx: HSlider = $SoundOption/VBoxContainer/SFX
 
 func _ready() -> void:
-	master.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(0)))
-	music.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(1)))
-	sfx.set_value_no_signal(db_to_linear(AudioServer.get_bus_volume_db(2)))
+	master.set_value_no_signal(GAudio.getMasterVol()*3)
+	music.set_value_no_signal(GAudio.getMusVol()*3)
+	sfx.set_value_no_signal(GAudio.getSFXVol()*3)
 	
 func _on_1280_pressed() -> void:
 	DisplayServer.window_set_size(Vector2(1280, 800))
@@ -42,13 +42,10 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 
 
 func _on_master_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0,linear_to_db(value))
-	GAudio.setMastVol(value)
+	GAudio.setMastVol(value/3)
 
 func _on_music_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(1,linear_to_db(value))
-	GAudio.setMusVol(value)
+	GAudio.setMusVol(value/3)
 
 func _on_sfx_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(2,linear_to_db(value))
-	GAudio.setSFXVol(value)
+	GAudio.setSFXVol(value/3)

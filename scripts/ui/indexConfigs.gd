@@ -10,7 +10,6 @@ func _ready():
 	await load_or_create_config()
 	await set_vol()
 	await set_graph()
-	#get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
 
 
 func load_or_create_config():

@@ -4,5 +4,6 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/utilities/path_guider_manager.tscn
+res://scripts/ui/indexConfigs.gd
+res://scenes/utilities/index.tscn
 res://scenes/utilities/npc_sample.tscn

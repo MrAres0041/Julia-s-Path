@@ -1,3 +1,4 @@
+res://scenes/UI
 res://scripts
 res://scenes/utilities
 res://scenes/timelines
@@ -7,7 +8,6 @@ res://assets/audio/sfx
 res://resources/maps
 res://assets/maps/under/Borders
 res://assets/maps/under
-res://scenes/UI
 res://resources/calls/
 res://resources/
 res://scenes/timelines/calls
