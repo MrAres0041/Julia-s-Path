@@ -1,10 +1,11 @@
 join Gloria (Serious1) left
 Gloria: I'll go...
-leave Gloria
-[wait time="0.7"]
+leave Gloria [animation="Fade Out" wait="true"]
 [signal arg="Door_calling"]
-[wait time="3.5"]
+[wait time="4.0"]
+[signal arg="OpenDoor"]
+audio sfx_dialogic "res://assets/audio/sfx/door.ogg"
+[wait time="0.5"]
 join Gloria (Angry) right
 Gloria: Who is this?
-[signal arg="OpenDoor"]
 [signal arg="DialogueEnded"]

@@ -8,10 +8,11 @@ class_name MainEvents
 @onready var door_living: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
 @onready var door: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
 
-
 @onready var mom_awake: DinamicDManager = $Interactions/Mom_awake
 @onready var no_pills: DinamicDManager = $Interactions/No_pills
 @onready var door_call: DinamicDManager = $Interactions/Door_call
+
+@onready var path_follow_gloria: PathFollow2D = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D"
 
 @onready var gloria_door: PathGuiderManager = $"../Cam_Movement/J_Living/NPCs/GloriaDoor"
 @onready var gloria: NPC_Sample = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D/Gloria"
@@ -34,6 +35,7 @@ func _ProgressHandler(i):
 			_killNode(mom_sleeping)
 		"Door_calling":
 			gloria_door._startWalking()
+			gloria._animationPlay("walk_l")
 		"OpenDoor":
 			door.visible = false
 
@@ -47,3 +49,11 @@ func _killNode(node):
 	if is_instance_valid(node):
 		remove_child(node)
 		node.queue_free()
+
+func _physics_process(delta: float) -> void:
+	if path_follow_gloria.progress_ratio > 0.05 and path_follow_gloria.progress_ratio < 0.06:
+		gloria._animationPlay("walk_r")
+	if path_follow_gloria.progress_ratio > 0.88 and path_follow_gloria.progress_ratio < 0.89:
+		gloria._changeSprite(false)
+	if path_follow_gloria.progress_ratio > 0.99:
+		gloria._animationPlay("idle_r")
