@@ -10,16 +10,25 @@
 "style": "DefaultStyle",
 "suffix": ""
 },
-&"default_portrait": "Eric1",
+&"default_portrait": "Default",
 &"description": "",
 &"display_name": "Eric",
 &"mirror": false,
 &"nicknames": ["Eric"],
-&"offset": Vector2(-100, 0),
+&"offset": Vector2(0, 0),
 &"portraits": {
-"Eric1": {
+"Default": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Eric/EricSmokingShi.png\""
+"image": "\"res://assets/portraits/Eric/E0.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Smiling": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E1.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,
@@ -27,9 +36,63 @@
 "scale": 1.0,
 "scene": ""
 },
-"Eric2": {
+"Smoke": {
 "export_overrides": {
-"image": "\"res://assets/portraits/Eric/Eric1.png\""
+"image": "\"res://assets/portraits/Eric/EricSmokingShi.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Smug1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sus1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talk1": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talk2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talk3": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Talk4": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Eric/E7.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

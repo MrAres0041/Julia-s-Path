@@ -26,9 +26,27 @@
 "scale": 1,
 "scene": ""
 },
+"Angry2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G14.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "AngryTalk": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Gloria/G8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"AngryTalk2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Gloria/G13.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

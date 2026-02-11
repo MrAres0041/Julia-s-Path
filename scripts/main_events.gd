@@ -17,6 +17,7 @@ class_name MainEvents
 @onready var gloria_door: PathGuiderManager = $"../Cam_Movement/J_Living/NPCs/GloriaDoor"
 @onready var gloria: NPC_Sample = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D/Gloria"
 
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
 func _ready() -> void:
 	_deactivateMonitor(corridorExit)
@@ -38,6 +39,12 @@ func _ProgressHandler(i):
 			gloria._animationPlay("walk_l")
 		"OpenDoor":
 			door.visible = false
+		"DoorClose":
+			animation_player.play("fade_out")
+		"LightAgain":
+			_killNode(gloria)
+			door.visible = true
+			animation_player.play("fade_in")
 
 func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true
@@ -49,11 +56,3 @@ func _killNode(node):
 	if is_instance_valid(node):
 		remove_child(node)
 		node.queue_free()
-
-func _physics_process(delta: float) -> void:
-	if path_follow_gloria.progress_ratio > 0.05 and path_follow_gloria.progress_ratio < 0.06:
-		gloria._animationPlay("walk_r")
-	if path_follow_gloria.progress_ratio > 0.88 and path_follow_gloria.progress_ratio < 0.89:
-		gloria._changeSprite(false)
-	if path_follow_gloria.progress_ratio > 0.99:
-		gloria._animationPlay("idle_r")

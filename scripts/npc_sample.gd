@@ -11,7 +11,6 @@ var isActive:bool = true
 
 func _ready() -> void:
 	_changeSprite(true)
-	animation_player.play("idle_l")
 
 func _NPCVerifier():
 	if !isActive:

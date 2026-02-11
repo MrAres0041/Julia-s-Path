@@ -6,8 +6,8 @@ res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/utilities/npc_sample.tscn
 res://scenes/utilities/index.tscn
-res://scripts/main_events.gd
-res://scripts/npc_sample.gd
-res://scripts/path_guider_manager.gd
 res://scenes/utilities/path_guider_manager.tscn
 res://scenes/timelines/door_call.dtl
+res://scenes/chars/DialogChars/Gloria.dch
+res://scripts/main_events.gd
+res://scripts/npc_sample.gd

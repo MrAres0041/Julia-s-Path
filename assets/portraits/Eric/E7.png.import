@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m6t5agdji4kq"
-path="res://.godot/imported/Eric1.png-8f1e4358e20c07b52424d71619bb0b7a.ctex"
+uid="uid://v2w4ohnnnp77"
+path="res://.godot/imported/E7.png-d15a25915ff0224c79a6284a4e50f147.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/Eric/Eric1.png"
-dest_files=["res://.godot/imported/Eric1.png-8f1e4358e20c07b52424d71619bb0b7a.ctex"]
+source_file="res://assets/portraits/Eric/E7.png"
+dest_files=["res://.godot/imported/E7.png-d15a25915ff0224c79a6284a4e50f147.ctex"]
 
 [params]
 

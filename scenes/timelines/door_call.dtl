@@ -6,6 +6,55 @@ leave Gloria [animation="Fade Out" wait="true"]
 [signal arg="OpenDoor"]
 audio sfx_dialogic "res://assets/audio/sfx/door.ogg"
 [wait time="0.5"]
-join Gloria (Angry) right
-Gloria: Who is this?
+join Gloria (Worried2) left [animation="Fade In"]
+join Eric (Smiling) right [mirrored="true"]
+Narrator: As your mother opened the door, she was greeted by the sight of a smiling idiot standing slightly beneath the doorframe.
+Narrator: And the moment you heard his voice, you knew you were screwed.
+Eric (Talk3): Hey, Miss G! Is Julia awake?
+update Eric (Default)
+Gloria (Sus2): Well, would you look at this...
+Gloria (Sus1): You must be Julie’s new friend.
+Gloria: Isn’t it a little too early to be showing up, young man?
+Eric (Talk1): Did she talk about me?
+update Eric (Default)
+Gloria (AngryTalk): Plenty, actually...
+update Eric (Smiling)
+update Gloria (Angry)
+Narrator: That guy would NEVER wake up at this hours.[input][br]It feels like the universe itself is making an effort to ruin your morning.
+Eric (Talk1): Oh! Right.
+update Gloria (Worried2)
+Eric (Talk2): Anyway, I didn’t want to bother.[input][br]Julie forgot her pills at my place yesterday, so I decided to stop by.
+update Eric (Default)
+Gloria (Sus2): Ah, I see…[input] how kind of you.
+Gloria (AngryTalk): I’d offer to let you come in, but let’s just say Julie will be quite occupied for a while.
+Gloria (AngryTalk2): [u]Three weeks[/u], to be more specific.
+update Gloria (Angry2)
+Eric (Smug1): Busy days, huh?
+update Eric (Smiling)
+Gloria (AngryTalk): You could say that, yes…[input][br]But I’ll tell her you passed by.
+update Gloria (Angry)
+Eric (Talk1): Cool! Yeah, I know how it goes.
+Eric (Talk4): Who’s got time these days anyway?
+update Gloria (Worried2)
+Eric (Talk3): Tell her I’ll be waiting for our next walk!
+Eric (Talk2): I’d go alone, but I kinda got attacked by dogs last time I did.
+update Eric (Smiling)
+update Gloria (Worried1)
+Narrator: Well... That’s it.
+Narrator: You’re ruined.
+update Eric (Default)
+Gloria (Talk2): I think she mentioned something about that…
+Gloria (AngryTalk): And I’m sure you’ll be bringing protection whenever you two go on your ‘walks,‘ right?
+Gloria: You know... in case that "dog" appears again?
+update Gloria (Angry)
+Eric (Talk1): Don’t worry about it, ma’am. I always do!
+Eric (Talk4): A good old stick![input][br]Dogs hate it.
+leave Gloria [animation="Fade Out"]
+leave Eric [animation="Fade Out" wait="true"]
+[signal arg="DoorClose"]
+[wait time="0.5"]
+Narrator: The world blessed your ‘situation-friend’ with the awareness of a capybara.[input][br]Which, of course, is a curse upon yourself.
+Narrator: You wish the earth would just split open and swallow you whole…
+[wait time="0.5"]
+[signal arg="LightAgain"]
 [signal arg="DialogueEnded"]
