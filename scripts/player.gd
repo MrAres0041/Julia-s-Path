@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_released("run"):
 		speed = base_speed
-		
+	
 	if playerInput:
 		velocity = speed * playerInput
 	else:

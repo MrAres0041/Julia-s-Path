@@ -36,7 +36,6 @@ func _ProgressHandler(i):
 			_killNode(mom_sleeping)
 		"Door_calling":
 			gloria_door._startWalking()
-			gloria._animationPlay("walk_l")
 		"OpenDoor":
 			door.visible = false
 		"DoorClose":

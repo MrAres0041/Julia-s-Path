@@ -7,7 +7,6 @@ res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/utilities/npc_sample.tscn
 res://scenes/utilities/index.tscn
 res://scenes/utilities/path_guider_manager.tscn
-res://scenes/timelines/door_call.dtl
-res://scenes/chars/DialogChars/Gloria.dch
-res://scripts/main_events.gd
-res://scripts/npc_sample.gd
+res://scripts/npcs/gloria_npc.gd
+res://scenes/chars/player.tscn
+res://scripts/player.gd

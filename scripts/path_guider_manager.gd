@@ -17,6 +17,3 @@ func _startWalking():
 
 func _stopWalking():
 		walk = false
-
-func _changeSpeed(newSpeed):
-	speed = newSpeed
