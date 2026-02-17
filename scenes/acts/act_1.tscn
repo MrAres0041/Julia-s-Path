@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=88 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -30,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
 [ext_resource type="PackedScene" uid="uid://c73je45r6mo8o" path="res://scenes/utilities/npc_sample.tscn" id="24_tui3u"]
 [ext_resource type="PackedScene" uid="uid://2b7nf2fglmtm" path="res://scenes/utilities/path_guider_manager.tscn" id="26_td3a4"]
+[ext_resource type="Texture2D" uid="uid://ct7ujdus1s25g" path="res://assets/sprites/Gloria/Gloria2.png" id="27_slgqg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_can1i"]
 size = Vector2(29, 84)
@@ -635,6 +636,8 @@ loop = false
 position = Vector2(0, 3.8147e-06)
 rotation = -1.5708
 scale = Vector2(0.55, 0.55)
+spriteFront = ExtResource("13_707qt")
+spriteBack = ExtResource("27_slgqg")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true

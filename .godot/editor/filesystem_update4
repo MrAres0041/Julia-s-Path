@@ -1,12 +1,12 @@
-res://scenes/acts/act_1.tscn
+res://scenes/utilities/npc_sample.tscn
 res://resources/calls/Act1.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/utilities/npc_sample.tscn
+res://scripts/npcs/gloria_npc.gd
+res://scripts/npc_sample.gd
+res://scenes/acts/act_1.tscn
 res://scenes/utilities/index.tscn
 res://scenes/utilities/path_guider_manager.tscn
-res://scripts/npcs/gloria_npc.gd
 res://scenes/chars/player.tscn
-res://scripts/player.gd
