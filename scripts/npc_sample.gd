@@ -4,6 +4,7 @@ class_name NPC_Sample
 @export var isActive:bool = true
 @export var spriteFront:Texture2D
 @export var spriteBack:Texture2D
+@export var flippedSprite:bool = false
 
 var lado:bool = true
 var last_position : Vector2
@@ -12,12 +13,14 @@ var last_position : Vector2
 @onready var anim_tree = $AnimationTree
 @onready var playback = anim_tree["parameters/playback"]
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	last_position = global_position
+	sprite_2d.flip_h = flippedSprite
 
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	var current_velocity = global_position - last_position
 	
 	_ladoVerify()
@@ -42,17 +45,18 @@ func _walk_animation(player_dir:Vector2, walking:bool):
 		animation_tree["parameters/Idle/blend_position"] = player_dir
 		animation_tree["parameters/Walk/blend_position"] = player_dir
 		
-	if player_dir != Vector2.ZERO:
+	if abs(player_dir.y) > 0.5:
 			if player_dir.y < 0 and lado == true:
 				_changeLado(false) 
 			elif player_dir.y > 0 and lado == false:
 				_changeLado(true)
 
+
 func _ladoVerify():
 	if lado:
-		$Sprite2D.texture = spriteFront
+		sprite_2d.texture = spriteFront
 	else:
-		$Sprite2D.texture = spriteBack
+		sprite_2d.texture = spriteBack
 
 
 func _NPCVerifier():
@@ -72,6 +76,7 @@ func _changeToFront():
 
 func _changeToBack():
 	lado = false
+
 
 func _changeLado(newLado:bool):
 	lado = newLado
