@@ -1,12 +1,71 @@
-audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
-Narrator: You found your meds! (Boo...)
-Narrator: But the bottle is empty. (Yay!)
-join Julia (JuliaDefault) right
-Narrator: A small part of you felt relieved when you saw the clean bottom.
-update Julia (JuliaSad1)
-Narrator: However, the functional part knows you shouldn’t skip them under any circumstances.
-Narrator: Being a responsible human being and all that…
-leave Julia
-Narrator: You left some in the car the last time you went out. Better go check before Mom wakes up.
-[signal arg="NoPills1"]
+if {Act1.keys_car_m} == false:
+	if {Act1.pills_can} == false:
+		audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
+		Narrator: You found your meds! (Boo...)
+		Narrator: But the bottle is empty. (Yay!)
+		join Julia (JuliaDefault) right
+		Narrator: A small part of you felt relieved when you saw the clean bottom.
+		update Julia (JuliaSad1)
+		Narrator: However, the functional part knows you shouldn’t skip them under any circumstances.
+		Narrator: Being a responsible human being and all that…
+		leave Julia
+		Narrator: You left some in the car the last time you went out. Better go check before Mom wakes up.
+		set {Act1.pills_can} = true
+		[signal arg="NoPills1"]
+	else:
+		Narrator: Makeup won't hide your problem.
+		Narrator: Better keep going...
+else:
+	if {Act1.im_sorry} == false:
+		Narrator: The pills are in your hand.You feel their weight.
+		Narrator: Small bricks you need to swallow before changing your mind.
+		Narrator: But your heart isn’t there, is it?
+		Narrator: The silence waits for your decision...
+		- Drop them in the sink.
+			[wait time="1.0"]
+			Narrator: The water carries away the problem.
+			join Julia (JuliaSad2) right
+			Narrator: Shame washes over you once again.
+			Narrator: And then his voice echoed in your mind...
+			join DreamAndrew (Mocking) left [animation="Fade In" wait="true"]
+			DreamAndrew: Good girl.
+			DreamAndrew (Mocking2): Now get back to bed.
+			DreamAndrew: There's nothing else for you.
+			leave DreamAndrew [animation="Fade Out" wait="true"]
+			Julia (JuliaSad1): ...
+			Narrator: You bow your head even though you know there’s no one there.
+			leave Julia [animation="Fade Out"]
+			Narrator: That doesn’t stop you from wishing he were.
+		- Take your medicine.
+			set {Act1.pills_taken} = true
+			join Julia (JuliaSad1) right
+			Narrator: The medication went down your throat.[input][br]It was the right thing to do, though it felt like anything but.
+			update Julia (JuliaDefault)
+			Narrator: You looked at your own reflection.
+			Narrator: Funny, but not the fun kind of funny...
+			join DreamNina (NinaDefault) left [mirrored="true"]
+			DreamNina: And there you go again.
+			update Julia (JuliaSad0)
+			[wait time="1.0" skippable="true"]
+			DreamNina (Mocking): You really seem to enjoy hurting yourself.
+			update Julia (JuliaSad1)
+			DreamNina (NinaDefault): You’re disgusting.[input][br]No wonder everyone leaves you.
+			DreamNina (Mocking): Always making the worst possible choice
+			update DreamNina (NinaDefault)
+			[wait time="1.0" skippable="true"]
+			Julia (JuliaSad1): Let me alone...
+			Julia: You’re not here.
+			DreamNina (Mocking): Haha, like hell I’m not.[input][br]But not like it matters, right?
+			update DreamNina (NinaDefault)
+			Julia (JuliaSad2): ...
+			[wait time="1.0" skippable="true"]
+			DreamNina: Don’t worry...[input][br]My friends are patient.
+			[wait time="1.0" skippable="true"]
+			DreamNina: Very patient.
+			leave DreamNina [animation="Fade Out"]
+			leave Julia [animation="Fade Out" wait="true"]
+			[wait time="1.0"]
+			Narrator: You’d better go lie down before Mom sees you talking alone...[input][br]again...
+		set {Act1.im_sorry} = true
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

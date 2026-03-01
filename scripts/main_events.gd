@@ -22,7 +22,7 @@ class_name MainEvents
 func _ready() -> void:
 	_deactivateMonitor(corridorExit)
 	_deactivateMonitor(mom_awake)
-	gloria._NPCVerifier()
+	_deactivateMonitor(door_call)
 	Dialogic.signal_event.connect(_ProgressHandler)
 
 func _ProgressHandler(i):
@@ -31,9 +31,10 @@ func _ProgressHandler(i):
 			_activateMonitor(corridorExit)
 			_killNode(no_pills)
 		"Pills2":
-			gloria._NPCVerifier()
 			_activateMonitor(mom_awake)
+			_activateMonitor(door_call)
 			_killNode(mom_sleeping)
+			gloria.setActive(true)
 		"Door_calling":
 			gloria_door._startWalking()
 		"OpenDoor":
@@ -41,7 +42,6 @@ func _ProgressHandler(i):
 		"DoorClose":
 			animation_player.play("fade_out")
 		"LightAgain":
-			_killNode(gloria)
 			door.visible = true
 			animation_player.play("fade_in")
 

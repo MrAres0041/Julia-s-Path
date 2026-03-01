@@ -39,7 +39,7 @@ size = Vector2(29, 84)
 size = Vector2(20, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sn05"]
-size = Vector2(87, 22)
+size = Vector2(90, 15)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mf6ci"]
 texture = ExtResource("2_28v14")
@@ -329,7 +329,7 @@ position = Vector2(4046, 245)
 timeline = "door_call"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainEvents/Interactions/Door_call"]
-position = Vector2(33.5, -80)
+position = Vector2(35, -76.5)
 shape = SubResource("RectangleShape2D_5sn05")
 
 [node name="Cam_Movement" parent="." node_paths=PackedStringArray("cam", "player", "firstPos") instance=ExtResource("1_3hmkl")]
@@ -580,6 +580,7 @@ shape = SubResource("RectangleShape2D_td3a4")
 [node name="Pills" parent="Cam_Movement/J_Bathroom/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(1788, -1308)
 timeline = "pills1"
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Bathroom/Items/Pills"]
 position = Vector2(-1.5, 0)
@@ -636,6 +637,7 @@ loop = false
 position = Vector2(0, 3.8147e-06)
 rotation = -1.5708
 scale = Vector2(0.55, 0.55)
+isActive = false
 spriteFront = ExtResource("13_707qt")
 spriteBack = ExtResource("27_slgqg")
 

@@ -114,8 +114,11 @@ audio/channel_defaults={
 }
 variables={
 "Act1": {
+"im_sorry": false,
 "keys_car_m": false,
-"pills_car": false
+"pills_can": false,
+"pills_car": false,
+"pills_taken": false
 }
 }
 text/input_action="dialogic_default_action"

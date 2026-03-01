@@ -23,6 +23,7 @@ func _ready() -> void:
 func _physics_process(_delta) -> void:
 	var current_velocity = global_position - last_position
 	
+	_NPCVerifier()
 	_ladoVerify()
 	
 	if current_velocity.length() > 0.1:
@@ -63,11 +64,9 @@ func _NPCVerifier():
 	if !isActive:
 		$CollisionShape2D.disabled = true
 		visible = false
-		isActive = true
 	else:
 		$CollisionShape2D.disabled = false
 		visible = true
-		isActive = false
 
 
 func _changeToFront():
@@ -80,3 +79,6 @@ func _changeToBack():
 
 func _changeLado(newLado:bool):
 	lado = newLado
+
+func setActive(vis:bool):
+	isActive = vis
