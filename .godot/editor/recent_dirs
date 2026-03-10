@@ -1,10 +1,12 @@
+res://scenes/timelines
+res://scripts/acts
+res://scenes/acts
 res://scripts
 res://assets/portraits/Gloria
 res://assets/portraits/Eric
 res://assets/audio/sfx
 res://scenes/UI
 res://scenes/utilities
-res://scenes/timelines
 res://assets/portraits/Julia
 res://resources/maps
 res://assets/maps/under/Borders
@@ -18,5 +20,4 @@ res://resources/items/
 res://resources/maps/
 res://scripts/ui
 res://assets/fonts
-res://assets/ui
 C:/Users/Equipo/Documents/dialogues

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c73je45r6mo8o"]
+[gd_scene load_steps=27 format=3 uid="uid://c73je45r6mo8o"]
 
 [ext_resource type="Script" uid="uid://dnv476uplhrd4" path="res://scripts/npc_sample.gd" id="1_840vc"]
 
@@ -278,6 +278,17 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqwao"]
 size = Vector2(97, 94)
 
+[sub_resource type="Gradient" id="Gradient_r04vw"]
+offsets = PackedFloat32Array(0.162338, 0.597403, 1)
+colors = PackedColorArray(0, 0, 0, 0.392157, 0, 0, 0, 0.24031, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_840vc"]
+gradient = SubResource("Gradient_r04vw")
+width = 132
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.529817)
+
 [node name="Gloria" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 2
@@ -305,3 +316,12 @@ parameters/Walk/blend_position = Vector2(-0.119617, 0.407407)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -37)
 shape = SubResource("RectangleShape2D_aqwao")
+
+[node name="Shadow" type="Node2D" parent="."]
+position = Vector2(0, -100)
+
+[node name="ShadowCast" type="Sprite2D" parent="Shadow"]
+y_sort_enabled = true
+position = Vector2(0, 108)
+scale = Vector2(0.772727, 0.78125)
+texture = SubResource("GradientTexture2D_840vc")

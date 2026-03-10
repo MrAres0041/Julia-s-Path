@@ -1,5 +1,10 @@
-Narrator: The bed lies ahead.
-Narrator: You wish you could stay there forever, but the last time you tried, it only made you feel even worse…
-Narrator: You doubt anyone would want you any more if you were just a vegetable.
-Narrator: Carry on to the bathroom then...
-[signal arg="DialogueEnded"]
+if {Act1.pills_taken} == false:
+	[signal arg="DoorClose"]
+	audio music_dialogic - [fade="0.5"]
+	[wait time="0.5"]
+	[signal arg="End"]
+else:
+	Narrator: The bed lies ahead.
+	Narrator: You wish you could stay there forever.
+	Narrator: Not like anyone would want you more if you were a vegetable, anyway.
+	[signal arg="DialogueEnded"]

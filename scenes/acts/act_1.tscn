@@ -406,6 +406,7 @@ shape = SubResource("RectangleShape2D_te4vh")
 
 [node name="Bed" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
 timeline = "bed_j"
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Bed"]
 position = Vector2(-338, 95)
@@ -638,8 +639,8 @@ position = Vector2(0, 3.8147e-06)
 rotation = -1.5708
 scale = Vector2(0.55, 0.55)
 isActive = false
-spriteFront = ExtResource("13_707qt")
-spriteBack = ExtResource("27_slgqg")
+spriteFront = ExtResource("27_slgqg")
+spriteBack = ExtResource("13_707qt")
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true

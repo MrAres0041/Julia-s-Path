@@ -44,6 +44,9 @@ func _ProgressHandler(i):
 		"LightAgain":
 			door.visible = true
 			animation_player.play("fade_in")
+		"End":
+			get_tree().change_scene_to_file("res://scenes/acts/act_2.tscn")
+		
 
 func _activateMonitor(trigger:Area2D):
 	trigger.monitoring = true

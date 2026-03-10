@@ -44,6 +44,7 @@ directories/dtl_directory={
 "default": "res://scenes/timelines/calls/default.dtl",
 "door_call": "res://scenes/timelines/door_call.dtl",
 "dream1": "res://scenes/timelines/dream1.dtl",
+"ending": "res://scenes/timelines/ending.dtl",
 "frame_collection": "res://scenes/timelines/frame_collection.dtl",
 "fridge_j": "res://scenes/timelines/fridge_j.dtl",
 "front_door_j": "res://scenes/timelines/front_door_j.dtl",

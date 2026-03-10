@@ -1,0 +1,4 @@
+[wait time="2.0"]
+Narrator: Life hasn't been easy lately...
+Narrator: Well, it hasn't been easy in a long time.
+[signal arg="DialogueEnded"]
