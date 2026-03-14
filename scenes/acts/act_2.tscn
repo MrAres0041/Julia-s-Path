@@ -1,17 +1,307 @@
-[gd_scene load_steps=8 format=3 uid="uid://1onv6yearx31"]
+[gd_scene load_steps=23 format=3 uid="uid://1onv6yearx31"]
 
 [ext_resource type="Script" uid="uid://b4obx0w0ei33t" path="res://scripts/acts/act_2.gd" id="1_f1rh2"]
 [ext_resource type="Texture2D" uid="uid://d0tvwncujluve" path="res://assets/panels/4/4_bed.png" id="2_3sfkl"]
 [ext_resource type="Texture2D" uid="uid://dijk7o04sqmxf" path="res://assets/panels/4/4_Julia1.png" id="3_6pj5f"]
 [ext_resource type="Texture2D" uid="uid://csv5isgsq03vy" path="res://assets/panels/4/4_Andrew.png" id="4_52buv"]
 [ext_resource type="Texture2D" uid="uid://uym60py7cjmf" path="res://assets/panels/4/4_Nina.png" id="5_2rpu3"]
+[ext_resource type="Texture2D" uid="uid://dmab7kqrwc3a7" path="res://assets/panels/4/4_BG2.png" id="6_52buv"]
 [ext_resource type="Texture2D" uid="uid://gdx5bfjkhkxq" path="res://assets/panels/4/4_Frame.png" id="6_yavhx"]
 [ext_resource type="Texture2D" uid="uid://l8tlyngn8qqh" path="res://assets/panels/4/4_BG.png" id="7_6pj5f"]
+[ext_resource type="Texture2D" uid="uid://bqeuq2df26ni6" path="res://assets/panels/4/4_Julia2.png" id="9_ksyef"]
+[ext_resource type="Texture2D" uid="uid://dv4v4spbnyo5m" path="res://assets/panels/4/4_Julia3.png" id="10_ii7uc"]
+[ext_resource type="Texture2D" uid="uid://wfdk4yy8tun1" path="res://assets/panels/4/4_Julia4.png" id="11_hxaeu"]
+
+[sub_resource type="Animation" id="Animation_6pj5f"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_52buv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Julie/Frame:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Julie/BG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Julie/Nina:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Julie/Andrew:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Julie/Julia:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_6pj5f")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Julie/Julia:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Julie/Bed:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2rpu3"]
+resource_name = "FrameVanish"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Frame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yavhx"]
+resource_name = "BGVanish"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ksyef"]
+resource_name = "Nina"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Nina:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ii7uc"]
+resource_name = "Andrew"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Andrew:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wyl3m"]
+resource_name = "Julia1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Julia:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_ksyef")]
+}
+
+[sub_resource type="Animation" id="Animation_8bw1q"]
+resource_name = "Julia2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Julia:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_ii7uc")]
+}
+
+[sub_resource type="Animation" id="Animation_7ko5s"]
+resource_name = "Julia3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Julia:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_hxaeu")]
+}
+
+[sub_resource type="Animation" id="Animation_hxaeu"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Julia:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Julie/Andrew:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Julie/Nina:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Julie/Bed:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yavhx"]
+_data = {
+&"Andrew": SubResource("Animation_ii7uc"),
+&"BGVanish": SubResource("Animation_yavhx"),
+&"FrameVanish": SubResource("Animation_2rpu3"),
+&"Julia1": SubResource("Animation_wyl3m"),
+&"Julia2": SubResource("Animation_8bw1q"),
+&"Julia3": SubResource("Animation_7ko5s"),
+&"Nina": SubResource("Animation_ksyef"),
+&"RESET": SubResource("Animation_52buv"),
+&"fade_in": SubResource("Animation_6pj5f"),
+&"fade_out": SubResource("Animation_hxaeu")
+}
 
 [node name="act_2" type="Node2D"]
 script = ExtResource("1_f1rh2")
 
 [node name="Julie" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 
 [node name="Bed" type="Sprite2D" parent="Julie"]
 texture = ExtResource("2_3sfkl")
@@ -20,17 +310,26 @@ texture = ExtResource("2_3sfkl")
 texture = ExtResource("3_6pj5f")
 
 [node name="Andrew" type="Sprite2D" parent="Julie"]
+modulate = Color(1, 1, 1, 0)
 texture = ExtResource("4_52buv")
 
 [node name="Nina" type="Sprite2D" parent="Julie"]
+modulate = Color(1, 1, 1, 0)
 texture = ExtResource("5_2rpu3")
+
+[node name="BG2" type="Sprite2D" parent="Julie"]
+texture = ExtResource("6_52buv")
 
 [node name="Frame" type="Sprite2D" parent="Julie"]
 texture = ExtResource("6_yavhx")
 
-[node name="Frame2" type="Sprite2D" parent="Julie"]
+[node name="BG" type="Sprite2D" parent="Julie"]
+modulate = Color(1, 1, 1, 0)
 texture = ExtResource("7_6pj5f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yavhx")
+}

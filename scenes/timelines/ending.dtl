@@ -1,4 +1,42 @@
+[signal arg="In"]
 [wait time="2.0"]
-Narrator: Life hasn't been easy lately...
-Narrator: Well, it hasn't been easy in a long time.
+if {Act1.pills_taken} == false:
+Narrator: The music plays at full volume.
+Narrator: You wish it would just silence the voices in your head…[input][br]The guilt…[input][br]The regret.
+[wait time="1.0"]
+[signal arg="J1"]
+[wait time="0.1"]
+[signal arg="Frame"]
+Narrator: How long?[input][br]How long has it been since he’s gone?
+Narrator: What a dumb question.[input][br]You know it very well.
+[signal arg="J2"]
+Narrator: You've been counting days after all...
+[signal arg="BG"]
+[wait time="1.0"]
+Narrator: And you know've you missed him every single one of them.
+[wait time="1.0"]
+DreamAndrew: You still remember, huh?
+[signal arg="Andrew"]
+DreamAndrew: Hah, you better do…
+DreamAndrew: What was it you told me last time?
+DreamAndrew: “I hate you.”[input][br]“You ungrateful bastard.”[input][br]“You ruined my life.”
+[signal arg="J3"]
+[wait time="0.5"]
+DreamAndrew: Pfff… how hurtful.
+DreamNina: Awww, leave her alone, Andy…
+[signal arg="Nina"]
+DreamNina: She’s going to cry again.[input][br]Like she always does.
+DreamNina: Maybe we should just go…[input][br]Unless she doesn’t want us to.
+DreamAndrew: Oh, I think she actually wants us to stay.[input][br]Isn’t that right, [b]Julie[/b]?
+[signal arg="Out"]
+[wait time="1.0"]
+Julia: No...[input][br]Don’t call me that...
+[wait time="1.0"]
+Julia: Please, just...[input][br]Just let me rest…
+Julia: Just a couple of minutes, please...
+[wait time="1.0"]
+DreamNina: There’s plenty of rest on the other side, Julie.[input][br]Just not for us.
+DreamAndrew: And surely not for you.
+DreamAndrew: Never for people like you.
+[wait time="3.0"]
 [signal arg="DialogueEnded"]
