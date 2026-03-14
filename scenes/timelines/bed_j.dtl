@@ -6,5 +6,5 @@ if {Act1.pills_taken} == false:
 else:
 	Narrator: The bed lies ahead.
 	Narrator: You wish you could stay there forever.
-	Narrator: Not like anyone would want you more if you were a vegetable, anyway.
+	Narrator: Not like becoming a vegetable would make anyone want you more.
 	[signal arg="DialogueEnded"]

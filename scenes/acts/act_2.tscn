@@ -1,6 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://1onv6yearx31"]
+[gd_scene load_steps=8 format=3 uid="uid://1onv6yearx31"]
 
 [ext_resource type="Script" uid="uid://b4obx0w0ei33t" path="res://scripts/acts/act_2.gd" id="1_f1rh2"]
+[ext_resource type="Texture2D" uid="uid://d0tvwncujluve" path="res://assets/panels/4/4_bed.png" id="2_3sfkl"]
+[ext_resource type="Texture2D" uid="uid://dijk7o04sqmxf" path="res://assets/panels/4/4_Julia1.png" id="3_6pj5f"]
+[ext_resource type="Texture2D" uid="uid://csv5isgsq03vy" path="res://assets/panels/4/4_Andrew.png" id="4_52buv"]
+[ext_resource type="Texture2D" uid="uid://uym60py7cjmf" path="res://assets/panels/4/4_Nina.png" id="5_2rpu3"]
+[ext_resource type="Texture2D" uid="uid://gdx5bfjkhkxq" path="res://assets/panels/4/4_Frame.png" id="6_yavhx"]
+[ext_resource type="Texture2D" uid="uid://l8tlyngn8qqh" path="res://assets/panels/4/4_BG.png" id="7_6pj5f"]
 
 [node name="act_2" type="Node2D"]
 script = ExtResource("1_f1rh2")
+
+[node name="Julie" type="Node2D" parent="."]
+
+[node name="Bed" type="Sprite2D" parent="Julie"]
+texture = ExtResource("2_3sfkl")
+
+[node name="Julia" type="Sprite2D" parent="Julie"]
+texture = ExtResource("3_6pj5f")
+
+[node name="Andrew" type="Sprite2D" parent="Julie"]
+texture = ExtResource("4_52buv")
+
+[node name="Nina" type="Sprite2D" parent="Julie"]
+texture = ExtResource("5_2rpu3")
+
+[node name="Frame" type="Sprite2D" parent="Julie"]
+texture = ExtResource("6_yavhx")
+
+[node name="Frame2" type="Sprite2D" parent="Julie"]
+texture = ExtResource("7_6pj5f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
