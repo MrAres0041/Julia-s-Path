@@ -1,42 +1,92 @@
 [signal arg="In"]
 [wait time="2.0"]
 if {Act1.pills_taken} == false:
-Narrator: The music plays at full volume.
-Narrator: You wish it would just silence the voices in your head…[input][br]The guilt…[input][br]The regret.
-[wait time="1.0"]
-[signal arg="J1"]
-[wait time="0.1"]
-[signal arg="Frame"]
-Narrator: How long?[input][br]How long has it been since he’s gone?
-Narrator: What a dumb question.[input][br]You know it very well.
-[signal arg="J2"]
-Narrator: You've been counting days after all...
-[signal arg="BG"]
-[wait time="1.0"]
-Narrator: And you know've you missed him every single one of them.
-[wait time="1.0"]
-DreamAndrew: You still remember, huh?
-[signal arg="Andrew"]
-DreamAndrew: Hah, you better do…
-DreamAndrew: What was it you told me last time?
-DreamAndrew: “I hate you.”[input][br]“You ungrateful bastard.”[input][br]“You ruined my life.”
-[signal arg="J3"]
-[wait time="0.5"]
-DreamAndrew: Pfff… how hurtful.
-DreamNina: Awww, leave her alone, Andy…
-[signal arg="Nina"]
-DreamNina: She’s going to cry again.[input][br]Like she always does.
-DreamNina: Maybe we should just go…[input][br]Unless she doesn’t want us to.
-DreamAndrew: Oh, I think she actually wants us to stay.[input][br]Isn’t that right, [b]Julie[/b]?
-[signal arg="Out"]
-[wait time="1.0"]
-Julia: No...[input][br]Don’t call me that...
-[wait time="1.0"]
-Julia: Please, just...[input][br]Just let me rest…
-Julia: Just a couple of minutes, please...
-[wait time="1.0"]
-DreamNina: There’s plenty of rest on the other side, Julie.[input][br]Just not for us.
-DreamAndrew: And surely not for you.
-DreamAndrew: Never for people like you.
-[wait time="3.0"]
+	Narrator: The music plays at full volume.
+	Narrator: You wish it would just silence the voices in your head…[input][br]The guilt…[input][br]The regret.
+	[wait time="1.0"]
+	[signal arg="J1"]
+	[wait time="0.1"]
+	[signal arg="Frame"]
+	[wait time="1.0"]
+	Narrator: How long?[input][br]How long has it been since he’s gone?
+	[signal arg="Bed"]
+	[wait time="1.0"]
+	Narrator: What a dumb question.[input][br]You know it very well.
+	[signal arg="J2"]
+	Narrator: You've been counting days after all...
+	[signal arg="BG"]
+	[wait time="1.0"]
+	Narrator: And you know've you missed him every single one of them.
+	[wait time="1.0"]
+	DreamAndrew: You still remember, huh?
+	[signal arg="Andrew"]
+	DreamAndrew: Hah, you better do…
+	DreamAndrew: What was it you told me last time?
+	DreamAndrew: “I hate you.”[input][br]“You ungrateful bastard.”[input][br]“You ruined my life.”
+	[signal arg="J3"]
+	[wait time="0.5"]
+	DreamAndrew: Pfff… how hurtful.
+	DreamNina: Awww, leave her alone, Andy…
+	[signal arg="Nina"]
+	DreamNina: She’s going to cry again.[input][br]Like she always does.
+	DreamNina: Maybe we should just go…[input][br]Unless she doesn’t want us to.
+	DreamAndrew: Oh, I think she actually wants us to stay.[input][br]Isn’t that right, [b]Julie[/b]?
+	[signal arg="Out"]
+	[wait time="1.0"]
+	Julia: No...[input][br]Don’t call me that...
+	[wait time="1.0"]
+	Julia: Please, just...[input][br]Just let me rest…
+	Julia: Just a couple of minutes, please...
+	[wait time="1.0"]
+	DreamNina: There’s plenty of rest on the other side, Julie.[input][br]Just not for us.
+	DreamAndrew: And surely not for you.
+	DreamAndrew: Never for people like you.
+	[wait time="3.0"]
+else:
+	Narrator: The music plays at full volume.
+	Narrator: Slowly, the medicine starts to take effect.
+	[signal arg="J1"]
+	Narrator: Your body relaxes as your heart softens a little.[input][br]Just enough to breath.
+	[wait time="1.0"]
+	[signal arg="Frame"]
+	Narrator: How long?[input][br]How long has it been since he’s gone?
+	[signal arg="Bed"]
+	Narrator: What a dumb question.[input][br]You know it very well.
+	[signal arg="J2"]
+	Narrator: You've been counting days after all...
+	[signal arg="BG"]
+	[wait time="1.0"]
+	Narrator: And you know've you still miss him.[input][br]It doesn't get any easier, but you try anyway.
+	[wait time="1.0"]
+	Gloria: It wasn’t your fault.
+	[signal arg="Gloria"]
+	Gloria: Your father used to be like that.
+	[signal arg="J3"]
+	Gloria: Excuses...[input][br]Lies...[input][br]Listen to your mother...
+	Gloria: There was nothing good coming from that boy.
+	[wait time="0.5"]
+	Narrator: You wish there was a way to fix everything.
+	[wait time="0.5"]
+	Eric: Hey, you good?
+	[signal arg="Eric"]
+	Eric: You sort of spaced out for a second.
+	Eric: It’s okay…[input][br]I wasn’t saying anything important anyway.
+	[wait time="1.0"]
+	Eric: Wanna talk about it?
+	Julia: ...
+	[wait time="1.0"]
+	[signal arg="Out"]
+	[wait time="1.0"]
+	Julia: I'm sorry...
+	[wait time="1.0"]
+	Julia: I'm so sorry...
+	[wait time="1.0"]
+	Narrator: Sometimes there’s nothing to be fixed.
+	Narrator: What’s done is done, after all.
+	Narrator: But maybe that's not the problem...
+	Narrator: Maybe the only thing that’s broken is you.
+	[wait time="1.0"]
+	Narrator: After all, if all the apple's are bad...
+	Julia: ...maybe the problem is the tree.
+	[wait time="3.0"]
 [signal arg="DialogueEnded"]

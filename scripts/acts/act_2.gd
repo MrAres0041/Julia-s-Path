@@ -17,6 +17,10 @@ func DialogicHandler(i):
 			animation_player.play("Andrew")
 		"Nina":
 			animation_player.play("Nina")
+		"Gloria":
+			animation_player.play("Gloria")
+		"Eric":
+			animation_player.play("Eric")
 		"BG":
 			animation_player.play("BGVanish")
 		"Frame":
@@ -28,4 +32,6 @@ func DialogicHandler(i):
 		"J3":
 			animation_player.play("Julia3")
 		"Out":
-			animation_player.play("fade_out")
+			animation_player.play("fade_out_2")
+		"Bed":
+			animation_player.play("Bed")

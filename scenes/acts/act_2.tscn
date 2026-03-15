@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://1onv6yearx31"]
+[gd_scene load_steps=29 format=3 uid="uid://1onv6yearx31"]
 
 [ext_resource type="Script" uid="uid://b4obx0w0ei33t" path="res://scripts/acts/act_2.gd" id="1_f1rh2"]
 [ext_resource type="Texture2D" uid="uid://d0tvwncujluve" path="res://assets/panels/4/4_bed.png" id="2_3sfkl"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://csv5isgsq03vy" path="res://assets/panels/4/4_Andrew.png" id="4_52buv"]
 [ext_resource type="Texture2D" uid="uid://uym60py7cjmf" path="res://assets/panels/4/4_Nina.png" id="5_2rpu3"]
 [ext_resource type="Texture2D" uid="uid://dmab7kqrwc3a7" path="res://assets/panels/4/4_BG2.png" id="6_52buv"]
+[ext_resource type="Texture2D" uid="uid://b87wx3obmigty" path="res://assets/panels/4/4_Eric.png" id="6_hxaeu"]
 [ext_resource type="Texture2D" uid="uid://gdx5bfjkhkxq" path="res://assets/panels/4/4_Frame.png" id="6_yavhx"]
 [ext_resource type="Texture2D" uid="uid://l8tlyngn8qqh" path="res://assets/panels/4/4_BG.png" id="7_6pj5f"]
+[ext_resource type="Texture2D" uid="uid://7s485k5gaa4u" path="res://assets/panels/4/4_Gloria.png" id="7_wyl3m"]
 [ext_resource type="Texture2D" uid="uid://bqeuq2df26ni6" path="res://assets/panels/4/4_Julia2.png" id="9_ksyef"]
 [ext_resource type="Texture2D" uid="uid://dv4v4spbnyo5m" path="res://assets/panels/4/4_Julia3.png" id="10_ii7uc"]
 [ext_resource type="Texture2D" uid="uid://wfdk4yy8tun1" path="res://assets/panels/4/4_Julia4.png" id="11_hxaeu"]
@@ -42,9 +44,23 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_s25bg"]
+resource_name = "Eric"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Eric:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_2rpu3"]
 resource_name = "FrameVanish"
-length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -52,10 +68,25 @@ tracks/0/path = NodePath("Julie/Frame:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m8q60"]
+resource_name = "Gloria"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Gloria:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_wyl3m"]
@@ -216,6 +247,30 @@ tracks/7/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Julie/Gloria:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Julie/Eric:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_6pj5f"]
 resource_name = "fade_in"
@@ -282,19 +337,77 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Julie/Eric:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Julie/Gloria:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_scw0l"]
+resource_name = "fade_out_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5wnst"]
+resource_name = "Bed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Julie/Bed:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yavhx"]
 _data = {
 &"Andrew": SubResource("Animation_ii7uc"),
 &"BGVanish": SubResource("Animation_yavhx"),
+&"Bed": SubResource("Animation_5wnst"),
+&"Eric": SubResource("Animation_s25bg"),
 &"FrameVanish": SubResource("Animation_2rpu3"),
+&"Gloria": SubResource("Animation_m8q60"),
 &"Julia1": SubResource("Animation_wyl3m"),
 &"Julia2": SubResource("Animation_8bw1q"),
 &"Julia3": SubResource("Animation_7ko5s"),
 &"Nina": SubResource("Animation_ksyef"),
 &"RESET": SubResource("Animation_52buv"),
 &"fade_in": SubResource("Animation_6pj5f"),
-&"fade_out": SubResource("Animation_hxaeu")
+&"fade_out": SubResource("Animation_hxaeu"),
+&"fade_out_2": SubResource("Animation_scw0l")
 }
 
 [node name="act_2" type="Node2D"]
@@ -316,6 +429,15 @@ texture = ExtResource("4_52buv")
 [node name="Nina" type="Sprite2D" parent="Julie"]
 modulate = Color(1, 1, 1, 0)
 texture = ExtResource("5_2rpu3")
+
+[node name="Eric" type="Sprite2D" parent="Julie"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("6_hxaeu")
+
+[node name="Gloria" type="Sprite2D" parent="Julie"]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("7_wyl3m")
 
 [node name="BG2" type="Sprite2D" parent="Julie"]
 texture = ExtResource("6_52buv")
