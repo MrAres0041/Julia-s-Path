@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=89 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -216,6 +216,9 @@ size = Vector2(256, 97)
 [sub_resource type="AtlasTexture" id="AtlasTexture_wyd8u"]
 atlas = ExtResource("2_bruh4")
 region = Rect2(1834.66, 247.864, 100.589, 131.014)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6duos"]
+size = Vector2(44, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvun"]
 size = Vector2(42, 100)
@@ -673,6 +676,10 @@ position = Vector2(3472, -219)
 scale = Vector2(1.05, 1.1)
 texture = SubResource("AtlasTexture_wyd8u")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Cam_Movement/J_Living/Props"]
+position = Vector2(4114, -106)
+shape = SubResource("RectangleShape2D_6duos")
+
 [node name="Interactions" type="Node2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true
 
@@ -729,6 +736,20 @@ autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/Front_door"]
 shape = SubResource("RectangleShape2D_it6eo")
+
+[node name="GloriaEnd" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(4111, -152)
+timeline = "gloria_2"
+autoDestruction = false
+
+[node name="Gloria_2" type="Sprite2D" parent="Cam_Movement/J_Living/Interactions/GloriaEnd"]
+visible = false
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("27_slgqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/GloriaEnd"]
+position = Vector2(3, 46)
+shape = SubResource("RectangleShape2D_6duos")
 
 [node name="J_Garage" type="Node2D" parent="Cam_Movement"]
 y_sort_enabled = true

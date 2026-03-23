@@ -1,12 +1,14 @@
 extends Node2D
 class_name MainEvents
 
+@onready var gloria_shape: CollisionShape2D = $"../Cam_Movement/J_Living/Props/CollisionShape2D5"
 
 @onready var corridorExit: CamDetector = $"../Cam_Movement/J_Corridor/Cam_Detector2"
 @onready var car_pills: DialogueManager = $"../Cam_Movement/J_Garage/Interactions/Car_pills"
 @onready var mom_sleeping: DialogueManager = $"../Cam_Movement/J_Living/Interactions/MomSleeping"
 @onready var door_living: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
 @onready var door: Sprite2D = $"../Cam_Movement/J_Living/Props/Door"
+@onready var gloria_2: Sprite2D = $"../Cam_Movement/J_Living/Interactions/GloriaEnd/Gloria_2"
 
 @onready var mom_awake: DinamicDManager = $Interactions/Mom_awake
 @onready var no_pills: DinamicDManager = $Interactions/No_pills
@@ -16,6 +18,8 @@ class_name MainEvents
 
 @onready var gloria_door: PathGuiderManager = $"../Cam_Movement/J_Living/NPCs/GloriaDoor"
 @onready var gloria: NPC_Sample = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D/Gloria"
+@onready var gloria_end: DialogueManager = $"../Cam_Movement/J_Living/Interactions/GloriaEnd"
+
 
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
@@ -23,6 +27,8 @@ func _ready() -> void:
 	_deactivateMonitor(corridorExit)
 	_deactivateMonitor(mom_awake)
 	_deactivateMonitor(door_call)
+	_dissappearMonitor(gloria_end)
+	gloria_shape.disabled = true
 	Dialogic.signal_event.connect(_ProgressHandler)
 
 func _ProgressHandler(i):
@@ -42,7 +48,12 @@ func _ProgressHandler(i):
 		"DoorClose":
 			animation_player.play("fade_out")
 		"LightAgain":
+			gloria_shape.disabled = false
+			gloria_2.visible = true
+			_appearMonitor(gloria_end)
 			door.visible = true
+			_killNode(gloria_door)
+			_killNode(door_call)
 			animation_player.play("fade_in")
 		"End":
 			get_tree().change_scene_to_file("res://scenes/acts/act_2.tscn")
@@ -53,6 +64,14 @@ func _activateMonitor(trigger:Area2D):
 
 func _deactivateMonitor(trigger:Area2D):
 	trigger.monitoring = false
+
+func _dissappearMonitor(trigger:Area2D):
+	trigger.monitorable = false
+	trigger.monitoring = false
+
+func _appearMonitor(trigger:Area2D):
+	trigger.monitorable = true
+	trigger.monitoring = true
 
 func _killNode(node):
 	if is_instance_valid(node):
