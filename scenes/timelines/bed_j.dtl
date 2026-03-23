@@ -1,4 +1,4 @@
-if {Act1.pills_taken} == false:
+if {Act1.pills_taken} == true:
 	[signal arg="DoorClose"]
 	audio music_dialogic - [fade="0.5"]
 	[wait time="0.5"]
