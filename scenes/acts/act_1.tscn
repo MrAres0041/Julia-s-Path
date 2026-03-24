@@ -472,8 +472,10 @@ mapProps = ExtResource("15_6jtyn")
 position = Vector2(3, 5)
 shape = SubResource("RectangleShape2D_ev3ej")
 
-[node name="Cam_Detector2" parent="Cam_Movement/J_Corridor" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("6_ev3ej")]
+[node name="Cam_Detector2" parent="Cam_Movement/J_Corridor" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(2427, 125)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Steps"
 player_location = NodePath("../../J_Living/player_location2")
 cam = NodePath("../../J_Living/2")
 mapProps = ExtResource("17_2cs5s")
@@ -602,8 +604,10 @@ position = Vector2(4054, 245)
 [node name="player_location2_1" type="Marker2D" parent="Cam_Movement/J_Living"]
 position = Vector2(4481, -61)
 
-[node name="Cam_Detector1" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("player_location", "cam") instance=ExtResource("6_ev3ej")]
+[node name="Cam_Detector1" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(4030, 244)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Steps"
 player_location = NodePath("../../J_Corridor/player_location1_1")
 cam = NodePath("../../J_Corridor/1")
 mapProps = ExtResource("13_vi8hp")

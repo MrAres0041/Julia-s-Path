@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 class_name MusicManager
 
-@export_enum("menu", "JuliaHouse0", "Testing") var StartingPlaylist:String
+@export_enum("menu", "JuliaHouse0") var StartingPlaylist:String
 @export var StartingIndex:int = 0
 
 var playlist = {
@@ -13,6 +13,7 @@ var playlist = {
 		preload("res://assets/audio/music/Spellbound (Music Box).mp3"),
 		preload("res://assets/audio/music/Dusty Memories MP3.mp3")
 	],
+	
 }
 
 var currentPlayList: String = ""

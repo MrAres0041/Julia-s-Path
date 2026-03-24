@@ -2,7 +2,7 @@ extends Area2D
 class_name CamDetector
 
 @export var audio:AudioManager
-@export_enum("Door", "Item_Collect") var SelectedSFX:String
+@export_enum("Door", "Item_Collect", "Steps") var SelectedSFX:String
 @export var index:int
 @export var player_location:Marker2D
 @export var cam:Marker2D
