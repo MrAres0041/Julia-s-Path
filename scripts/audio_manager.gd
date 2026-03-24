@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 class_name AudioManager
 
-@export_enum("Door", "Item_Collect", "Phone") var SelectedSFX:String
+@export_enum("Door", "Item_Collect", "Phone", "Tree") var SelectedSFX:String
 @export var ChosenIndex:int = 0
 
 var playlist = {
@@ -14,6 +14,9 @@ var playlist = {
 	"Phone":[
 		preload("res://assets/audio/sfx/phone_button.mp3"),
 		preload("res://assets/audio/sfx/phone.ogg")
+	],
+	"Tree":[
+		preload("res://assets/audio/sfx/tree.ogg")
 	]
 }
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5sf6lvb3gj3e"]
+[gd_scene load_steps=11 format=3 uid="uid://c5sf6lvb3gj3e"]
 
 [ext_resource type="Texture2D" uid="uid://b4kuwidc6gox" path="res://assets/ui/bg.png" id="1_b0wu7"]
 [ext_resource type="Script" uid="uid://cl8cjdtmqu0as" path="res://scripts/ui/title_bg.gd" id="1_qyaso"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cejpuvy88y2e" path="res://assets/ui/tree_r.png" id="3_t453k"]
 [ext_resource type="Texture2D" uid="uid://bcwvmlu8lufc2" path="res://assets/ui/fade.png" id="4_t453k"]
 [ext_resource type="Texture2D" uid="uid://1th43r42t2am" path="res://assets/ui/Name.png" id="6_1rma7"]
+[ext_resource type="PackedScene" uid="uid://dpcbf6g8klkre" path="res://scenes/UI/audio_manager.tscn" id="7_00aiv"]
 
 [sub_resource type="Animation" id="Animation_qyaso"]
 length = 0.001
@@ -84,6 +85,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.566667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_playTree"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1rma7"]
@@ -170,3 +185,6 @@ expand_mode = 3
 libraries = {
 &"": SubResource("AnimationLibrary_1rma7")
 }
+
+[node name="AudioManager" parent="." instance=ExtResource("7_00aiv")]
+SelectedSFX = "Tree"
