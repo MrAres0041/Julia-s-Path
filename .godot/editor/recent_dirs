@@ -1,3 +1,4 @@
+res://assets/panels
 res://scenes/timelines
 res://scripts/acts
 res://scenes/acts
@@ -15,7 +16,6 @@ res://resources/calls/
 res://resources/
 res://scenes/timelines/calls
 res://assets/styles
-res://assets/panels
 res://resources/items/
 res://resources/maps/
 res://scripts/ui
