@@ -4,10 +4,10 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_def
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/timelines/gloria_2.dtl
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_normal.tres
 res://scenes/utilities/npc_sample.tscn
 res://scenes/acts/act_2.tscn
 res://scenes/UI/main_menu.tscn
 res://scenes/UI/cam_detector.tscn
-res://scenes/chars/DialogChars/Julia.dch
-res://scenes/chars/DialogChars/Gloria.dch
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_hover.tres
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/choice_panel_focus.tres
