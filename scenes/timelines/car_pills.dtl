@@ -1,4 +1,4 @@
-if {Act1.keys_car_} == false:
+if {Act1.keys_car_m} == false:
 	if {Act1.pills_car} == true:
 		Narrator: You work the screwdriver into the locker.
 		Narrator: A little push here, a small wiggle there, and…
@@ -14,7 +14,7 @@ if {Act1.keys_car_} == false:
 		leave Julia
 		Narrator: Better to deal with it later, right?
 		Narrator: For now, you go make breakfast.
-		set {Act1.keys_car_} = true
+		set {Act1.keys_car_m} = true
 		[signal arg="Pills2"]
 	else:
 		Narrator: You pull the car handle, but the door doesn’t open.

@@ -1,4 +1,4 @@
-if {Act1.keys_car_} == false:
+if {Act1.keys_car_m} == false:
 	if {Act1.pills_can} == false:
 		audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 		Narrator: You found your meds! (Boo...)
