@@ -1,10 +1,16 @@
 [style]
 [wait time="2.0"]
-- Skip introductory scene.
+[background arg="res://assets/ui/TutorialPanel.png" fade="0.5"]
+[wait_input]
+[background arg="res://assets/ui/TutorialPanel2.png" fade="0.5"]
+[wait_input]
+[background fade="1.0" wait="true"]
+[wait time="1.0"]
+- Skip introduction.
 	[wait time="2.0"]
 	[signal arg="DialogueEnded"]
 	[end_timeline]
-- Watch it whole...
+- Face your demons...
 [wait time="2.0"]
 audio music_dialogic "res://assets/audio/music/Enter the Clown.mp3"
 [background arg="res://assets/maps/under/dreamBG.png" fade="2.0"]
@@ -33,7 +39,7 @@ update DreamAndrew (DefaultAndrew)
 update DreamAndrew (Talking) [mirrored="false"]
 DreamAndrew: Ugh...[input][br]Come on, quit it already.
 DreamAndrew (Resigned): Gosh, it's always the same with you.
-DreamAndrew (DefaultAndrew): Always the little girl complaining about [u]everything[/u].
+DreamAndrew (DefaultAndrew): Always the little girl complaining about everything.
 DreamAndrew (Mocking): Crying for things that are just inside [u]your head[/u].
 DreamAndrew (Mocking2): So pathetic...
 [wait time="2.0" skippable="true"]
@@ -67,16 +73,17 @@ update DreamNina (NinaDefault) center [mirrored="false"]
 update DreamNina (Nervous) center [mirrored="true"]
 DreamNina: I thought we were friends...
 DreamNina (Mocking): Best friends forever, remember?
-DreamNina (NinaDefault): But perhaps forever it's too long for someone you...
+DreamNina (NinaDefault): But perhaps forever it's too long for someone like you...
 [wait time="2.0" skippable="true"]
 update DreamNina [mirrored="false"]
 DreamNina: That's alright...
 [wait time="2.0" skippable="true"]
 DreamNina (Mocking): I have new friends now.
 DreamNina: They all [u]crawl[/u] and [u]ooze[/u]!
-DreamNina: We play all day long, they just never seem to get tired.
+DreamNina: We play all day long!
+DreamNina: They never seem to get tired...[input][br]Never complain...
 DreamNina (Nervous): They even told me they can't wait for you to join us.
-DreamNina: They really want to play with you too.
+DreamNina: Really want to play with you too.
 update DreamNina (NinaDefault) [mirrored="false"]
 [wait time="2.0" skippable="true"]
 DreamNina (Nervous): Maybe then you'll be able to feel better.
@@ -89,8 +96,8 @@ join Echo center [animation="Fade In" wait="true"]
 [wait time="2.0" skippable="true"]
 Narrator: This one feels different...
 Narrator: You can't see anything from him.
-Narrator: Not a face,[input] not a silhouette,[input] not even an idea of what he or she might look like.
-Narrator: But somehow…[input] you feel like you know this person.
+Narrator: Not a face.[input][br]Not a silhouette.[input][br]Not even an idea of what he or she might look like.
+Narrator: But somehow…[input] you know this person.
 [wait time="2.0" skippable="true"]
 Echo (Default): What is your story, miserable one?
 [wait time="2.0" skippable="true"]
@@ -100,7 +107,7 @@ update Echo (Default)
 [wait time="2.0" skippable="true"]
 Echo (Sus): How much has this world taken from you?
 Echo: Your heart?[input][br]Your happiness?[input][br]Your mind?
-Echo: Wasn't all [u]that[/u] enough?
+Echo: Wasn't all that enough?
 Echo (Sus): How cruel.
 leave DreamAndrew [animation="Fade Out" wait="true"]
 Echo (Sus): My poor daisy...
@@ -110,18 +117,17 @@ leave Echo [animation="Fade Out" wait="true"]
 [background fade="2.0"]
 [wait time="2.0"]
 Echo: Please, remember...[input] I need you to remember...
-Echo: If all the apples rot...[input][br]Then the problem might be on the tree.
 audio music_dialogic - [fade="2.5"]
 [wait time="3.0" skippable="true"]
 audio sfx_dialogic "res://assets/audio/sfx/alarm.ogg" [loop="true"]
 [wait time="2.0" skippable="true"]
 [background arg="res://assets/panels/1.png" fade="0.5" transition="Simple Fade"]
 [wait time="3.0" skippable="true"]
-[background arg="res://assets/panels/2.png" fade="0.2" transition="Push Left"]
+[background arg="res://assets/panels/3.png" fade="0.2" transition="Push Left"]
 [wait_input]
 audio sfx_dialogic "res://assets/audio/sfx/switch.ogg" [loop="false"]
-[background arg="res://assets/panels/3.png" fade="0.2" transition="Push Up"]
+[background arg="res://assets/panels/2.png" fade="0.2" transition="Push Up"]
 [wait_input]
 [background fade="0.0"]
 [wait time="2.0" skippable="true"]
-Narrator: And just like that...[input] another day beggins.
+Narrator: And just like that...[input][br]Another day beggins.
