@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=95 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cdiaqc5cexjxp" path="res://assets/maps/under/j_bathroom.png" id="8_frvun"]
 [ext_resource type="PackedScene" uid="uid://dn6yh46vn2srj" path="res://scenes/utilities/dialogue_manager.tscn" id="9_amb7k"]
 [ext_resource type="Texture2D" uid="uid://d0x8kfpqqcncs" path="res://assets/maps/under/Borders/j_corridor_border.png" id="9_te4vh"]
+[ext_resource type="Texture2D" uid="uid://dqscenwlyexs1" path="res://assets/maps/under/Borders/j_mom_room_border.png" id="10_f707s"]
 [ext_resource type="Texture2D" uid="uid://dtrfvgejx0rjn" path="res://assets/maps/under/j_garage.png" id="11_fkol3"]
 [ext_resource type="Texture2D" uid="uid://o4dt2bbxq7n8" path="res://assets/sprites/Gloria/Gloria1.png" id="13_707qt"]
 [ext_resource type="Resource" uid="uid://cbawodteqhpt3" path="res://resources/maps/J_Corridor.tres" id="13_vi8hp"]
@@ -24,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bgchnf1y65dqi" path="res://scenes/UI/music_manager.tscn" id="15_bssua"]
 [ext_resource type="PackedScene" uid="uid://jopcj20kd7ck" path="res://scenes/UI/game_menu.tscn" id="15_xi35y"]
 [ext_resource type="PackedScene" uid="uid://dpcbf6g8klkre" path="res://scenes/UI/audio_manager.tscn" id="16_7mp2q"]
+[ext_resource type="Texture2D" uid="uid://defbymym8rot" path="res://assets/maps/under/j_mom_room.png" id="16_d36ii"]
 [ext_resource type="Resource" uid="uid://ly4of8hqrepu" path="res://resources/maps/J_Living.tres" id="17_2cs5s"]
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
@@ -31,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://c73je45r6mo8o" path="res://scenes/utilities/npc_sample.tscn" id="24_tui3u"]
 [ext_resource type="PackedScene" uid="uid://2b7nf2fglmtm" path="res://scenes/utilities/path_guider_manager.tscn" id="26_td3a4"]
 [ext_resource type="Texture2D" uid="uid://ct7ujdus1s25g" path="res://assets/sprites/Gloria/Gloria2.png" id="27_slgqg"]
+[ext_resource type="Resource" uid="uid://g1tv0r21kkwj" path="res://resources/maps/J_Mom_Room.tres" id="30_d36ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_can1i"]
 size = Vector2(29, 84)
@@ -68,12 +71,18 @@ texture = ExtResource("7_nxw7d")
 14:0/size_in_atlas = Vector2i(48, 50)
 14:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jg0i"]
+texture = ExtResource("10_f707s")
+12:5/size_in_atlas = Vector2i(63, 42)
+12:5/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_4ecay"]
 sources/0 = SubResource("TileSetAtlasSource_mf6ci")
 sources/2 = SubResource("TileSetAtlasSource_ev3ej")
 sources/1 = SubResource("TileSetAtlasSource_bssua")
 sources/3 = SubResource("TileSetAtlasSource_6jtyn")
 sources/4 = SubResource("TileSetAtlasSource_xx8qm")
+sources/5 = SubResource("TileSetAtlasSource_0jg0i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hmkl"]
 texture = ExtResource("1_crqd6")
@@ -101,12 +110,18 @@ texture = ExtResource("8_frvun")
 12:3/size_in_atlas = Vector2i(63, 44)
 12:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ceca"]
+texture = ExtResource("16_d36ii")
+12:5/size_in_atlas = Vector2i(63, 42)
+12:5/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_c5r8j"]
 sources/0 = SubResource("TileSetAtlasSource_3hmkl")
 sources/2 = SubResource("TileSetAtlasSource_amb7k")
 sources/1 = SubResource("TileSetAtlasSource_7mp2q")
 sources/4 = SubResource("TileSetAtlasSource_ghp2r")
 sources/3 = SubResource("TileSetAtlasSource_wyd8u")
+sources/5 = SubResource("TileSetAtlasSource_6ceca")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28v14"]
 texture = ExtResource("2_bruh4")
@@ -137,12 +152,14 @@ texture = ExtResource("2_bruh4")
 94:15/size_in_atlas = Vector2i(16, 9)
 94:15/0 = 0
 94:15/0/y_sort_origin = -45
+44:25/size_in_atlas = Vector2i(6, 28)
+44:25/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mf6ci"]
 sources/0 = SubResource("TileSetAtlasSource_28v14")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddspx"]
-size = Vector2(73, 60.5)
+size = Vector2(73, 37.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
 size = Vector2(95, 62)
@@ -201,6 +218,9 @@ size = Vector2(20, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0dq0"]
 size = Vector2(31, 85)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ceca"]
+size = Vector2(68, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bssua"]
 size = Vector2(96, 158)
 
@@ -226,9 +246,6 @@ size = Vector2(42, 100)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jg0i"]
 size = Vector2(76, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ceca"]
-size = Vector2(120, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntu76"]
 size = Vector2(64, 52)
 
@@ -249,6 +266,9 @@ size = Vector2(20, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14e02"]
 size = Vector2(75, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njs0q"]
+size = Vector2(34, 9)
 
 [sub_resource type="Animation" id="Animation_x0dq0"]
 length = 0.001
@@ -348,19 +368,19 @@ y_sort_enabled = true
 [node name="map_borders" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = 1
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAyAQIABAAOAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAyAQIABAAOAAAAAADgAEUABQAMAAUAAAA=")
 tile_set = SubResource("TileSet_4ecay")
 
 [node name="map_under" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = -500
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAyAQIAAwAOAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAyAQIAAwAOAAAAAADgAEUABQAMAAUAAAA=")
 tile_set = SubResource("TileSet_c5r8j")
 
 [node name="map_props" type="TileMapLayer" parent="Cam_Movement/Maps"]
 y_sort_enabled = true
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAyAQUAAAABABoAAABDAQgAAAAjABoAAAAlAQ8AAAAXABoAAADxAP//AABeAA8AAAA=")
+tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAyAQUAAAABABoAAABDAQgAAAAjABoAAAAlAQ8AAAAXABoAAADxAP//AABeAA8AAADHAEkAAAAsABkAAAA=")
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
@@ -370,12 +390,11 @@ initial_facing = Vector2(1, 0)
 [node name="J_Room" type="Node2D" parent="Cam_Movement"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cam_Movement/J_Room"]
-visible = false
 collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Room/StaticBody2D"]
-polygon = PackedVector2Array(121, -12, 291, -15, 291, 28, 434, 34, 433, 277, 291, 281, 290, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
+polygon = PackedVector2Array(121, -12, 291, -15, 291, 11, 435, 11, 433, 277, 291, 281, 290, 201, 23, 199, 19, 339, -445, 338, -446, 218, -223, 208, -221, 50, 88, 54, 85, 4, 113, 6, 114, -20, -563, -24, -543, 452, 527, 419, 490, -39, 122, -28)
 
 [node name="cam_0" parent="Cam_Movement/J_Room" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(17, 14)
@@ -386,7 +405,7 @@ cam = NodePath("../../J_Corridor/1")
 mapProps = ExtResource("13_vi8hp")
 
 [node name="CollisionShape1" type="CollisionShape2D" parent="Cam_Movement/J_Room/cam_0"]
-position = Vector2(191.5, -18.25)
+position = Vector2(191.5, -29.75)
 shape = SubResource("RectangleShape2D_ddspx")
 
 [node name="0" type="Marker2D" parent="Cam_Movement/J_Room"]
@@ -603,6 +622,9 @@ position = Vector2(4054, 245)
 [node name="player_location2_1" type="Marker2D" parent="Cam_Movement/J_Living"]
 position = Vector2(4481, -61)
 
+[node name="player_location2_2" type="Marker2D" parent="Cam_Movement/J_Living"]
+position = Vector2(3632, 88)
+
 [node name="Cam_Detector1" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
 position = Vector2(4030, 244)
 audio = NodePath("../../../AudioManager")
@@ -626,6 +648,17 @@ mapProps = ExtResource("21_fkol3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Cam_Detector2"]
 position = Vector2(-5.5, 6.5)
 shape = SubResource("RectangleShape2D_x0dq0")
+
+[node name="Cam_Detector3" parent="Cam_Movement/J_Living" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
+position = Vector2(3632, 100)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
+player_location = NodePath("../../J_Mom_Room/player_location6")
+cam = NodePath("../../J_Mom_Room/6")
+mapProps = ExtResource("30_d36ii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Cam_Detector3"]
+shape = SubResource("RectangleShape2D_6ceca")
 
 [node name="NPCs" type="Node2D" parent="Cam_Movement/J_Living"]
 y_sort_enabled = true
@@ -707,14 +740,6 @@ autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/Fridge"]
 shape = SubResource("RectangleShape2D_0jg0i")
-
-[node name="GloriaRoom" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
-position = Vector2(3634, 127)
-timeline = "gloria_room_j"
-autoDestruction = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/GloriaRoom"]
-shape = SubResource("RectangleShape2D_6ceca")
 
 [node name="TV" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
 position = Vector2(4386, 198)
@@ -807,6 +832,33 @@ timeline = "workbench"
 position = Vector2(3.5, 8)
 shape = SubResource("RectangleShape2D_14e02")
 
+[node name="J_Mom_Room" type="Node2D" parent="Cam_Movement"]
+
+[node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Mom_Room"]
+collision_layer = 16
+collision_mask = 19
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Mom_Room/Props"]
+polygon = PackedVector2Array(3894, 1155, 3894, 1140, 4021, 1141, 4022, 1155, 4053, 1155, 4053, 1191, 4240, 1193, 4242, 1367, 4261, 1368, 4260, 1441, 4438, 1443, 4438, 1535, 3555, 1535, 3555, 1231, 3454, 1229, 3454, 1157, 3880, 1158, 3869, 1127, 3432, 1141, 3440, 1548, 4461, 1555, 4460, 1409, 4213, 1116, 3885, 1128)
+
+[node name="Cam_Detector1" parent="Cam_Movement/J_Mom_Room" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
+position = Vector2(3955, 1160)
+audio = NodePath("../../../AudioManager")
+SelectedSFX = "Door"
+player_location = NodePath("../../J_Living/player_location2_2")
+cam = NodePath("../../J_Living/2")
+mapProps = ExtResource("17_2cs5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Cam_Detector1"]
+position = Vector2(0, -11.5)
+shape = SubResource("RectangleShape2D_njs0q")
+
+[node name="6" type="Marker2D" parent="Cam_Movement/J_Mom_Room"]
+position = Vector2(3949, 1311)
+
+[node name="player_location6" type="Marker2D" parent="Cam_Movement/J_Mom_Room"]
+position = Vector2(3955, 1171)
+
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-1971, 65)
 zoom = Vector2(0.7, 0.7)
@@ -819,6 +871,7 @@ position = Vector2(1971, -65)
 [node name="inv_UI" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("5_c5r8j")]
 
 [node name="GameMenu" parent="Cam_Movement/Camera2D/CanvasLayer" instance=ExtResource("15_xi35y")]
+visible = false
 
 [node name="MusicManager" parent="." instance=ExtResource("15_bssua")]
 StartingPlaylist = "JuliaHouse0"

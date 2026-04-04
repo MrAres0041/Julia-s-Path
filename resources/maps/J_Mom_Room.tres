@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MapVariables" load_steps=2 format=3 uid="uid://g1tv0r21kkwj"]
+
+[ext_resource type="Script" uid="uid://b4fqehhrtq5j7" path="res://resources/maps/map_vars.gd" id="1_smlqh"]
+
+[resource]
+script = ExtResource("1_smlqh")
+CamScale = Vector2(0.75, 0.75)
+PlayerSize = Vector2(0.85, 0.85)
+PlayerSpeed = 300
+metadata/_custom_type_script = "uid://b4fqehhrtq5j7"

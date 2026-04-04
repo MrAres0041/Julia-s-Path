@@ -1,5 +1,5 @@
+MapVariables
 CallList
 Resource
 Inv_Item
-MapVariables
 Inventory
