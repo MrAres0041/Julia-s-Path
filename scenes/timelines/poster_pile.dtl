@@ -1,0 +1,17 @@
+Narrator: Mom’s sanctuary.
+Narrator: She always told you the same story…
+Julia: She and Miss Renee.
+Narrator: They went to every single concert they could get to.[input][br]Got drunk and made terrible decisions.
+Narrator: That didn’t turn out so well for them…
+join Julia right
+Julia: …
+update Julia (JuliaWorried)
+Narrator: You wonder if your “situation-friend” would come with you to a Radiohead concert.
+[wait time="2.0"]
+update Julia (JuliaDefault)
+Julia: No, that’s a terrible idea.
+Julia: Eric would probably try climbing the stage.
+update Julia (JuliaWorried)
+Julia: I really don't want to get kicked out...
+leave Julia [animation="Fade Out" wait="true"]
+[signal arg="DialogueEnded"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=99 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -269,6 +269,18 @@ size = Vector2(75, 118)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njs0q"]
 size = Vector2(34, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ttm"]
+size = Vector2(50, 158)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mk06l"]
+size = Vector2(266, 159)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vi86m"]
+size = Vector2(116, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_araju"]
+size = Vector2(72, 68)
 
 [sub_resource type="Animation" id="Animation_x0dq0"]
 length = 0.001
@@ -833,6 +845,7 @@ position = Vector2(3.5, 8)
 shape = SubResource("RectangleShape2D_14e02")
 
 [node name="J_Mom_Room" type="Node2D" parent="Cam_Movement"]
+y_sort_enabled = true
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Mom_Room"]
 collision_layer = 16
@@ -858,6 +871,39 @@ position = Vector2(3949, 1311)
 
 [node name="player_location6" type="Marker2D" parent="Cam_Movement/J_Mom_Room"]
 position = Vector2(3955, 1171)
+
+[node name="Interactions" type="Node2D" parent="Cam_Movement/J_Mom_Room"]
+y_sort_enabled = true
+
+[node name="Guittar" parent="Cam_Movement/J_Mom_Room/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(3506, 1409)
+timeline = "guitar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Interactions/Guittar"]
+shape = SubResource("RectangleShape2D_v6ttm")
+
+[node name="PosterPile" parent="Cam_Movement/J_Mom_Room/Interactions" instance=ExtResource("9_amb7k")]
+timeline = "poster_pile"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Interactions/PosterPile"]
+position = Vector2(3680, 1025.5)
+shape = SubResource("RectangleShape2D_mk06l")
+
+[node name="M_Bag" parent="Cam_Movement/J_Mom_Room/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(4335, 1413)
+timeline = "m_bag"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Interactions/M_Bag"]
+position = Vector2(0, -18.5)
+shape = SubResource("RectangleShape2D_vi86m")
+
+[node name="M_Closet" parent="Cam_Movement/J_Mom_Room/Interactions" instance=ExtResource("9_amb7k")]
+position = Vector2(3505, 1243)
+timeline = "m_closet"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Interactions/M_Closet"]
+position = Vector2(0, 24)
+shape = SubResource("RectangleShape2D_araju")
 
 [node name="Camera2D" type="Camera2D" parent="Cam_Movement"]
 position = Vector2(-1971, 65)

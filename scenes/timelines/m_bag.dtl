@@ -1,0 +1,4 @@
+audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
+Narrator: You picked up a note![input][br](Congratulations! You just went through your mother’s purse without her permission…)
+leave Julia [animation="Fade Out" wait="true"]
+[signal arg="DialogueEnded"]
