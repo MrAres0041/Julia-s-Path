@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Inv_Item" load_steps=3 format=3 uid="uid://dt17r0np4fuut"]
+
+[ext_resource type="Script" uid="uid://bed7k1jp4rm41" path="res://resources/inv_item.gd" id="1_y4mt7"]
+[ext_resource type="Texture2D" uid="uid://c2guy2e7og7qt" path="res://assets/sprites/Items/Card_E.png" id="2_4i2ht"]
+
+[resource]
+script = ExtResource("1_y4mt7")
+name = "Eric_Note"
+texture = ExtResource("2_4i2ht")
+item_txt = "EricNote"
+metadata/_custom_type_script = "uid://bed7k1jp4rm41"

@@ -1,0 +1,9 @@
+[background arg="res://assets/panels/note2.png" fade="0.5" transition="Simple Fade"]
+[wait_input]
+if {Act1.pills_car} == false:
+	Narrator: It's too early.
+	Narrator: He's probably sleeping.
+else:
+	Narrator: You just saw him.
+	Narrator: No way he's home.
+[signal arg="DialogueEnded"]

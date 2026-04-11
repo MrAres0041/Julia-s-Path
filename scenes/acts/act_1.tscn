@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=100 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -30,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
 [ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
+[ext_resource type="Resource" uid="uid://dt17r0np4fuut" path="res://resources/items/number_eric.tres" id="23_0jg0i"]
 [ext_resource type="PackedScene" uid="uid://c73je45r6mo8o" path="res://scenes/utilities/npc_sample.tscn" id="24_tui3u"]
 [ext_resource type="PackedScene" uid="uid://2b7nf2fglmtm" path="res://scenes/utilities/path_guider_manager.tscn" id="26_td3a4"]
 [ext_resource type="Texture2D" uid="uid://ct7ujdus1s25g" path="res://assets/sprites/Gloria/Gloria2.png" id="27_slgqg"]
@@ -465,6 +466,7 @@ shape = SubResource("RectangleShape2D_vi8hp")
 [node name="Photos" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(381, -154)
 timeline = "photograph"
+item = ExtResource("23_0jg0i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Photos"]
 shape = SubResource("RectangleShape2D_nxw7d")
@@ -472,6 +474,7 @@ shape = SubResource("RectangleShape2D_nxw7d")
 [node name="Book" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(163, 220)
 timeline = "notebook_j"
+item = ExtResource("23_0jg0i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Book"]
 shape = SubResource("RectangleShape2D_slgqg")

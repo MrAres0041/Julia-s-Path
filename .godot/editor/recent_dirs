@@ -1,4 +1,6 @@
 res://assets/panels
+res://
+res://resources/items/
 res://scenes/timelines
 res://assets/audio/sfx
 res://resources/maps/
@@ -18,6 +20,4 @@ res://resources/calls/
 res://resources/
 res://scenes/timelines/calls
 res://assets/styles
-res://resources/items/
-res://scripts/ui
 C:/Users/Equipo/Documents/dialogues
