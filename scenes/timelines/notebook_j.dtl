@@ -1,6 +1,6 @@
-Narrator: Your notebook.[input][br]Nothing but old songs, bad ideas, and your psychologist’s phone number.
+Narrator: Your notebook.[input][br]Nothing but old songs, bad ideas, and your [u]situation-friend's[/u] number.
 audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
-Narrator: You picked up your psychologist’s number!
-Narrator: Better keep it close in case you need it…
+Narrator: You picked up Big Dummy's number!
+Narrator: If he remembers how phones work, he might even answer.
 [signal arg="ItemAdded"]
 [signal arg="DialogueEnded"]
