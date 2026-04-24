@@ -9,7 +9,7 @@ if {Act1.keys_car_m} == false:
 		Narrator: However, the functional part knows you shouldn’t skip them under any circumstances.
 		Narrator: Being a responsible human being and all that…
 		leave Julia
-		Narrator: You left some in the car the last time you went out. Better go check before Mom wakes up.
+		Narrator: You left some in the car the last time you went out.[br]Better go check before Mom wakes up.
 		set {Act1.pills_can} = true
 		[signal arg="NoPills1"]
 	else:

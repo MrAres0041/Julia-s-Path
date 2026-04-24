@@ -5,5 +5,8 @@ res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_nam
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
 res://scenes/chars/player.tscn
-res://scenes/timelines/ropero_j.dtl
-res://scenes/timelines/notebook_j.dtl
+res://scenes/timelines/frame_collection.dtl
+res://scenes/timelines/pills1.dtl
+res://scenes/timelines/tv_j.dtl
+res://scenes/timelines/bed_j.dtl
+res://scenes/timelines/window_j.dtl

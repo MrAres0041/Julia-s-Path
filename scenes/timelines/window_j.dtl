@@ -7,5 +7,5 @@ Narrator: It reminds you of your school days.[input][br]When Mom had to fight he
 update Julia (JuliaHappy1)
 Narrator: She still tried to keep a smile on her face...
 [wait time="2.0" skippable="true"]
-Narrator: The kid is crying though[input][br] Not like you really care.
+Narrator: The kid is crying though[input][br] Not like anyone really cares.
 [signal arg="DialogueEnded"]

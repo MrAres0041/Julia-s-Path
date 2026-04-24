@@ -1,10 +1,12 @@
-Narrator: “A guy opens his door and gets shot.”
+[background arg="res://assets/panels/7.png" fade="1.0" wait="true"]
+Narrator: “A guy opens his door and gets feed.”
 Narrator: ”You think I’m that guy? No...”
-Narrator: “I’m the one who knocks!”
+Narrator: “I’m the one who cooks!”
+[background fade="1.0"]
 join Julia (JuliaDefault) right
-Julia: It’s that weird show again.[input][br]The one with the bald guy who sells drugs.
+Julia: It’s that weird show again.[input][br]The one with the bald guy who becomes a cheff to take care of his family.
 update Julia (JuliaWorried)
-Julia: Andrew used to hate it because it was too dense, but Eric would probably love it.
+Julia: Andrew used to hate it because it was too dense, but Eric would probably like it.
 update Julia (JuliaHappy)
 Narrator: You can almost imagine him with a goatee like Walt.
 update Julia (JuliaHappy1)
