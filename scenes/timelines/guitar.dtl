@@ -1,10 +1,10 @@
-Narrator: A relic.
-Narrator: Your mom’s most precious treasure from her glory days.
-Narrator: You could also say it’s…[input][br][u]The boulevard of broken dreams[/u].
+Narrator: Your mom’s most precious treasure...
+Narrator: The echo of a lost dream, or, if you prefer…
+Narrator: …[u]the boulevard of broken dreams[/u].
 join Julia (JuliaHappy1) right
 [wait time="2.0" skippable="true"]
 update Julia (JuliaWorried)
 [wait time="1.0" skippable="true"]
-Narrator: It’s your fault, so don’t laugh too hard.
+Narrator: It’s your fault.[br][input]Don’t laugh.
 leave Julia [animation="Fade Out" wait="true"]
 [signal arg="DialogueEnded"]

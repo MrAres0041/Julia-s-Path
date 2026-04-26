@@ -1,19 +1,25 @@
-Narrator: Mom’s sanctuary.
-Narrator: She always tell you the same story…
+Narrator: Ah, the sanctuary...
+Narrator: A relic from a long (though not forgotten) time…
 [background arg="res://assets/panels/6.png" fade="1.0" wait="true"]
 Julia: She and Miss Renee.
-Narrator: They went to every single concert they could get to.[input][br]Got drunk and made terrible decisions.
-Narrator: That didn’t turn out so well for them…
+Narrator: They used to go to every concert they could. Then they’d get drunk and…
+Narrator: Well, you can guess how that turned out.
+Narrator: But she still has an endless supply of stories from those days.
 [background fade="1.0" wait="true"]
 join Julia right
 Julia: …
 update Julia (JuliaWorried)
 Narrator: You wonder if your “situation-friend” would come with you to a Radiohead concert.
-[wait time="2.0"]
+[wait time="1.0"]
 update Julia (JuliaDefault)
 Julia: No, that’s a terrible idea.
-Julia: Eric would probably try climbing the stage.
+Julia: Eric would probably try to climb the stage.
 update Julia (JuliaWorried)
-Julia: I really don't want to get kicked out...
+Julia: I really don’t want to spend that much money just to end up getting kicked out…
+[wait time="1.0"]
+update Julia (JuliaTalk2)
+Julia: But hey, at least he’d say yes...
+update Julia (JuliaTalk3)
+Julia: ...right?
 leave Julia [animation="Fade Out" wait="true"]
 [signal arg="DialogueEnded"]

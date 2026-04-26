@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Inv_Item" load_steps=3 format=3 uid="uid://7cxvec36022h"]
+
+[ext_resource type="Script" uid="uid://bed7k1jp4rm41" path="res://resources/inv_item.gd" id="1_xoffo"]
+[ext_resource type="Texture2D" uid="uid://cn807is5n1my5" path="res://assets/sprites/Items/Doc.png" id="2_y67qc"]
+
+[resource]
+script = ExtResource("1_xoffo")
+name = "Number_Psy"
+texture = ExtResource("2_y67qc")
+item_txt = "NumberPsy"
+metadata/_custom_type_script = "uid://bed7k1jp4rm41"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=100 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://2b7nf2fglmtm" path="res://scenes/utilities/path_guider_manager.tscn" id="26_td3a4"]
 [ext_resource type="Texture2D" uid="uid://ct7ujdus1s25g" path="res://assets/sprites/Gloria/Gloria2.png" id="27_slgqg"]
 [ext_resource type="Resource" uid="uid://g1tv0r21kkwj" path="res://resources/maps/J_Mom_Room.tres" id="30_d36ii"]
+[ext_resource type="Resource" uid="uid://7cxvec36022h" path="res://resources/items/number_psy.tres" id="32_6ceca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_can1i"]
 size = Vector2(29, 84)
@@ -884,6 +885,7 @@ shape = SubResource("RectangleShape2D_mk06l")
 [node name="M_Bag" parent="Cam_Movement/J_Mom_Room/Interactions" instance=ExtResource("9_amb7k")]
 position = Vector2(4335, 1413)
 timeline = "m_bag"
+item = ExtResource("32_6ceca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Mom_Room/Interactions/M_Bag"]
 position = Vector2(0, -18.5)
