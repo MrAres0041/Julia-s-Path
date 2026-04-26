@@ -8,3 +8,5 @@ res://scenes/timelines/mom_awake.dtl
 res://scenes/chars/player.tscn
 res://scenes/chars/DialogChars/Gloria.dch
 res://scenes/chars/DialogChars/Julia.dch
+res://scenes/timelines/door_call.dtl
+res://scenes/chars/DialogChars/Eric.dch
