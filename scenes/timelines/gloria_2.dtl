@@ -1,18 +1,20 @@
 join Julia right [animation="Fade In"]
-join Gloria (Sus2) left [animation="Fade In"]
-Gloria: Would you look at that…[input][br]Just “friends”, huh?
-Julia (JuliaTalk1): Ah… [input][br]He’s just a little naive, okay?
-Julia: He doesn’t think twice before speaking.
+join Gloria (Serious1) left [animation="Fade In"]
+Gloria: Just “friends”, huh?
+Julia (JuliaTalk1): Ah… [input][br]Eric is just a little naive, okay?
+Julia (JuliaTalk3): He doesn’t think twice before speaking.
 update Julia (JuliaDefault)
 Gloria (Angry): Right…
 Gloria (Angry2): I’m sure he doesn’t think twice about a lot of things.
 update Julia (JuliaWorried)
-Narrator: No, actually, she’s right.[input][br]
-Narrator: He doesn’t. But you’d better not tell her that.
+Narrator: No, she’s right. He doesn't.[input][br]But you’d better not tell her that.
 update Julia (JuliaDefault)
 Gloria (Serious1): Use protection.
 update Julia (JuliaWorried)
-Gloria (Angry): And I will repeat myself.[input][br]A LOT.
+Gloria: And I [u]will[/u] repeat myself.
+Julia (JuliaSad0): B-But...
+update Julia (JuliaDefault)
+Gloria (Angry): A LOT.
 leave Gloria [animation="Fade Out"]
 leave Julia
 [signal arg="DialogueEnded"]

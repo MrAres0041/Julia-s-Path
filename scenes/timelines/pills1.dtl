@@ -7,22 +7,28 @@ if {Act1.keys_car_m} == false:
 		Narrator: A small part of you felt relieved when you saw the clean bottom.
 		update Julia (JuliaSad1)
 		Narrator: However, the functional part knows you shouldn’t skip them under any circumstances.
-		Narrator: Being a responsible human being and all that…
+		Narrator: Things could get [u]really[/u] messy...
 		leave Julia
 		Narrator: You left some in the car the last time you went out.[br]Better go check before Mom wakes up.
 		set {Act1.pills_can} = true
 		[signal arg="NoPills1"]
 	else:
 		Narrator: Makeup won't hide your problem.
-		Narrator: Better keep going...
+		Narrator: You already tried...
 else:
 	if {Act1.im_sorry} == false:
-		Narrator: The pills are in your hand.You feel their weight.
-		Narrator: Small bricks you need to swallow before changing your mind.
-		Narrator: But your heart isn’t there, is it?
-		Narrator: The silence waits for your decision...
+		audio music_dialogic - [fade="2.0"]
+		Narrator: The pills are in your hand.
+		Narrator: You feel their weight.[input][br]Like small bricks you need to swallow to...[input][br]...stop yourself from feeling.
+		Narrator: But you know the truth.
+		Narrator: Your heart isn’t there.
+		Narrator: You want to feel.[input][br]You [u]need[/u] to feel...
+		Narrator: Responsibility or desire?
+		Narrator: The silence waits for your answer...
 		- Drop them in the sink.
 			[wait time="1.0"]
+			audio sfx_dialogic "res://assets/audio/sfx/toilet.mp3"
+			[wait time="2.0"]
 			Narrator: The water carries away the problem.
 			join Julia (JuliaSad2) right
 			Narrator: Shame washes over you once again.
@@ -33,11 +39,13 @@ else:
 			DreamAndrew: There's nothing else for you.
 			leave DreamAndrew [animation="Fade Out" wait="true"]
 			Julia (JuliaSad1): ...
+			update Julia (JuliaSad3)
 			Narrator: You bow your head even though you know there’s no one there.
 			leave Julia [animation="Fade Out"]
 			Narrator: That doesn’t stop you from wishing he were.
 		- Take your medicine.
 			set {Act1.pills_taken} = true
+			[wait time="2.0"]
 			join Julia (JuliaSad1) right
 			Narrator: The medication went down your throat.[input][br]It was the right thing to do, though it felt like anything but.
 			update Julia (JuliaDefault)
@@ -65,7 +73,7 @@ else:
 			leave DreamNina [animation="Fade Out"]
 			leave Julia [animation="Fade Out" wait="true"]
 			[wait time="1.0"]
-			Narrator: You’d better go lie down before Mom sees you talking alone...[input][br]again...
+			Narrator: You’d better go lie down before Mom hears you talking alone again...
 		set {Act1.im_sorry} = true
 [wait time="0.5"]
 [signal arg="DialogueEnded"]
