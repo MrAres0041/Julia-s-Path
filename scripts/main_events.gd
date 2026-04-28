@@ -1,6 +1,8 @@
 extends Node2D
 class_name MainEvents
 
+@onready var music_manager: MusicManager = $"../MusicManager"
+
 @onready var gloria_shape: CollisionShape2D = $"../Cam_Movement/J_Living/Props/CollisionShape2D5"
 
 @onready var corridorExit: CamDetector = $"../Cam_Movement/J_Corridor/Cam_Detector2"
@@ -41,6 +43,7 @@ func _ProgressHandler(i):
 			_activateMonitor(door_call)
 			_killNode(mom_sleeping)
 			gloria.setActive(true)
+			music_manager.stop()
 		"Door_calling":
 			gloria_door._startWalking()
 		"OpenDoor":
@@ -48,6 +51,7 @@ func _ProgressHandler(i):
 		"DoorClose":
 			animation_player.play("fade_out")
 		"LightAgain":
+			music_manager.playPlaylist("JuliaHouse0")
 			gloria_shape.disabled = false
 			gloria_2.visible = true
 			_appearMonitor(gloria_end)

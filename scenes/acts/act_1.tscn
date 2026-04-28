@@ -339,6 +339,7 @@ _data = {
 y_sort_enabled = true
 
 [node name="MainEvents" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_xx8qm")
 
 [node name="Interactions" type="Node2D" parent="MainEvents"]

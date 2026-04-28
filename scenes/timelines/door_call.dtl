@@ -6,11 +6,13 @@ leave Gloria [animation="Fade Out" wait="true"]
 [signal arg="OpenDoor"]
 audio sfx_dialogic "res://assets/audio/sfx/door.ogg"
 [wait time="0.5"]
+Narrator: As your mother opened the door, she was greeted by the sight of a smiling idiot standing slightly beneath the doorframe.
 join Gloria (Worried2) left [animation="Fade In"]
 join Eric (Smiling) right [mirrored="true"]
-Narrator: As your mother opened the door, she was greeted by the sight of a smiling idiot standing slightly beneath the doorframe.
 Narrator: And the moment you heard his voice, you knew you were screwed.
+audio music_dialogic "res://assets/audio/music/Cuando Pase El Temblor.mp3" [loop="true"]
 Eric (Talk3): Hey, Miss G! Is Julia awake?
+[wait time="0.5"]
 update Eric (Default)
 Gloria (Sus2): Look who decided to show up...
 Gloria (Sus1): You must be Julie’s new [u]friend[/u].
@@ -40,7 +42,7 @@ update Eric (Smiling)
 update Gloria (Angry)
 [wait time="2.0"]
 Eric (Talk1): So![input][br]Tell her I’ll be waiting for our next walk!
-Eric (Talk2): I’d go alone, but I kinda got attacked by dogs last time I did.
+Eric (Talk2): I’d go alone, but kinda got attacked by dogs last time I did.
 update Eric (Smiling)
 update Gloria (Worried1)
 Narrator: Well... That’s it.
@@ -48,13 +50,15 @@ Narrator: You’re ruined.
 update Eric (Default)
 Gloria (Talk2): I think she mentioned something about that…
 Gloria (AngryTalk): And I’m sure you’ll be bringing protection whenever you two go on your [u]walks[/u], right?
-Gloria: You know... in case that [u]dog[/u] appears again?
+Gloria: You know, in case that [u]dog[/u] shows up again?
 update Gloria (Angry)
 Eric (Talk1): Don’t worry about it, ma’am. I always do!
-Eric (Talk4): A good old stick![input][br]Dogs hate it.
+update Gloria (Worried2)
+Eric (Talk4): A good old stick![input][br][u]Large[/u] and [u]thick[/u], just like papa used on his field trips.
 leave Gloria [animation="Fade Out"]
 leave Eric [animation="Fade Out" wait="true"]
 [signal arg="DoorClose"]
+audio music_dialogic - [fade="1.0"]
 [wait time="0.5"]
 Narrator: The world blessed your [u]situation-friend[/u] with the awareness of a capybara.[input][br]Which, of course, is a curse upon yourself.
 Narrator: At this point, you just wish the earth would just split open and swallow you whole…

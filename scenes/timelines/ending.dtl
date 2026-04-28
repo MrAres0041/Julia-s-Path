@@ -1,6 +1,6 @@
+audio music_dialogic "res://assets/audio/music/Dusty Memories MP3.mp3" [loop="true"]
 [wait time="1.5"]
 [background arg="res://assets/panels/4_Player.png" fade="1.0" wait="true"]
-audio music_dialogic "res://assets/audio/music/Radiohead - Karma Police.mp3"
 [wait time="1.5"]
 [background fade="1.0" wait="true"]
 [wait time="1.5"]
@@ -10,7 +10,7 @@ if {Act1.pills_taken} == false:
 	Narrator: You wish it would just silence the voices in your head…[input][br]The guilt…[input][br]The regret.
 	[wait time="1.0"]
 	[signal arg="J1"]
-	[wait time="0.1"]
+	[wait time="0.5"]
 	[signal arg="Frame"]
 	[wait time="1.0"]
 	Narrator: How long?[input][br]How long has it been since he’s gone?
@@ -51,13 +51,17 @@ else:
 	Narrator: The music plays at full volume.
 	Narrator: Slowly, the medicine starts to take effect.
 	[signal arg="J1"]
+	[wait time="1.0"]
 	Narrator: Your body relaxes as your heart softens a little.[input][br]Just enough to breath.
 	[wait time="1.0"]
 	[signal arg="Frame"]
+	[wait time="1.0"]
 	Narrator: How long?[input][br]How long has it been since he’s gone?
 	[signal arg="Bed"]
+	[wait time="1.0"]
 	Narrator: What a dumb question.[input][br]You know it very well.
 	[signal arg="J2"]
+	[wait time="1.0"]
 	Narrator: You've been counting days after all...
 	[signal arg="BG"]
 	[wait time="1.0"]
@@ -65,8 +69,10 @@ else:
 	[wait time="1.0"]
 	Gloria: It wasn’t your fault.
 	[signal arg="Gloria"]
+	[wait time="1.0"]
 	Gloria: Your father used to be like that.
 	[signal arg="J3"]
+	[wait time="1.0"]
 	Gloria: Excuses...[input][br]Lies...[input][br]Listen to your mother...
 	Gloria: There was nothing good coming from that boy.
 	[wait time="0.5"]
@@ -74,6 +80,7 @@ else:
 	[wait time="0.5"]
 	Eric: Hey, you good?
 	[signal arg="Eric"]
+	[wait time="1.0"]
 	Eric: You sort of spaced out for a second.
 	Eric: It’s okay…[input][br]I wasn’t saying anything important anyway.
 	[wait time="1.0"]

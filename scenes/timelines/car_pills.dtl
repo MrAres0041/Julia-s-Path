@@ -5,6 +5,7 @@ if {Act1.keys_car_m} == false:
 		audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 		Narrator: You unlocked the door and picked up the keys!
 		Narrator: …And you found your meds again! (Boo...)
+		audio music_dialogic - [fade="2.0"]
 		Narrator: But the bottle is empty, yet again. (Yay!)
 		join Julia (JuliaDefault) right
 		Julia: ...
