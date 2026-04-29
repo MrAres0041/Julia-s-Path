@@ -43,7 +43,7 @@ func _ProgressHandler(i):
 			_activateMonitor(door_call)
 			_killNode(mom_sleeping)
 			gloria.setActive(true)
-			music_manager.stop()
+			music_manager.stop_with_fade()
 		"Door_calling":
 			gloria_door._startWalking()
 		"OpenDoor":

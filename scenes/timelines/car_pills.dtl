@@ -5,17 +5,17 @@ if {Act1.keys_car_m} == false:
 		audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 		Narrator: You unlocked the door and picked up the keys!
 		Narrator: …And you found your meds again! (Boo...)
-		audio music_dialogic - [fade="2.0"]
+		[signal arg="Pills2"]
 		Narrator: But the bottle is empty, yet again. (Yay!)
 		join Julia (JuliaDefault) right
 		Julia: ...
 		update Julia (JuliaWorried)
 		Narrator: You can smell trouble from a mile away.
+		[signal arg="Pills2"]
 		leave Julia
 		Narrator: Maybe it’d be better to crawl back into bed before your mom wakes up and starts asking questions…
-		Narrator: Breakfast can wait.
 		set {Act1.keys_car_m} = true
-		[signal arg="Pills2"]
+		Narrator: Breakfast can wait.
 	else:
 		Narrator: You pull the car handle, but the door doesn’t open.
 		Narrator: A closer look through the window reveals the keys resting comfortably on the passenger seat, next to the bottle of pills.

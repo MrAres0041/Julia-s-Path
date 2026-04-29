@@ -42,3 +42,16 @@ func _play_current_track():
 
 func _on_finished() -> void:
 	play()
+
+func stop_with_fade(duration: float = 1.5) -> void:
+	var tween = create_tween()
+	var start_vol = GAudio.getMusVol()
+	
+	tween.tween_method(GAudio.setMusVol, start_vol, 0.0, duration)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN)
+	
+	tween.finished.connect(func():
+		stop()
+		GAudio.setMusVol(start_vol) 
+	)

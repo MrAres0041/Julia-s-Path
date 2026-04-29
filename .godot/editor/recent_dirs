@@ -1,3 +1,5 @@
+/home/aresito/Escritorio/Proyectos/Godot/JuegoExportado
+res://assets/ui
 res://assets/audio/music
 res://assets/panels
 res://assets/audio/sfx
@@ -6,7 +8,6 @@ res://resources/items/
 res://
 res://scenes/timelines
 res://resources/maps/
-res://assets/ui
 res://scripts/acts
 res://scenes/acts
 res://scripts
@@ -19,5 +20,3 @@ res://resources/maps
 res://assets/maps/under/Borders
 res://assets/maps/under
 res://resources/calls/
-res://resources/
-C:/Users/Equipo/Documents/dialogues
