@@ -1,0 +1,66 @@
+[wait time="1.0"]
+if {Act1.pills_car} == false:
+	Narrator: ...
+	Narrator: Yeah, as figures.
+	Narrator: Eric waking up before noon would probably count as a natural disaster.
+else:
+	Eric: Helloooooo!
+	Eric: You’ve reached the specialized hotline for grounded people.
+	Eric: To appeal your punishment, please consider not doing whatever you did!
+	join Julia (JuliaHappy) right
+	Julia (JuliaTalk): Ah, shut up, you dumbass!
+	update Julia (JuliaHappy)
+	Eric: Hahahaha!
+	Eric: How’re you doing, girl?[input][br]I talked to your mom earlier.
+	Julia (JuliaSad2): Yeah, I can tell...
+	Eric: I think I made a good first impression.
+	update Julia (JuliaDefault)
+	Eric: She may like me too much already.
+	Julia (JuliaTalk3): Highly doubt it, Eric.
+	Julia (JuliaTalk1): Right now, you’re closer to getting run over by her car than getting her to like you.
+	update Julia (JuliaHappy)
+	Eric: Really? Damn...
+	update Julia (JuliaHappy1)
+	[wait time="2.0" skippable="true"]
+	update Julia (JuliaSad2)
+	[wait time="2.0" skippable="true"]
+	Julia (JuliaDefault): Hey...[input][br]I’m sorry.
+	Eric: ...
+	Eric: You sorry?[input][br]For what?
+	update Julia (JuliaSad2)
+	[wait time="2.0" skippable="true"]
+	Julia: …No.
+	Julia: No, it doesn’t matter.[input][br]I just needed to say it to you directly.
+	[wait time="1.0" skippable="true"]
+	Eric: You okay, Julie?
+	update Julia (JuliaDefault)
+	Eric: Want me to pass by or...?
+	Julia (JuliaSad1): No! No, really I'm…
+	Julia (JuliaSad2): I just took my meds, that’s all.[input][br]My head’s a little fuzzy.
+	update Julia (JuliaWorried)
+	Eric: Oh, right...
+	update Julia (JuliaHappy1)
+	Eric: Yeah, my head’s always a little fuzzy, hahaha!
+	Julia (JuliaHappy): You’re such a dumbass, geez…
+	Julia (JuliaTalk): One cannot have a serious conversation with you!
+	update Julia (JuliaHappy)
+	Eric: Let me be, hahahaha!
+	update Julia (JuliaHappy1)
+	[wait time="2.0" skippable="true"]
+	update Julia (JuliaWorried)
+	Narrator: The silence settles over the call, as if neither of them knew how to move forward.
+	[wait time="2.0"]
+	Julia (JuliaDefault): I-I should get going, okay?
+	Julia (JuliaHappy): I don't want Mom to catch me on the phone and make everything really awkward again.
+	Eric: Sure thing!
+	Eric: I’ll be here fixing the ceiling if you wanna stop by…[input][br]Oh, right.[input][br]You’re grounded.
+	Julia (JuliaTalk): And whose fault is that?
+	update Julia (JuliaHappy1)
+	Eric: Yours!
+	Julia (JuliaTalk2): Oh, right, hahaha!
+	update Julia (JuliaHappy1)
+	[wait time="2.0" skippable="true"]
+	update Julia (JuliaHappy)
+	[wait time="2.0" skippable="true"]
+	Julia (JuliaDefault): Take care, okay?
+[signal arg="DialogueEnded"]

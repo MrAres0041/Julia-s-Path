@@ -1,3 +1,4 @@
+res://scenes/timelines
 /home/aresito/Escritorio/Proyectos/Godot/JuegoExportado
 res://assets/ui
 res://assets/audio/music
@@ -6,7 +7,6 @@ res://assets/audio/sfx
 res://assets/sprites/Items
 res://resources/items/
 res://
-res://scenes/timelines
 res://resources/maps/
 res://scripts/acts
 res://scenes/acts
