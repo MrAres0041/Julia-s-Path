@@ -1,9 +1,10 @@
+res://assets/audio/music
+res://assets/audio/sfx
+res://scenes/chars/DialogChars
 res://scenes/timelines
 /home/aresito/Escritorio/Proyectos/Godot/JuegoExportado
 res://assets/ui
-res://assets/audio/music
 res://assets/panels
-res://assets/audio/sfx
 res://assets/sprites/Items
 res://resources/items/
 res://
@@ -19,4 +20,3 @@ res://assets/portraits/Julia
 res://resources/maps
 res://assets/maps/under/Borders
 res://assets/maps/under
-res://resources/calls/

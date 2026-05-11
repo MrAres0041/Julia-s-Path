@@ -17,7 +17,7 @@ if {Act1.keys_car_m} == false:
 		Narrator: You already tried...
 else:
 	if {Act1.im_sorry} == false:
-		audio music_dialogic - [fade="2.0"]
+		[signal arg="ShutMusic"]
 		Narrator: The pills are in your hand.
 		Narrator: You feel their weight.[input][br]Like small bricks you need to swallow to...[input][br]...stop yourself from feeling.
 		Narrator: But you know the truth.

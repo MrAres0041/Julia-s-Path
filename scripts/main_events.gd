@@ -35,6 +35,8 @@ func _ready() -> void:
 
 func _ProgressHandler(i):
 	match i:
+		"ShutMusic":
+			music_manager.stop_with_fade()
 		"NoPills1":
 			_activateMonitor(corridorExit)
 			_killNode(no_pills)
@@ -51,7 +53,7 @@ func _ProgressHandler(i):
 		"DoorClose":
 			animation_player.play("fade_out")
 		"LightAgain":
-			music_manager.playPlaylist("JuliaHouse0")
+			music_manager.playPlaylist("Dusty Memories")
 			gloria_shape.disabled = false
 			gloria_2.visible = true
 			_appearMonitor(gloria_end)

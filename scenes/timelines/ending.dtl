@@ -1,5 +1,6 @@
-audio music_dialogic "res://assets/audio/music/Dusty Memories MP3.mp3" [loop="true"]
-[wait time="1.5"]
+[wait time="2.0"]
+audio music_dialogic "res://assets/audio/music/Karma Police.mp3" [loop="true"]
+[wait time="2.0"]
 [background arg="res://assets/panels/4_Player.png" fade="1.0" wait="true"]
 [wait time="1.5"]
 [background fade="1.0" wait="true"]

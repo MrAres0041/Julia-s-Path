@@ -1,6 +1,5 @@
-if {Act1.pills_taken} == true:
+if {Act1.im_sorry} == true:
 	[signal arg="DoorClose"]
-	audio music_dialogic - [fade="0.5"]
 	[wait time="0.5"]
 	[signal arg="End"]
 else:

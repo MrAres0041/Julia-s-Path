@@ -1,1 +1,30 @@
+[wait time="1.0"]
+if {Act1.pills_car} == false:
+	DreamAndrew: You’ve reached the Graves residence.
+	DreamAndrew: Please, if you—
+	Julia: ANDY! WHERE’S THE FUCKING SPOON?!
+	DreamAndrew: ASHLEY, SHUT THE—
+	DreamAndrew: UUUUGH…
+	[wait time="1.5" skippable="true"]
+	DreamAndrew: Anyway, leave your message or something…
+	[wait time="1.0"]
+	join Julia (JuliaSad1) right
+	Narrator: Congratulation, you just hurt yourself.
+	Narrator: Again.
+else:
+	Ashley: ...
+	[wait time="1.5" skippable="true"]
+	Ashley: You miss him, don’t you? You disgusting little shit.
+	join Julia (JuliaSad1) right
+	Ashley: It’s your fault we ended up like this.
+	[wait time="1.5" skippable="true"]
+	Ashley: Why don’t you just jump out the window already?
+	Ashley: It’s not like anything better is waiting for you anyway…
+	join Julia (JuliaSad3) right
+	Ashley: Fucking [u]slut[/u].
+	leave Julia
+	[wait time="1.5" skippable="true"]
+	Narrator: The phone isn't ringing.
+	Narrator: You should just hang it already.
+	Narrator: The phone...
 [signal arg="DialogueEnded"]

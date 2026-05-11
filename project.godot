@@ -29,6 +29,7 @@ IndexConfigs="*res://scripts/ui/indexConfigs.gd"
 [dialogic]
 
 directories/dch_directory={
+"Ashley": "res://scenes/chars/DialogChars/Ashley.dch",
 "DreamAndrew": "res://scenes/chars/DialogChars/DreamAndrew.dch",
 "DreamNina": "res://scenes/chars/DialogChars/DreamNina.dch",
 "Echo": "res://scenes/chars/DialogChars/Echo.dch",

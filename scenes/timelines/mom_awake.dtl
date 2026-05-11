@@ -22,7 +22,6 @@ update Julia (JuliaTalk3) right [move_time="0.5"]
 update Julia (JuliaWorried)
 [wait time="2.0" skippable="true"]
 update Julia (JuliaDefault)
-audio music_dialogic - [fade="2.0"]
 Gloria (Sus1): ...your pills.
 [wait time="1.0" skippable="true"]
 update Julia (JuliaWorried)
@@ -30,7 +29,6 @@ update Julia (JuliaWorried)
 Narrator: Poor you, thinking you could dodge the watchful eye of the owner of this house.
 update Gloria (Serious1)
 Julia (JuliaSad2): I’m sorry...
-audio music_dialogic "res://assets/audio/music/Exit Music.mp3" [fade="2.0" loop="true"]
 Julia (JuliaSad0): I was in a hurry, I got back late last night and just needed to lie down…
 update Julia (JuliaSad1)
 Gloria (Happy1): Baby… Relax.[input][br]I knows how it goes...
@@ -40,12 +38,14 @@ Gloria (Talk1): It may not seems like it, but your old momma have played this ga
 update Gloria (GloriaDefault)
 Julia (JuliaSad0): No! It...
 update Gloria (Serious1)
+audio music_dialogic - [fade="2.0"]
 Julia (JuliaSad2): It’s not like that, mom...
 Julia: Eric is just a [u]friend[/u].[input][br]I really don't want to go further than that.
 update Gloria (Worried2)
 Julia (JuliaSad0): I like him, he's funny and distracts me...
 Julia (JuliaSad2): But with everything that’s been going on, that’s all I want right now.
 Julia: It doesn't feel right...
+audio music_dialogic "res://assets/audio/music/Exit Music.mp3" [fade="2.0" loop="true"]
 update Gloria (Worried1)
 [wait time="2.0" skippable="true"]
 Gloria (Talk2): Honey...[input][br]I'm sorry.
@@ -70,7 +70,6 @@ update Gloria (Serious1)
 [wait time="1.5"]
 Gloria (Talk2): But that's beside the point
 update Julia (JuliaSad2)
-audio music_dialogic - [fade="2.0"]
 Gloria (Serious1): I know it's hard, I know you don’t like it, but you need to stay on your medication.
 Gloria (Talk2): Have you taken them already?
 update Gloria (Worried2)
@@ -81,6 +80,7 @@ Gloria (Serious1): Julie...
 Gloria: Please, tell me you’re not skipping again…
 [wait time="1.5" skippable="true"]
 Julia (JuliaSad3): I...
+audio music_dialogic - [fade="2.0"]
 Julia (JuliaSad0): I’ll go in a moment, okay?
 update Gloria (Serious1)
 [wait time="1.5" skippable="true"]

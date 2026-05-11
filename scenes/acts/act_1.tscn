@@ -915,7 +915,7 @@ position = Vector2(1971, -65)
 visible = false
 
 [node name="MusicManager" parent="." instance=ExtResource("15_bssua")]
-StartingPlaylist = "JuliaHouse0"
+StartingPlaylist = "Dusty Memories"
 
 [node name="AudioManager" parent="." instance=ExtResource("16_7mp2q")]
 
