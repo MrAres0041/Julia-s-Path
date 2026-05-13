@@ -89,34 +89,35 @@ update DreamNina (NinaDefault) [mirrored="false"]
 DreamNina (Nervous): Maybe then you'll be able to feel better.
 update DreamNina (NinaDefault) leftmost [mirrored="true" move_time="1.0"]
 [wait time="1.5" skippable="true"]
-Narrator: And then one last person.
-Narrator: Or at least, that's what you assume...
-[wait time="2.0" skippable="true"]
+Narrator: And then one last...[input][br]Thing...
+Narrator: It isn't a person.
+Narrator: Not even remotely resembling a person.
+Narrator: Mire like...
+[wait time="1.0" skippable="true"]
 join Echo center [animation="Fade In" wait="true"]
+Narrator: A figure...[input][br]A symbol of some kind...
 [wait time="2.0" skippable="true"]
-Narrator: This one feels different...
-Narrator: You can't see anything from him.
-Narrator: Not a face.[input][br]Not a silhouette.[input][br]Not even an idea of what he or she might look like.
-Narrator: But somehow…[input] you know this person.
+Narrator: You feel terrible by just looking at it.
+Narrator: Yet somehow…[input][br]the feeling that you know him doesn't go away.
+Narrator: Familiarity.
 [wait time="2.0" skippable="true"]
-Echo (Default): What is your story, miserable one?
+Echo (Default): What is your story, [u]miserable one[/u]?
 [wait time="2.0" skippable="true"]
-Echo (Sad): I see...
+Echo: I see...
 Echo: A flower born in a field of thorns.[input][br]A [u]cursed daisy[/u].
-update Echo (Default)
 [wait time="2.0" skippable="true"]
-Echo (Sus): How much has this world taken from you?
+Echo: How much has this world taken from you?
 Echo: Your heart?[input][br]Your happiness?[input][br]Your mind?
 Echo: Wasn't all that enough?
-Echo (Sus): How cruel.
+Echo: How cruel.
 leave DreamAndrew [animation="Fade Out" wait="true"]
-Echo (Sus): My poor daisy...
+Echo: My poor daisy...
 leave DreamNina [animation="Fade Out" wait="true"]
 Echo: My poor... [u]poor[/u], cursed daisy...
 leave Echo [animation="Fade Out" wait="true"]
 [background fade="2.0"]
 [wait time="2.0"]
-Echo: Please, remember...[input] I need you to remember...
+Echo: Please, remember...[input][br]You must remember...
 audio music_dialogic - [fade="2.5"]
 [wait time="3.0" skippable="true"]
 audio sfx_dialogic "res://assets/audio/sfx/alarm.ogg" [loop="true"]

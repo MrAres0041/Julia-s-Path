@@ -15,27 +15,9 @@
 &"display_name": "???",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
+&"offset": Vector2(0, 100),
 &"portraits": {
 "Default": {
-"export_overrides": {
-"image": "\"res://assets/portraits/Others/Echo3.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"Sad": {
-"export_overrides": {
-"image": "\"res://assets/portraits/Others/Echo.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"Sus": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Others/Echo2.png\""
 },
@@ -45,5 +27,5 @@
 "scene": ""
 }
 },
-&"scale": 1.0
+&"scale": 1.3
 }

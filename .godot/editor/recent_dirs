@@ -1,3 +1,5 @@
+res://assets/portraits/Others
+res://addons/dialogic/Example Assets/sound-effects/
 res://assets/audio/music
 res://assets/audio/sfx
 res://scenes/chars/DialogChars
@@ -18,5 +20,3 @@ res://scenes/UI
 res://scenes/utilities
 res://assets/portraits/Julia
 res://resources/maps
-res://assets/maps/under/Borders
-res://assets/maps/under
