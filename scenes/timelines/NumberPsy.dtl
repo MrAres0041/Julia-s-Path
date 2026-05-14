@@ -1,0 +1,4 @@
+[background arg="res://assets/panels/note3.png" fade="0.5" transition="Simple Fade"]
+[wait_input]
+Narrator: She told you to call only in emergencies.
+[signal arg="DialogueEnded"]

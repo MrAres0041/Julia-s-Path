@@ -1,4 +1,4 @@
-[wait time="1.0"]
+[background arg="res://assets/panels/call_bg.png" fade="1.5" wait="true"]
 if {Act1.pills_car} == false:
 	Narrator: ...
 	Narrator: Yeah, as figures.
@@ -63,4 +63,6 @@ else:
 	update Julia (JuliaHappy)
 	[wait time="2.0" skippable="true"]
 	Julia (JuliaDefault): Take care, okay?
+[background fade="1.0" wait="true"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

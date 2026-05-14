@@ -1,0 +1,36 @@
+[background arg="res://assets/panels/call_bg.png" fade="1.5" wait="true"]
+if {Act1.pills_car} == false:
+	Alice: Hello, Dr. Alice Vonbrain speaking.
+	Alice: If your head’s in a pickle, we can help you out.[input][br]What's the issue?
+	join Julia right
+	Julia (JuliaWorried): H-Hi, Mrs. Alice?[input][br]It’s Julia...
+	[wait time="1.0" skippable="true"]
+	Alice: ...Ugh.[input][br]Miss Julia...
+	Alice: What is it this time?
+	Julia (JuliaDefault): I’m sorry, I just...
+	Julia (JuliaWorried): I wanted to ask when we could have another session.
+	Julia (JuliaDefault): I... I really need to vent about some things.
+	Alice: We’ve already talked about this, Miss Julia.
+	update Julia (JuliaSad0)
+	Alice: I can only schedule for one appointment at a time.
+	Julia (JuliaTalk1): I know![input][br]I know, but—
+	update Julia (JuliaSad1)
+	Alice: Just continue with the treatment.
+	Alice: Repeat after me...
+	[wait time="1.0" skippable="true"]
+	Julia: ...Turn my head off.[input][br]Don’t skip the medication.[input][br]Stick to positive thoughts.
+	Alice: Exactly.
+	update Julia (JuliaSad0)
+	Alice: Now, I’ll be seeing you in two weeks.
+	Julia: But I—
+	Alice: TWO.[input][br]WEEKS.
+	[wait time="1.5"]
+	Julia (JuliaSad2): ...Okay.[input][br]Two weeks, then.
+	Julia: Thanks, Miss Vonbrain.
+	leave Julia [animation="Fade Out" wait="true"]
+else:
+	Narrator: You really don’t feel like calling her again.
+	Narrator: What would be the point?[input][br]Just getting yelled at again?
+[background fade="1.0" wait="true"]
+[wait time="0.5"]
+[signal arg="DialogueEnded"]

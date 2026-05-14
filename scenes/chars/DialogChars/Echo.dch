@@ -17,6 +17,15 @@
 &"nicknames": [""],
 &"offset": Vector2(0, 100),
 &"portraits": {
+"2": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Others/Echo1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Default": {
 "export_overrides": {
 "image": "\"res://assets/portraits/Others/Echo2.png\""

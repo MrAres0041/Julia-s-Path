@@ -1,0 +1,21 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.330048, 0.359713, 0.804688, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "DefaultStyle",
+"suffix": ""
+},
+&"default_portrait": "",
+&"description": "",
+&"display_name": "Alice",
+&"mirror": false,
+&"nicknames": ["Alice"],
+&"offset": Vector2(0, 0),
+&"portraits": {},
+&"scale": 1.0
+}

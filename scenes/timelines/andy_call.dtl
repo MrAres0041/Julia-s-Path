@@ -1,4 +1,4 @@
-[wait time="1.0"]
+[background arg="res://assets/panels/call_bg.png" fade="1.5" wait="true"]
 if {Act1.pills_car} == false:
 	DreamAndrew: You’ve reached the Graves residence.
 	DreamAndrew: Please, if you—
@@ -27,4 +27,6 @@ else:
 	Narrator: The phone isn't ringing.
 	Narrator: You should just hang it already.
 	Narrator: The phone...
+[background fade="1.0" wait="true"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

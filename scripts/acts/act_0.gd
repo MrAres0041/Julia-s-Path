@@ -2,6 +2,7 @@ extends Node2D
 class_name Act0
 
 func _ready() -> void:
+	GPlayer.G_SetDefaults()
 	Dialogic.start("dream1")
 	Dialogic.signal_event.connect(DialogicHandler)
 

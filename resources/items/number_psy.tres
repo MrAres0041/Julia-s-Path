@@ -7,5 +7,5 @@
 script = ExtResource("1_xoffo")
 name = "Number_Psy"
 texture = ExtResource("2_y67qc")
-item_txt = "NumberPsy"
+item_txt = null
 metadata/_custom_type_script = "uid://bed7k1jp4rm41"
