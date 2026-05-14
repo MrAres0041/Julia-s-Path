@@ -11,11 +11,12 @@ if {Act1.keys_car_m} == false:
 		Julia: ...
 		update Julia (JuliaWorried)
 		Narrator: You can smell trouble from a mile away.
-		[signal arg="Pills2"]
 		leave Julia
 		Narrator: Maybe it’d be better to crawl back into bed before your mom wakes up and starts asking questions…
-		set {Act1.keys_car_m} = true
 		Narrator: Breakfast can wait.
+		[wait time="0.5"]
+		set {Act1.keys_car_m} = true
+		[signal arg="Pills2"]
 	else:
 		Narrator: You pull the car handle, but the door doesn’t open.
 		Narrator: A closer look through the window reveals the keys resting comfortably on the passenger seat, next to the bottle of pills.

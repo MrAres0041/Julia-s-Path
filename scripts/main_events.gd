@@ -61,6 +61,10 @@ func _ProgressHandler(i):
 			_killNode(gloria_door)
 			_killNode(door_call)
 			animation_player.play("fade_in")
+		"Red_on":
+			animation_player.play("hallucination_on")
+		"Red_off":
+			animation_player.play("hallucination_off")
 		"End":
 			get_tree().change_scene_to_file("res://scenes/acts/act_2.tscn")
 		

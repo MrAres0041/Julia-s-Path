@@ -32,12 +32,16 @@ else:
 			Narrator: The water carries away the problem.
 			join Julia (JuliaSad2) right
 			Narrator: Shame washes over you once again.
+			[signal arg="Red_on"]
+			[wait time="0.5" skippable="true"]
 			Narrator: And then his voice echoed in your mind...
 			join DreamAndrew (Mocking) left [animation="Fade In" wait="true"]
 			DreamAndrew: Good girl.
 			DreamAndrew (Mocking2): Now get back to bed.
 			DreamAndrew: There's nothing else for you.
 			leave DreamAndrew [animation="Fade Out" wait="true"]
+			[signal arg="Red_off"]
+			[wait time="0.5" skippable="true"]
 			Julia (JuliaSad1): ...
 			update Julia (JuliaSad3)
 			Narrator: You bow your head even though you know there’s no one there.
@@ -51,6 +55,8 @@ else:
 			update Julia (JuliaDefault)
 			Narrator: You looked at your own reflection.
 			Narrator: Funny, but not the fun kind of funny...
+			[signal arg="Red_on"]
+			[wait time="0.5" skippable="true"]
 			join DreamNina (NinaDefault) left [mirrored="true"]
 			DreamNina: And there you go again.
 			update Julia (JuliaSad0)
@@ -70,6 +76,8 @@ else:
 			DreamNina: Don’t worry...[input][br]My friends are patient.
 			[wait time="1.0" skippable="true"]
 			DreamNina: Very patient.
+			[signal arg="Red_off"]
+			[wait time="0.5" skippable="true"]
 			leave DreamNina [animation="Fade Out"]
 			leave Julia [animation="Fade Out" wait="true"]
 			[wait time="1.0"]
