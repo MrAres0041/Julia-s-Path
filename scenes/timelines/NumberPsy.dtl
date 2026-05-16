@@ -1,4 +1,8 @@
 [background arg="res://assets/panels/note3.png" fade="0.5" transition="Simple Fade"]
 [wait_input]
-Narrator: She told you to call only in emergencies.
+if {Act1.pills_can} == false:
+	Narrator: You really don’t feel like calling her again.
+	Narrator: What would be the point?[input][br]Just getting yelled at again?
+else:
+	Narrator: She told you to call only if you really need it.
 [signal arg="DialogueEnded"]

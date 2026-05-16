@@ -65,5 +65,5 @@ func _playRandomSound():
 	L_AudioManager.playSFX("Phone",0)
 
 func DialogicHandler(i):
-	if i == "DialogueEnded":
+	if i == "CallEnded":
 		queue_free()

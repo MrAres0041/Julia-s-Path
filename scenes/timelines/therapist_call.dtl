@@ -13,9 +13,9 @@ if {Act1.pills_car} == false:
 	Alice: We’ve already talked about this, Miss Julia.
 	update Julia (JuliaSad0)
 	Alice: I can only schedule for one appointment at a time.
-	Julia (JuliaTalk1): I know![input][br]I know, but—
+	Julia (JuliaTalk1): I know![input][br]I know, but—[aa=0]
 	update Julia (JuliaSad1)
-	Alice: Just continue with the treatment.
+	Alice: JUST...[input][br] ...continue with the treatment.
 	Alice: Repeat after me...
 	[wait time="1.0" skippable="true"]
 	Julia: ...Turn my head off.[input][br]Don’t skip the medication.[input][br]Stick to positive thoughts.
@@ -29,8 +29,37 @@ if {Act1.pills_car} == false:
 	Julia: Thanks, Miss Vonbrain.
 	leave Julia [animation="Fade Out" wait="true"]
 else:
-	Narrator: You really don’t feel like calling her again.
-	Narrator: What would be the point?[input][br]Just getting yelled at again?
+	Alice: Hello, Dr. Alice Vonbrain speaking.
+	Alice: If you’re suffering because of your dead boyfriend and his psycho sister...[input][br]Perhaps you should just take the easy way out!
+	[wait time="1.5" skippable="true"]
+	join Julia right
+	[wait time="1.0" skippable="true"]
+	Julia: W-What?[input][br]Dr. Alice?
+	[wait time="1.0" skippable="true"]
+	Alice: Take the whole bottle.
+	update Julia (JuliaWorried)
+	Alice: Go on, do it.
+	Alice: It’ll feel just like falling asleep.
+	[wait time="1.0" skippable="true"]
+	update Julia (JuliaSad2)
+	Alice: Nobody will miss you, and all your problems will disappear.
+	[wait time="1.0" skippable="true"]
+	Julia (JuliaDefault): I-I think I should go now, okay?
+	update Julia (JuliaSad0)
+	Alice: Coward.
+	Alice: You can’t even face your own problems.
+	leave Julia
+	Alice: No wonder everyone leaves you.[input][br]Perhaps your father did the right thing after—[aa=0]
+	[signal arg="CallEnded"]
+	[wait time="1.0" skippable="true"]
+	Narrator: You slammed the phone down before she could finish.
+	[wait time="1.0" skippable="true"]
+	join Julia (JuliaSad3) right
+	Julia (JuliaHappy2): [u]No[/u]!
+	Julia: Turn my head off![br]Don’t skip the medication![br]Stick to positive thoughts!
+	Julia: Turn my head off![br]Don’t skip the medication![br]Stick to positive thoughts!
+	leave Julia
 [background fade="1.0" wait="true"]
 [wait time="0.5"]
+[signal arg="CallEnded"]
 [signal arg="DialogueEnded"]

@@ -65,4 +65,5 @@ else:
 	Julia (JuliaDefault): Take care, okay?
 [background fade="1.0" wait="true"]
 [wait time="0.5"]
+[signal arg="CallEnded"]
 [signal arg="DialogueEnded"]
