@@ -13,7 +13,8 @@ var playlist = {
 	],
 	"Phone":[
 		preload("res://assets/audio/sfx/phone_button.mp3"),
-		preload("res://assets/audio/sfx/phone.ogg")
+		preload("res://assets/audio/sfx/phone.ogg"),
+		preload("res://assets/audio/sfx/phone_up.ogg")
 	],
 	"Tree":[
 		preload("res://assets/audio/sfx/tree.ogg")

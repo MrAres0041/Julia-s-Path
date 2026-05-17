@@ -51,9 +51,8 @@ else:
 	leave Julia
 	Alice: No wonder everyone leaves you.[input][br]Perhaps your father did the right thing after—[aa=0]
 	[signal arg="CallEnded"]
-	[wait time="1.0" skippable="true"]
-	Narrator: You slammed the phone down before she could finish.
-	[wait time="1.0" skippable="true"]
+	audio "res://assets/audio/sfx/phone_smash.ogg"
+	[wait time="1.5" skippable="true"]
 	join Julia (JuliaSad3) right
 	Julia (JuliaHappy2): [u]No[/u]!
 	Julia: Turn my head off![br]Don’t skip the medication![br]Stick to positive thoughts!

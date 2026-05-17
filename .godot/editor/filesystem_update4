@@ -8,3 +8,6 @@ res://scenes/timelines/therapist_call.dtl
 res://scenes/chars/player.tscn
 res://scenes/acts/act_0.tscn
 res://scenes/UI/padlocker.tscn
+res://scripts/audio_manager.gd
+res://scripts/ui/padlocker.gd
+res://scripts/globals/g_player.gd

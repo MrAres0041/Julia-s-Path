@@ -10,6 +10,7 @@ var lenght:int
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)
+	L_AudioManager.playSFX("Phone",2)
 
 func _physics_process(delta: float) -> void:
 	lenght = textlabel.get_parsed_text().length()
@@ -21,8 +22,13 @@ func _physics_process(delta: float) -> void:
 					callList._callTheNumber(callList.dialogues[index])
 		else:
 			callList._callTheNumber("default")
-
 		textlabel.text = ""
+	if Input.is_action_just_pressed("back"):
+		GPlayer.can_walk = true
+		GPlayer.can_talk = true
+		GPlayer.is_talking = false
+
+		queue_free()
 
 func _on_button_1_pressed() -> void:
 	textlabel.add_text("1")
