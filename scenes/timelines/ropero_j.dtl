@@ -1,4 +1,5 @@
 Narrator: Nothing here but clothes, bad memories, and your old guitar lesson notes.
 Narrator: On their own, they’re an offense to music.
 Narrator: Talent doesn’t seem to be hereditary.[br]At least not in your case.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

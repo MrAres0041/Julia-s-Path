@@ -1,4 +1,5 @@
 Narrator: You figure it’s better to get everything in place before running out of the house.
 Narrator: Anxiety, obsession, or just being cautious...[input][br]Call it whatever you want.
 Narrator: Just pull yourself together.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

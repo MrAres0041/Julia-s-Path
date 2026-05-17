@@ -2,4 +2,5 @@ Narrator: Some old memories.
 Narrator: Strange...[input][br]You always get serious chills whenever you look at the broken frame.
 Narrator: Your mom never told you why, but she insists on keeping it there...
 Narrator: Whatever the reason, you shouldn't look at it for too long.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

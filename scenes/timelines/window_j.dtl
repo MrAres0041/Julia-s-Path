@@ -8,4 +8,5 @@ update Julia (JuliaHappy1)
 Narrator: She still tried to keep a smile on her face...
 [wait time="2.0" skippable="true"]
 Narrator: The kid is crying though[input][br] Not like anyone really cares.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

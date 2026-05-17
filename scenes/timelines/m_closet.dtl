@@ -8,4 +8,5 @@ Narrator: You wrote it down just in case.
 update Julia (JuliaWorried)
 Narrator: Probably just a serial number… right?
 leave Julia [animation="Fade Out" wait="true"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

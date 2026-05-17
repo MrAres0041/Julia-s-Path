@@ -3,4 +3,5 @@ audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 Narrator: You picked up Big Dummy's number!
 Narrator: If he remembers how phones work, he might even answer.
 [signal arg="ItemAdded"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

@@ -1,4 +1,5 @@
 Narrator: You remember the time your mom dropped a bottle of whisky into it.
 Narrator: Going weeks without a working toilet is an experience worth remembering.
 Narrator: Take good care of it, please.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

@@ -12,4 +12,5 @@ Narrator: You can almost imagine him with a goatee like Walt.
 update Julia (JuliaHappy1)
 Narrator: (It looks terrible.)
 leave Julia [animation="Fade Out" length="0.3"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

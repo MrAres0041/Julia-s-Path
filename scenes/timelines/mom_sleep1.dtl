@@ -13,4 +13,5 @@ update Julia (JuliaDefault)
 Narrator: Perhaps it would be better not to think too much about it.
 leave Gloria [animation="Fade Out" length="0.3"]
 leave Julia [animation="Fade Out" length="0.3"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

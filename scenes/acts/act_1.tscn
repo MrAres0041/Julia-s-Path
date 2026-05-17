@@ -776,7 +776,6 @@ shape = SubResource("RectangleShape2D_frvun")
 [node name="Fridge" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
 position = Vector2(4405, -190)
 timeline = "fridge_j"
-autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/Fridge"]
 shape = SubResource("RectangleShape2D_0jg0i")

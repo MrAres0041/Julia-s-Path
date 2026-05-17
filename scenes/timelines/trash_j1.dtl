@@ -3,4 +3,5 @@ Narrator: There’s also a note here.
 audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 Narrator: You picked up a note![input][br](You promised you wouldn’t do this to yourself, though…)
 [signal arg="ItemAdded"]
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

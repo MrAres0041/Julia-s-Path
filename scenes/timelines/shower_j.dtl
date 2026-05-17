@@ -1,4 +1,5 @@
 Narrator: Those old horror movies keep haunting you when bathing.
 Narrator: But your mom likes them, so what can you do about it?
 Narrator: Just try not closing your eyes and be aware of the oominous silhouettes...
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

@@ -17,4 +17,5 @@ update Julia (JuliaDefault)
 Gloria (Angry): A LOT.
 leave Gloria [animation="Fade Out"]
 leave Julia
+[wait time="0.5" skippable="true"]
 [signal arg="DialogueEnded"]

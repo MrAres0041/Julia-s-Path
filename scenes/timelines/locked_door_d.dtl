@@ -2,4 +2,5 @@ Narrator: Your dad’s room.
 Narrator: As far as you can remember, this door has never been open.
 Narrator: Another secret your mom prefers to keep hidden under the rug.
 Narrator: (No, there aren’t any keys there either.)[input][br](That would’ve been convenient, don’t you think?)
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

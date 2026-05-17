@@ -4,4 +4,5 @@ join Julia (JuliaSad1) right
 Julia: It’s pointless.[input][br]Just give up already...
 leave Julia [animation="Fade Out" wait="true"]
 Narrator: You should take that frame down when Mom looks away.
+[wait time="0.5"]
 [signal arg="DialogueEnded"]

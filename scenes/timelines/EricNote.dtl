@@ -4,4 +4,5 @@ if {Act1.pills_car} == false:
 	Narrator: It's too early.
 	Narrator: He's probably sleeping.
 else:
+[wait time="0.5"]
 [signal arg="DialogueEnded"]
