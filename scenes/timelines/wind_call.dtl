@@ -1,0 +1,10 @@
+[wait time="1.0"]
+join Julia right
+Julia: Huh?
+update Julia (JuliaSad0)
+Julia: A cold draft brushes against your back.
+Julia: Something feels off...
+Julia: Perhaps you should check it out.
+[wait time="0.5"]
+[signal arg="SomethingChanged"]
+[signal arg="DialogueEnded"]

@@ -1,6 +1,6 @@
+CollisionShape2D
 ColorRect
 CanvasLayer
-CollisionShape2D
 Node2D
 Marker2D
 CollisionPolygon2D

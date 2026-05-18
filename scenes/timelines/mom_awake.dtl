@@ -36,9 +36,9 @@ update Julia (JuliaDefault)
 Gloria (Happy1): You just met this new guy...[input][br]He’s the novelty…[input][br]Your head’s in the clouds.
 Gloria (Talk1): It may not seems like it, but your old momma have played this game aswell.
 update Gloria (GloriaDefault)
+audio music_dialogic - [fade="2.0"]
 Julia (JuliaSad0): No! It...
 update Gloria (Serious1)
-audio music_dialogic - [fade="2.0"]
 Julia (JuliaSad2): It’s not like that, mom...
 Julia: Eric is just a [u]friend[/u].[input][br]I really don't want to go further than that.
 update Gloria (Worried2)

@@ -79,6 +79,7 @@ directories/dtl_directory={
 "try_skip_pill": "res://scenes/timelines/try_skip_pill.dtl",
 "tv_j": "res://scenes/timelines/tv_j.dtl",
 "weird_bottles": "res://scenes/timelines/weird_bottles.dtl",
+"wind_call": "res://scenes/timelines/wind_call.dtl",
 "window_j": "res://scenes/timelines/window_j.dtl",
 "workbench": "res://scenes/timelines/workbench.dtl"
 }

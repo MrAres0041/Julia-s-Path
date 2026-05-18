@@ -1,13 +1,13 @@
+res://scenes/timelines/wind_call.dtl
 res://scenes/acts/act_1.tscn
 res://resources/calls/Act1.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres
 res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres
 res://assets/styles/DefaultStyle.tres
 res://scenes/utilities/themes/menu_buttons.tres
-res://scenes/timelines/tv_j.dtl
-res://scenes/chars/DialogChars/Julia.dch
+res://scripts/main_events.gd
 res://scenes/acts/act_0.tscn
 res://scenes/UI/padlocker.tscn
-res://scenes/timelines/gloria_2.dtl
 res://scenes/chars/DialogChars/Gloria.dch
-res://scenes/timelines/window_j.dtl
+res://scenes/chars/DialogChars/Julia.dch
+res://scenes/timelines/mom_awake.dtl

@@ -15,6 +15,7 @@ class_name MainEvents
 @onready var mom_awake: DinamicDManager = $Interactions/Mom_awake
 @onready var no_pills: DinamicDManager = $Interactions/No_pills
 @onready var door_call: DinamicDManager = $Interactions/Door_call
+@onready var wind: DinamicDManager = $Interactions/Wind
 
 @onready var path_follow_gloria: PathFollow2D = $"../Cam_Movement/J_Living/NPCs/GloriaDoor/PathFollow2D"
 
@@ -30,6 +31,7 @@ func _ready() -> void:
 	_deactivateMonitor(mom_awake)
 	_deactivateMonitor(door_call)
 	_dissappearMonitor(gloria_end)
+	_deactivateMonitor(wind)
 	gloria_shape.disabled = true
 	Dialogic.signal_event.connect(_ProgressHandler)
 
@@ -46,6 +48,8 @@ func _ProgressHandler(i):
 			_killNode(mom_sleeping)
 			gloria.setActive(true)
 			music_manager.stop_with_fade()
+		"Mom_Awake":
+			_deactivateMonitor(mom_awake)
 		"Door_calling":
 			gloria_door._startWalking()
 		"OpenDoor":
@@ -65,6 +69,9 @@ func _ProgressHandler(i):
 			animation_player.play("hallucination_on")
 		"Red_off":
 			animation_player.play("hallucination_off")
+			_activateMonitor(wind)
+		"SomethingChanged":
+			_deactivateMonitor(wind)
 		"End":
 			get_tree().change_scene_to_file("res://scenes/acts/act_2.tscn")
 		
