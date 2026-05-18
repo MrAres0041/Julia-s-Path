@@ -35,7 +35,7 @@ The game is available on Itch.io.
 
 You can play the published version here:
 
-[Itch.io](https://tu-juego.itch.io/)
+[Itch.io]((https://mrares041.itch.io/julias-cycle)
 
 ---
 
@@ -45,3 +45,5 @@ You can play the published version here:
 - Nemlei — Creator of The Coffin of Andy and Leyley
 - Darren Curtis Music — Composer of some of the tracks used
 - MrAres041 — Programming, writing, art, and development
+
+![JuliaWhy](https://img.itch.zone/aW1nLzI2NTQ1MjQwLnBuZw==/original/yufsCy.png)
