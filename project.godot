@@ -69,6 +69,7 @@ directories/dtl_directory={
 "pills1": "res://scenes/timelines/pills1.dtl",
 "poster_pile": "res://scenes/timelines/poster_pile.dtl",
 "ropero_j": "res://scenes/timelines/ropero_j.dtl",
+"secret_call": "res://scenes/timelines/secret_call.dtl",
 "shower_j": "res://scenes/timelines/shower_j.dtl",
 "test_1": "res://scenes/timelines/test_1.dtl",
 "therapist_call": "res://scenes/timelines/therapist_call.dtl",

@@ -90,16 +90,17 @@
 	update DreamNina (NinaDefault) leftmost [mirrored="true" move_time="1.0"]
 	[wait time="1.5" skippable="true"]
 	Narrator: And then one last...[input][br]Thing...
-	Narrator: It isn't a person.
-	Narrator: Not even remotely resembling a person.
-	Narrator: More like...
+	Narrator: It isn’t a person.[input][br]Not even close to one.
+	Narrator: It resembles some kind of...[input][br]tree...
 	[wait time="1.0" skippable="true"]
 	join Echo center [animation="Fade In" wait="true"]
-	Narrator: A [u]thing[/u] of some kind...
+	Narrator: Or perhaps something pretending to be one.
 	[wait time="2.0" skippable="true"]
-	Narrator: You feel terrible by just looking at it.
-	Narrator: Yet somehow…[input][br]the feeling that you know him doesn't go away.
-	Narrator: Familiarity.
+	Narrator: Just looking at it makes you feel awful.
+	Narrator: Not fear.[input][br]Not unease.
+	Narrator: [u]Guilt[/u].
+	Narrator: Like you’ve done something terrible...[input][br]Or worse.
+	Narrator: Like you were supposed to.
 	[wait time="2.0" skippable="true"]
 	Echo (Default): What is your story, [u]miserable one[/u]?
 	[wait time="2.0" skippable="true"]

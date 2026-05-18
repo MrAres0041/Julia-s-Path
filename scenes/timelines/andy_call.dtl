@@ -1,8 +1,8 @@
 [background arg="res://assets/panels/call_bg.png" fade="1.5" wait="true"]
-if {Act1.pills_car} == false:
+if {Act1.im_sorry} == false:
 	DreamAndrew: You’ve reached the Graves residence.
 	DreamAndrew: Please, if you—
-	Julia: ANDY! WHERE’S THE FUCKING SPOON?!
+	Ashley: ANDY! WHERE’S THE FUCKING SPOON?!
 	DreamAndrew: ASHLEY, SHUT THE—
 	DreamAndrew: UUUUGH…
 	[wait time="1.5" skippable="true"]

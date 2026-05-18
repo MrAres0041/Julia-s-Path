@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_rtfmh")
-callist = Array[String](["187895", "199551", "588778"])
-dialogues = Array[String](["andy_call", "eric_call", "therapist_call"])
+callist = Array[String](["187895", "199551", "588778", "626133"])
+dialogues = Array[String](["andy_call", "eric_call", "therapist_call", "secret_call"])
 metadata/_custom_type_script = "uid://cinojxh4ygqig"

@@ -1,12 +1,18 @@
-Narrator: It’s too early...
-[background arg="res://assets/panels/5.png" fade="1.0" wait="true"]
-Narrator: That poor kid just missed the bus again.[input][br]It happens every morning at this point.
-[background fade="1.0" wait="true"]
-join Julia (JuliaHappy) right
-Narrator: It reminds you of your school days.[input][br]When Mom had to fight her hangover just to get you there on time.
-update Julia (JuliaHappy1)
-Narrator: She still tried to keep a smile on her face...
-[wait time="2.0" skippable="true"]
-Narrator: The kid is crying though[input][br] Not like anyone really cares.
+if {Act1.pills_car} == false:
+	Narrator: It’s too early...
+	[background arg="res://assets/panels/5.png" fade="1.0" wait="true"]
+	Narrator: That poor kid just missed the bus again.[input][br]It happens every morning at this point.
+	[background fade="1.0" wait="true"]
+	join Julia (JuliaHappy) right
+	Narrator: It reminds you of your school days.[input][br]When Mom had to fight her hangover just to get you there on time.
+	update Julia (JuliaHappy1)
+	Narrator: She still tried to keep a smile on her face...
+	[wait time="2.0" skippable="true"]
+	Narrator: The kid is crying though[input][br] Not like anyone really cares.
+else:
+	[background arg="res://assets/panels/5_1.png" fade="1.0" wait="true"]
+	Narrator: It’s a beautiful day outside.
+	Narrator: On days like this...[input][br]girls like you...
+	Narrator: ...probably shouldn’t spend so much time staring out the window like a weirdo.
 [wait time="0.5"]
 [signal arg="DialogueEnded"]

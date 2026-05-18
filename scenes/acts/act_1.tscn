@@ -783,6 +783,7 @@ shape = SubResource("RectangleShape2D_0jg0i")
 [node name="TV" parent="Cam_Movement/J_Living/Interactions" instance=ExtResource("9_amb7k")]
 position = Vector2(4386, 198)
 timeline = "tv_j"
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Living/Interactions/TV"]
 position = Vector2(3, -4)

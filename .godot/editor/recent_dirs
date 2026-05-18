@@ -1,8 +1,8 @@
-res://assets/portraits/Others
-res://assets/audio/sfx
 res://assets/panels
-res://scenes/chars/DialogChars
+res://assets/audio/sfx
 res://scenes/timelines
+res://assets/portraits/Others
+res://scenes/chars/DialogChars
 res://addons/dialogic/Example Assets/sound-effects/
 res://assets/audio/music
 /home/aresito/Escritorio/Proyectos/Godot/JuegoExportado

@@ -1,5 +1,5 @@
 [background arg="res://assets/panels/call_bg.png" fade="1.5" wait="true"]
-if {Act1.pills_car} == false:
+if {Act1.im_sorry} == false:
 	Alice: Hello, Dr. Alice Vonbrain speaking.
 	Alice: If your head’s in a pickle, we can help you out.[input][br]What's the issue?
 	join Julia right
