@@ -1,5 +1,3 @@
-# Julia's Cycle
-
 ![Banner](https://img.itch.zone/aW1nLzI2NTUyMDM2LnBuZw==/original/El9tTN.png)
 
 ## About the Game
