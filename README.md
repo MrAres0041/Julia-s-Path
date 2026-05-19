@@ -33,7 +33,7 @@ The game is available on Itch.io.
 
 You can play the published version here:
 
-[Itch.io]((https://mrares041.itch.io/julias-cycle)
+[Itch.io](https://mrares041.itch.io/julias-cycle)
 
 ---
 
