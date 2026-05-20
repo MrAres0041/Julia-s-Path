@@ -1,5 +1,3 @@
-# Julia's Cycle
-
 ![Banner](https://img.itch.zone/aW1nLzI2NTUyMDM2LnBuZw==/original/El9tTN.png)
 
 ## About the Game
@@ -35,7 +33,7 @@ The game is available on Itch.io.
 
 You can play the published version here:
 
-[Itch.io]((https://mrares041.itch.io/julias-cycle)
+[Itch.io](https://mrares041.itch.io/julias-cycle)
 
 ---
 
