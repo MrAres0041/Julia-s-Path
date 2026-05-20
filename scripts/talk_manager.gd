@@ -9,29 +9,30 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("dialogic_default_action") and GPlayer.can_talk and !GPlayer.inv_open and !GPlayer.is_talking and talk_area:
-			#talk_area.Execute_Dialogue()
 			GPlayer.is_talking = true
 			$Sprite2D.visible = false
 			talk_area.Execute_Dialogue()
 	
 func DialogicHandler(i):
 	if i == "DialogueEnded":
+		talk_area = null
 		GPlayer.is_talking = false
 
 func Look_At_This(dir:Vector2):
-	match dir:
-		Vector2(0,-1):
-			$CollisionShape2D.rotation_degrees = 0.0
-			$CollisionShape2D.position = Vector2(0.0,-68.0)
-		Vector2(0,1):
-			$CollisionShape2D.rotation_degrees = 0
-			$CollisionShape2D.position = Vector2(0.0,88.0)
-		Vector2(-1,0):
-			$CollisionShape2D.rotation_degrees = 90.0
-			$CollisionShape2D.position = Vector2(-60.0,40.0)
-		Vector2(1,0):
-			$CollisionShape2D.rotation_degrees = 90.0
-			$CollisionShape2D.position = Vector2(60.0,40.0)
+	if !GPlayer.is_talking:
+		match dir:
+			Vector2(0,-1):
+				$CollisionShape2D.rotation_degrees = 0.0
+				$CollisionShape2D.position = Vector2(0.0,-68.0)
+			Vector2(0,1):
+				$CollisionShape2D.rotation_degrees = 0
+				$CollisionShape2D.position = Vector2(0.0,88.0)
+			Vector2(-1,0):
+				$CollisionShape2D.rotation_degrees = 90.0
+				$CollisionShape2D.position = Vector2(-60.0,40.0)
+			Vector2(1,0):
+				$CollisionShape2D.rotation_degrees = 90.0
+				$CollisionShape2D.position = Vector2(60.0,40.0)
 
 
 func _on_area_entered(area: Area2D) -> void:

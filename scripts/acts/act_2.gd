@@ -32,6 +32,6 @@ func DialogicHandler(i):
 		"J3":
 			animation_player.play("Julia3")
 		"Out":
-			animation_player.play("fade_out_2")
+			animation_player.play("fade_out")
 		"Bed":
 			animation_player.play("Bed")

@@ -47,7 +47,6 @@ if {Act1.pills_taken} == false:
 	DreamNina: There’s plenty of rest on the other side, Julie.[input][br]Just not for us.
 	DreamAndrew: And surely not for you.
 	DreamAndrew: Never for people like you.
-	[wait time="3.0"]
 else:
 	Narrator: The music plays at full volume.
 	Narrator: Slowly, the medicine starts to take effect.
@@ -101,5 +100,12 @@ else:
 	[wait time="1.0"]
 	Narrator: After all, if all the apple's are bad...
 	Julia: ...maybe the problem is the tree.
-	[wait time="3.0"]
+[wait time="2.0"]
+set {Act1.im_sorry} = false
+set {Act1.keys_car_m} = false
+set {Act1.pills_can} = false
+set {Act1.pills_car} = false
+set {Act1.pills_taken} = false
+audio music_dialogic - [fade="2.0"]
+[wait time="4.0"]
 [signal arg="DialogueEnded"]

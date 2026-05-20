@@ -1,6 +1,16 @@
-Narrator: Your dad’s room.
-Narrator: As far as you can remember, this door has never been open.
-Narrator: Another secret your mom prefers to keep hidden under the rug.
-Narrator: (No, there aren’t any keys there either.)[input][br](That would’ve been convenient, don’t you think?)
+if {Act1.im_sorry} == false:
+	Narrator: Your dad’s room.
+	Narrator: As far as you can remember, this door has never been open.
+	Narrator: Another secret your mom prefers to keep hidden under the rug.
+	Narrator: (No, there aren’t any keys there either.)[input][br](That would’ve been convenient, don’t you think?)
+else:
+	Narrator: It’s just your dad’s room, but...
+	join Julia right
+	Julia: Is someone...[input][br]...whispering?
+	leave Julia
+	Narrator: You leaned closer to listen.
+	[wait time="1.5" skippable="true"]
+	Echo: The sins of the father...[input][br]The sins of the father...[input][br]The sins of the father...
+	Echo: ...shall be visited upon the son.
 [wait time="0.5"]
 [signal arg="DialogueEnded"]

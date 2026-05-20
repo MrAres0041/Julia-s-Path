@@ -1,4 +1,4 @@
-if {Act1.im_sorry} == true:
+if {Act1.im_sorry} == false:
 	[signal arg="DoorClose"]
 	[wait time="0.5"]
 	[signal arg="End"]
@@ -6,5 +6,4 @@ else:
 	Narrator: The bed lies ahead.
 	Narrator: You wish you could stay there forever.
 	Narrator: Not like becoming a vegetable would make anyone want you more.
-	[wait time="0.5"]
 	[signal arg="DialogueEnded"]
