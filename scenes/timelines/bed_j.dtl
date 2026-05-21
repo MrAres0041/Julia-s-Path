@@ -1,4 +1,4 @@
-if {Act1.im_sorry} == false:
+if {Act1.im_sorry} == true:
 	[signal arg="DoorClose"]
 	[wait time="0.5"]
 	[signal arg="End"]

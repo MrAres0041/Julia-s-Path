@@ -6,10 +6,10 @@ const INV = preload("res://resources/items/inventory.tres")
 @export var item:Inv_Item
 @export var autoDestruction:bool = true
 
-@onready var ended:bool = false
+var ended:bool = false
 
 func _ready() -> void:
-	Dialogic.signal_event.connect(DialogueHandler)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func Execute_Dialogue():
 	Dialogic.start(timeline)
@@ -17,6 +17,6 @@ func Execute_Dialogue():
 		INV._insert(item)
 	ended = true
 
-func DialogueHandler(i):
-	if i == "DialogueEnded" and ended and autoDestruction:
+func _on_timeline_ended():
+	if autoDestruction and ended:
 		get_tree().queue_delete(self)

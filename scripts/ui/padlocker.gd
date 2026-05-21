@@ -11,6 +11,9 @@ var lenght:int
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicHandler)
 	L_AudioManager.playSFX("Phone",2)
+	GPlayer.can_walk = false
+	GPlayer.can_talk = false
+	GPlayer.is_talking = true
 
 func _physics_process(delta: float) -> void:
 	lenght = textlabel.get_parsed_text().length()

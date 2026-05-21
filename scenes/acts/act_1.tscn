@@ -586,6 +586,7 @@ polygon = PackedVector2Array(-712, 58, -561, 56, -562, 86, -457, 88, -457, 68, -
 [node name="LockedDoor" parent="Cam_Movement/J_Corridor/Items" instance=ExtResource("9_amb7k")]
 position = Vector2(2230, 0)
 timeline = "locked_door_d"
+autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Corridor/Items/LockedDoor"]
 position = Vector2(0, -27)

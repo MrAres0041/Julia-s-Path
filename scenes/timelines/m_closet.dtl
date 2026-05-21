@@ -1,12 +1,1 @@
 Narrator: No, there are no skeletons in the closet.
-Narrator: But…
-join Julia right
-Julia: What’s this?
-audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
-Narrator: You found a number written on the back!
-Narrator: You wrote it down just in case.
-update Julia (JuliaWorried)
-Narrator: Probably just a serial number… right?
-leave Julia [animation="Fade Out" wait="true"]
-[wait time="0.5"]
-[signal arg="DialogueEnded"]
