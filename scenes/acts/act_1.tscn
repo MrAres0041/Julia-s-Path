@@ -264,7 +264,7 @@ size = Vector2(228, 298)
 size = Vector2(28, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0asix"]
-size = Vector2(20, 80)
+size = Vector2(20, 161)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14e02"]
 size = Vector2(75, 118)
@@ -873,7 +873,7 @@ timeline = "car_pills"
 autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Interactions/Car_pills"]
-position = Vector2(0, 23)
+position = Vector2(0, 63.5)
 shape = SubResource("RectangleShape2D_0asix")
 
 [node name="DialogueManager" parent="Cam_Movement/J_Garage/Interactions" instance=ExtResource("9_amb7k")]

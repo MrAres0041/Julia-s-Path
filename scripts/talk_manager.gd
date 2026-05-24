@@ -15,12 +15,8 @@ func _physics_process(delta: float) -> void:
 			GPlayer.is_talking = true
 			$Sprite2D.visible = false
 			talk_area.Execute_Dialogue()
-	
-func DialogicHandler(i):
-	if i == "DialogueEnded":
-		talk_area = null
-		GPlayer.is_talking = false
-		
+
+
 func _on_timeline_started():
 	GPlayer.is_talking = true
 	$Sprite2D.visible = false
