@@ -21,7 +21,7 @@ func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, 
 		player.global_position = player_location.global_position
 		player.scale = scale_player
 		GPlayer.can_walk = false
-		player.base_speed = new_speed
+		player.speed = new_speed
 		newCamera = nCam.global_position
 		newCamScale = scaleCam
 		_fadeOut()

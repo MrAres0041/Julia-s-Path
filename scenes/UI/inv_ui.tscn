@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ckhnwfq86xdns"]
 
-[ext_resource type="Script" uid="uid://cfchl85lg3vvw" path="res://scripts/ui/inv_ui.gd" id="1_035ib"]
+[ext_resource type="Script" uid="uid://cfchl85lg3vvw" path="res://scripts/ui/inv_ui.gd" id="1_2nutk"]
 [ext_resource type="Texture2D" uid="uid://dumat6v0r12ap" path="res://assets/ui/UI_f.png" id="2_jpxcs"]
 [ext_resource type="PackedScene" uid="uid://baoht13ixa6uy" path="res://scenes/UI/inv_ui_slot.tscn" id="3_sqe2a"]
 [ext_resource type="Texture2D" uid="uid://bcwvmlu8lufc2" path="res://assets/ui/fade.png" id="4_dm4hg"]
@@ -184,7 +184,9 @@ _data = {
 &"exit": SubResource("Animation_0rr4i")
 }
 
-[node name="inv_UI" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="inv_UI" type="Control" parent="."]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -193,9 +195,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_035ib")
+script = ExtResource("1_2nutk")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="inv_UI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -204,7 +206,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Inv" type="NinePatchRect" parent="."]
+[node name="Inv" type="NinePatchRect" parent="inv_UI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -223,7 +225,7 @@ patch_margin_top = 50
 patch_margin_right = 50
 patch_margin_bottom = 50
 
-[node name="GridContainer" type="GridContainer" parent="Inv"]
+[node name="GridContainer" type="GridContainer" parent="inv_UI/Inv"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -239,67 +241,67 @@ grow_vertical = 2
 mouse_filter = 2
 columns = 5
 
-[node name="inv_UI_slot" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot2" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot2" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot3" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot3" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot4" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot4" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot5" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot5" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot6" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot6" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot7" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot7" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot8" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot8" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot9" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot9" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot10" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot10" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot11" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot11" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot12" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot12" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot13" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot13" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot14" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot14" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot15" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot15" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot16" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot16" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot17" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot17" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot18" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot18" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot19" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot19" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="inv_UI_slot20" parent="Inv/GridContainer" instance=ExtResource("3_sqe2a")]
+[node name="inv_UI_slot20" parent="inv_UI/Inv/GridContainer" instance=ExtResource("3_sqe2a")]
 layout_mode = 2
 
-[node name="Inv2" type="NinePatchRect" parent="."]
+[node name="Inv2" type="NinePatchRect" parent="inv_UI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -312,17 +314,17 @@ patch_margin_top = 50
 patch_margin_right = 50
 patch_margin_bottom = 50
 
-[node name="Tree" type="Sprite2D" parent="."]
+[node name="Tree" type="Sprite2D" parent="inv_UI"]
 position = Vector2(1159.12, 474.75)
 scale = Vector2(2.12875, 2.12875)
 texture = ExtResource("7_0lhw3")
 
-[node name="Tree2" type="Sprite2D" parent="."]
+[node name="Tree2" type="Sprite2D" parent="inv_UI"]
 position = Vector2(75.125, 478.75)
 scale = Vector2(2.12875, 2.12875)
 texture = ExtResource("7_0lhw3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="inv_UI"]
 libraries = {
 &"": SubResource("AnimationLibrary_0rr4i")
 }

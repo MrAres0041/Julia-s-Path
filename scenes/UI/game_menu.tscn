@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://gci5r2vrqium" path="res://scenes/utilities/themes/menu_buttons.tres" id="1_aeiwg"]
 [ext_resource type="Script" uid="uid://m3gci3y8mwdn" path="res://scripts/ui/game_menu.gd" id="1_isfb2"]
-[ext_resource type="Script" uid="uid://ufiwmewyxgd1" path="res://scripts/ui/game_options.gd" id="2_kv44u"]
+[ext_resource type="Script" uid="uid://dvus8oo4ckcmx" path="res://scripts/ui/options.gd" id="3_isfb2"]
 
 [sub_resource type="Animation" id="Animation_isfb2"]
 length = 0.001
@@ -164,7 +164,9 @@ _data = {
 &"exit_options": SubResource("Animation_ywgnr")
 }
 
-[node name="GameMenu" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GameMenu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -173,7 +175,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_isfb2")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="GameMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -181,7 +183,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="GameMenu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -196,27 +198,27 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_aeiwg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/CenterContainer"]
 layout_mode = 2
 
-[node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="GameMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Resume"
 
-[node name="Save game" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Save game" type="Button" parent="GameMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 disabled = true
 text = "Save game"
 
-[node name="Options" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="GameMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="Exit" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="GameMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit"
 
-[node name="Options" type="VBoxContainer" parent="."]
+[node name="Options" type="VBoxContainer" parent="GameMenu"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -233,115 +235,115 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_aeiwg")
 alignment = 1
-script = ExtResource("2_kv44u")
+script = ExtResource("3_isfb2")
 
-[node name="SoundOption" type="HBoxContainer" parent="Options"]
+[node name="SoundOption" type="HBoxContainer" parent="GameMenu/Options"]
 layout_mode = 2
 
-[node name="Labels" type="VBoxContainer" parent="Options/SoundOption"]
+[node name="Labels" type="VBoxContainer" parent="GameMenu/Options/SoundOption"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Options/SoundOption/Labels"]
+[node name="Label" type="Label" parent="GameMenu/Options/SoundOption/Labels"]
 layout_mode = 2
 text = "Master Volume:"
 
-[node name="Label3" type="Label" parent="Options/SoundOption/Labels"]
+[node name="Label3" type="Label" parent="GameMenu/Options/SoundOption/Labels"]
 layout_mode = 2
 text = "Music Volume:"
 
-[node name="Label2" type="Label" parent="Options/SoundOption/Labels"]
+[node name="Label2" type="Label" parent="GameMenu/Options/SoundOption/Labels"]
 layout_mode = 2
 text = "SFX Volume:"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/SoundOption"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/Options/SoundOption"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 alignment = 1
 
-[node name="Master" type="HSlider" parent="Options/SoundOption/VBoxContainer"]
+[node name="Master" type="HSlider" parent="GameMenu/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
 value = 2.0
 
-[node name="Music" type="HSlider" parent="Options/SoundOption/VBoxContainer"]
+[node name="Music" type="HSlider" parent="GameMenu/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
 value = 2.0
 
-[node name="SFX" type="HSlider" parent="Options/SoundOption/VBoxContainer"]
+[node name="SFX" type="HSlider" parent="GameMenu/Options/SoundOption/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 max_value = 6.0
 value = 2.0
 
-[node name="ResolutionOption" type="HBoxContainer" parent="Options"]
+[node name="ResolutionOption" type="HBoxContainer" parent="GameMenu/Options"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Options/ResolutionOption"]
+[node name="Label" type="Label" parent="GameMenu/Options/ResolutionOption"]
 layout_mode = 2
 text = "Resolution:"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options/ResolutionOption"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/Options/ResolutionOption"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="1280" type="Button" parent="Options/ResolutionOption/HBoxContainer"]
+[node name="1280" type="Button" parent="GameMenu/Options/ResolutionOption/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "1280 x 800"
 
-[node name="1600" type="Button" parent="Options/ResolutionOption/HBoxContainer"]
+[node name="1600" type="Button" parent="GameMenu/Options/ResolutionOption/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "1600 x 900"
 
-[node name="1980" type="Button" parent="Options/ResolutionOption/HBoxContainer"]
+[node name="1980" type="Button" parent="GameMenu/Options/ResolutionOption/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "1980 x 1080"
 
-[node name="Screen" type="HBoxContainer" parent="Options"]
+[node name="Screen" type="HBoxContainer" parent="GameMenu/Options"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Options/Screen"]
+[node name="Label" type="Label" parent="GameMenu/Options/Screen"]
 layout_mode = 2
 text = "Fullscreen:"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options/Screen"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/Options/Screen"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CheckBox" type="CheckButton" parent="Options/Screen/HBoxContainer"]
+[node name="CheckBox" type="CheckButton" parent="GameMenu/Options/Screen/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/Options"]
 layout_mode = 2
 alignment = 2
 
-[node name="Back" type="Button" parent="Options/HBoxContainer"]
+[node name="Back" type="Button" parent="GameMenu/Options/HBoxContainer"]
 layout_mode = 2
 text = "Back"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameMenu"]
 libraries = {
 &"": SubResource("AnimationLibrary_ywgnr")
 }
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="value_changed" from="Options/SoundOption/VBoxContainer/Master" to="Options" method="_on_master_value_changed"]
-[connection signal="value_changed" from="Options/SoundOption/VBoxContainer/Music" to="Options" method="_on_music_value_changed"]
-[connection signal="value_changed" from="Options/SoundOption/VBoxContainer/SFX" to="Options" method="_on_sfx_value_changed"]
-[connection signal="pressed" from="Options/ResolutionOption/HBoxContainer/1280" to="Options" method="_on_1280_pressed"]
-[connection signal="pressed" from="Options/ResolutionOption/HBoxContainer/1600" to="Options" method="_on_1600_pressed"]
-[connection signal="pressed" from="Options/ResolutionOption/HBoxContainer/1980" to="Options" method="_on_1980_pressed"]
-[connection signal="toggled" from="Options/Screen/HBoxContainer/CheckBox" to="Options" method="_on_check_box_toggled"]
-[connection signal="pressed" from="Options/HBoxContainer/Back" to="Options" method="_on_back_pressed"]
+[connection signal="pressed" from="GameMenu/CenterContainer/VBoxContainer/Resume" to="GameMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="GameMenu/CenterContainer/VBoxContainer/Options" to="GameMenu" method="_on_options_pressed"]
+[connection signal="pressed" from="GameMenu/CenterContainer/VBoxContainer/Exit" to="GameMenu" method="_on_exit_pressed"]
+[connection signal="value_changed" from="GameMenu/Options/SoundOption/VBoxContainer/Master" to="GameMenu/Options" method="_on_master_value_changed"]
+[connection signal="value_changed" from="GameMenu/Options/SoundOption/VBoxContainer/Music" to="GameMenu/Options" method="_on_music_value_changed"]
+[connection signal="value_changed" from="GameMenu/Options/SoundOption/VBoxContainer/SFX" to="GameMenu/Options" method="_on_sfx_value_changed"]
+[connection signal="pressed" from="GameMenu/Options/ResolutionOption/HBoxContainer/1280" to="GameMenu/Options" method="_on_1280_pressed"]
+[connection signal="pressed" from="GameMenu/Options/ResolutionOption/HBoxContainer/1600" to="GameMenu/Options" method="_on_1600_pressed"]
+[connection signal="pressed" from="GameMenu/Options/ResolutionOption/HBoxContainer/1980" to="GameMenu/Options" method="_on_1980_pressed"]
+[connection signal="toggled" from="GameMenu/Options/Screen/HBoxContainer/CheckBox" to="GameMenu/Options" method="_on_check_box_toggled"]
+[connection signal="pressed" from="GameMenu/Options/HBoxContainer/Back" to="GameMenu/Options" method="_on_back_pressed"]

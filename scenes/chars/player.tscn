@@ -1,10 +1,15 @@
-[gd_scene load_steps=33 format=3 uid="uid://d1wqlmfexqt02"]
+[gd_scene load_steps=38 format=3 uid="uid://d1wqlmfexqt02"]
 
-[ext_resource type="Script" uid="uid://deul77iwudcc7" path="res://scripts/player.gd" id="1_o781t"]
-[ext_resource type="Resource" uid="uid://blpsffokh0v5h" path="res://resources/items/inventory.tres" id="2_t25bx"]
+[ext_resource type="Script" uid="uid://d3v35igdrg5hg" path="res://scripts/player.gd" id="1_x1lki"]
+[ext_resource type="PackedScene" uid="uid://va7it3wd8hl3" path="res://scenes/utilities/talking_area.tscn" id="2_3ud1y"]
 [ext_resource type="Texture2D" uid="uid://b3rnqeq1yhqp4" path="res://assets/sprites/Julia/Jilia1.png" id="2_wyvug"]
-[ext_resource type="PackedScene" uid="uid://5xdnqd538gwj" path="res://scenes/utilities/talk_manager.tscn" id="4_r04vw"]
 [ext_resource type="Texture2D" uid="uid://kje4bpfa83xj" path="res://assets/sprites/Julia/JiliaBack.png" id="5_r04vw"]
+[ext_resource type="Script" uid="uid://b8sd0nmn0d5tp" path="res://scripts/player_states/state_machine.gd" id="6_3ud1y"]
+[ext_resource type="Script" uid="uid://b318ni5ngrr0n" path="res://scripts/player_states/IdlePlayer.gd" id="7_gwd0n"]
+[ext_resource type="Script" uid="uid://dfba3glohmc1j" path="res://scripts/player_states/RunPlayer.gd" id="8_l1atu"]
+[ext_resource type="Script" uid="uid://b5a7yyw6s8me2" path="res://scripts/player_states/LockedPlayer.gd" id="9_xdrvd"]
+[ext_resource type="Script" uid="uid://tp3gomik8kxk" path="res://scripts/player_states/pause.gd" id="10_0t2q0"]
+[ext_resource type="Script" uid="uid://b3h3h3oruaerg" path="res://scripts/player_states/Inventory.gd" id="11_fa76y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o781t"]
 size = Vector2(126, 49)
@@ -465,9 +470,10 @@ fill_to = Vector2(1, 0.529817)
 y_sort_enabled = true
 collision_mask = 31
 motion_mode = 1
-script = ExtResource("1_o781t")
-base_speed = 300
-inv = ExtResource("2_t25bx")
+script = ExtResource("1_x1lki")
+
+[node name="TalkingArea" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("2_3ud1y")]
+Player = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -478,9 +484,6 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 45.5)
 shape = SubResource("RectangleShape2D_o781t")
-
-[node name="TalkManager" parent="." instance=ExtResource("4_r04vw")]
-position = Vector2(-1, -61)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -504,3 +507,23 @@ y_sort_enabled = true
 position = Vector2(0, 169)
 scale = Vector2(0.772727, 0.78125)
 texture = SubResource("GradientTexture2D_4yrg8")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("6_3ud1y")
+initial_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://b8sd0nmn0d5tp"
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("7_gwd0n")
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("8_l1atu")
+
+[node name="Locked" type="Node" parent="StateMachine"]
+script = ExtResource("9_xdrvd")
+
+[node name="Pause" type="Node" parent="StateMachine"]
+script = ExtResource("10_0t2q0")
+
+[node name="Inventory" type="Node" parent="StateMachine"]
+script = ExtResource("11_fa76y")
