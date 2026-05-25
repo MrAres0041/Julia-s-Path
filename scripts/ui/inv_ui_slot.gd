@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void:
 		print(item_desc)
 		Dialogic.start(item_desc)
 		selected = false
-		GPlayer.is_talking = true
 
 func _update(item:Inv_Item):
 	if !item:

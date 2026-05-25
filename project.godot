@@ -22,7 +22,6 @@ boot_splash/minimum_display_time=2000
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GPSignals="*res://scripts/globals/g_phone.gd"
-GPlayer="*res://scripts/globals/g_player.gd"
 GAudio="*res://scripts/globals/g_audio.gd"
 IndexConfigs="*res://scripts/ui/indexConfigs.gd"
 

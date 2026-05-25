@@ -20,7 +20,6 @@ func _teleport(nCam:Marker2D, player_location:Marker2D, player:CharacterBody2D, 
 	if !nCam.global_position==null:
 		player.global_position = player_location.global_position
 		player.scale = scale_player
-		GPlayer.can_walk = false
 		player.speed = new_speed
 		newCamera = nCam.global_position
 		newCamScale = scaleCam
@@ -36,5 +35,3 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		cam.global_position = newCamera
 		cam.zoom = newCamScale
 		$AnimationPlayer.play("fadeIn")
-	if anim_name == "fadeIn" or "enterScene":
-		GPlayer.can_walk = true

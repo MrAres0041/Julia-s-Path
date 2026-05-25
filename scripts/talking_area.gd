@@ -7,6 +7,7 @@ class_name TalkingArea extends Area2D
 
 var timeline:String
 var item:Inv_Item
+var dialogue:DialogueManager
 
 func _ready() -> void:
 	animation_player.play("interaction")

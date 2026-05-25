@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://bfeanwsk371lf"]
+[gd_scene load_steps=102 format=4 uid="uid://bfeanwsk371lf"]
 
 [ext_resource type="PackedScene" uid="uid://bk7lhdryqp712" path="res://scenes/UI/cam_movement.tscn" id="1_3hmkl"]
 [ext_resource type="Texture2D" uid="uid://bqkeipv250mj" path="res://assets/maps/under/j_room.png" id="1_crqd6"]
@@ -28,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://d4ax26llwmqjt" path="res://resources/items/number_andy.tres" id="17_sp7ld"]
 [ext_resource type="Resource" uid="uid://0y8fo5iwkw0h" path="res://resources/maps/J_Bathroom.tres" id="18_sp7ld"]
 [ext_resource type="Resource" uid="uid://b4qn8axlwsm14" path="res://resources/maps/J_Garage.tres" id="21_fkol3"]
+[ext_resource type="Resource" uid="uid://dq4qqlkrttkl1" path="res://resources/calls/Act1.tres" id="22_ntu76"]
 [ext_resource type="Resource" uid="uid://dt17r0np4fuut" path="res://resources/items/number_eric.tres" id="23_0jg0i"]
 [ext_resource type="PackedScene" uid="uid://c73je45r6mo8o" path="res://scenes/utilities/npc_sample.tscn" id="24_tui3u"]
 [ext_resource type="PackedScene" uid="uid://2b7nf2fglmtm" path="res://scenes/utilities/path_guider_manager.tscn" id="26_td3a4"]
@@ -165,7 +166,7 @@ sources/0 = SubResource("TileSetAtlasSource_28v14")
 size = Vector2(73, 37.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_te4vh"]
-size = Vector2(95, 62)
+size = Vector2(95, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghp2r"]
 size = Vector2(168, 190)
@@ -471,12 +472,11 @@ position = Vector2(209, 35)
 [node name="Items" type="Node" parent="Cam_Movement/J_Room"]
 
 [node name="Phone" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]
-position = Vector2(-185, -165)
-timeline = "phone1"
+CallListed = ExtResource("22_ntu76")
 autoDestruction = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Room/Items/Phone"]
-position = Vector2(6.5, 0)
+position = Vector2(-178.5, -165)
 shape = SubResource("RectangleShape2D_te4vh")
 
 [node name="Bed" parent="Cam_Movement/J_Room/Items" instance=ExtResource("9_amb7k")]

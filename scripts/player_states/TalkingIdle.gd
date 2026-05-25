@@ -5,15 +5,11 @@ extends State
 
 var dir:Vector2
 
-
-func enter() -> void:
-	talking_area.timeline = ""
-	talking_area.item = null
+func _ready() -> void:
+	Dialogic.timeline_started.connect(_on_timeline_started)
 
 func _on_talking_area_area_entered(area: DialogueManager) -> void:
-	print("Can Talk!")
-	talking_area.timeline = area.timeline
-	talking_area.item = area.item
+	talking_area.dialogue = area
 	transitioned.emit(self, "CanTalk")
 	
 func physics_update(_delta: float) -> void:
@@ -27,7 +23,10 @@ func physics_update(_delta: float) -> void:
 			collision_shape_2d.position = Vector2(0.0,88.0)
 		Vector2(-1,0):
 			collision_shape_2d.rotation_degrees = 90.0
-			collision_shape_2d.position = Vector2(-60.0,40.0)
+			collision_shape_2d.position = Vector2(-60.0,20.0)
 		Vector2(1,0):
 			collision_shape_2d.rotation_degrees = 90.0
-			collision_shape_2d.position = Vector2(60.0,40.0)
+			collision_shape_2d.position = Vector2(60.0,20.0)
+
+func _on_timeline_started():
+	transitioned.emit(self, "Talking")

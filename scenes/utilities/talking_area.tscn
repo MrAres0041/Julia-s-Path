@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://va7it3wd8hl3"]
+[gd_scene load_steps=12 format=3 uid="uid://va7it3wd8hl3"]
 
 [ext_resource type="Script" uid="uid://n5ub1evp0mpn" path="res://scripts/talking_area.gd" id="1_fp4mf"]
 [ext_resource type="Script" uid="uid://b8sd0nmn0d5tp" path="res://scripts/player_states/state_machine.gd" id="1_gqdpc"]
@@ -6,9 +6,10 @@
 [ext_resource type="Script" uid="uid://ta2pgyuug2pt" path="res://scripts/player_states/Talking.gd" id="3_fp4mf"]
 [ext_resource type="Script" uid="uid://cf4vmio3wvxq1" path="res://scripts/player_states/CanTalk.gd" id="4_nnfpw"]
 [ext_resource type="Texture2D" uid="uid://m3jg8u3752i6" path="res://assets/sprites/Julia/Interact.png" id="6_5rpi5"]
+[ext_resource type="Script" uid="uid://x12gf7skj40c" path="res://scripts/player_states/calling.gd" id="6_jlm5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nltha"]
-size = Vector2(24, 160)
+size = Vector2(24, 204)
 
 [sub_resource type="Animation" id="Animation_ye85i"]
 length = 0.001
@@ -53,7 +54,7 @@ collision_mask = 8
 script = ExtResource("1_fp4mf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 88)
+position = Vector2(0, 110)
 shape = SubResource("RectangleShape2D_nltha")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -69,6 +70,9 @@ script = ExtResource("3_fp4mf")
 
 [node name="CanTalk" type="Node" parent="StateMachine"]
 script = ExtResource("4_nnfpw")
+
+[node name="Calling" type="Node" parent="StateMachine"]
+script = ExtResource("6_jlm5j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
