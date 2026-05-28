@@ -83,5 +83,3 @@ else:
 			[wait time="1.0"]
 			Narrator: You’d better go lie down before Mom hears you talking alone again...
 		set {Act1.im_sorry} = true
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

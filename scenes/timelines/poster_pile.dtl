@@ -22,5 +22,3 @@ Julia: But hey, at least he’d say yes...
 update Julia (JuliaTalk3)
 Julia: ...right?
 leave Julia [animation="Fade Out" wait="true"]
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

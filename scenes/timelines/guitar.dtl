@@ -7,5 +7,3 @@ update Julia (JuliaWorried)
 [wait time="1.0" skippable="true"]
 Narrator: It’s your fault.[br][input]Don’t laugh.
 leave Julia [animation="Fade Out" wait="true"]
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

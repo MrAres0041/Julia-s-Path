@@ -89,5 +89,4 @@ leave Julia [animation="Fade Out"]
 leave Gloria [animation="Fade Out"]
 [wait time="1.0" skippable="true"]
 Narrator: You didn't get grounded this time, but somehow it ended up worse than expected...
-[signal arg="DialogueEnded"]
 [signal arg="Mom_Awake"]

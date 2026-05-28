@@ -1,5 +1,3 @@
 Narrator: The fridge is full of nothing.
 Narrator: No matter how many times you re-open it, it’s still empty.
 Narrator: Please stop.
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

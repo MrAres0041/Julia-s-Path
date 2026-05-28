@@ -27,11 +27,9 @@ else:
 	Julia (JuliaWorried): I don’t know...[input][br]It just feels a little off.
 	update Julia (JuliaDefault) [animation="Fade In"]
 	Gloria (Sus1): Hey, I never criticize your sitcoms.
-	Gloria (Happy1):  I know this season’s a bit weak, but it gets better.
+	Gloria (Happy1): I know this season’s a bit weak, but it gets better.
 	update Julia (JuliaWorried) [animation="Fade In"]
 	Narrator: You should probably drop the subject.
 	Narrator: You shouldn’t have said anything to begin with.
 	leave Gloria [animation="Fade Out"]
 	leave Julia
-[wait time="0.5" skippable="true"]
-[signal arg="DialogueEnded"]

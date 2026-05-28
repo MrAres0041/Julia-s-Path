@@ -1,6 +1,7 @@
 extends VBoxContainer
 class_name OptionsMenu
 
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
 @onready var master: HSlider = $SoundOption/VBoxContainer/Master
 @onready var music: HSlider = $SoundOption/VBoxContainer/Music
@@ -49,3 +50,7 @@ func _on_music_value_changed(value: float) -> void:
 
 func _on_sfx_value_changed(value: float) -> void:
 	GAudio.setSFXVol(value/3)
+
+
+func _on_back_pressed() -> void:
+	animation_player.play("exit_options")

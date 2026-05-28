@@ -19,10 +19,14 @@ func _on_timeline_ended():
 	if !is_active:
 		return
 	
+	if item:
+		var delivered_item = item
+		item = null 
+		INV._insert(delivered_item)
+		
 	if autoDestruction:
 		queue_free()
-	if item:
-		INV._insert(item)
+
 
 func _on_area_entered(area: TalkingArea) -> void:
 	is_active = true

@@ -5,4 +5,3 @@ if {Act1.pills_can} == false:
 	Narrator: What would be the point?[input][br]Just getting yelled at again?
 else:
 	Narrator: She told you to call only if you really need it.
-[signal arg="DialogueEnded"]

@@ -91,6 +91,5 @@ func _appearMonitor(trigger:Area2D):
 	trigger.monitoring = true
 
 func _killNode(node):
-	if is_instance_valid(node):
-		remove_child(node)
+	if is_instance_valid(node) and !node.is_queued_for_deletion():
 		node.queue_free()

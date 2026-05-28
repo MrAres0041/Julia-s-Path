@@ -108,4 +108,3 @@ set {Act1.pills_car} = false
 set {Act1.pills_taken} = false
 audio music_dialogic - [fade="2.0"]
 [wait time="4.0"]
-[signal arg="DialogueEnded"]

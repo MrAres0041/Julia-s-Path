@@ -424,19 +424,19 @@ y_sort_enabled = true
 [node name="map_borders" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = 1
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAAAyAQIABAAOAAAAAADgAEUABQAMAAUAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/AwAMAAMAAADgAEUABQAMAAUAAABYAQEABAAOAAAAAAA=")
 tile_set = SubResource("TileSet_4ecay")
 
 [node name="map_under" type="TileMapLayer" parent="Cam_Movement/Maps"]
 z_index = -500
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAAAyAQIAAwAOAAAAAADgAEUABQAMAAUAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAANAAMAAABoAP//AgABAAUAAADeAAAAAQAFAAIAAABmAML/BAAMAAMAAADgAEUABQAMAAUAAABYAQEAAwAOAAAAAAA=")
 tile_set = SubResource("TileSet_c5r8j")
 
 [node name="map_props" type="TileMapLayer" parent="Cam_Movement/Maps"]
 y_sort_enabled = true
 scale = Vector2(1.1, 1.1)
-tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAAAyAQUAAAABABoAAABDAQgAAAAjABoAAAAlAQ8AAAAXABoAAADxAP//AABeAA8AAADHAEkAAAAsABkAAAA=")
+tile_map_data = PackedByteArray("AAAJAA4AAAA7AAEAAAAVAA8AAAA8AA4AAADtAAoAAABuAAAAAAD5AAoAAABVAA8AAADzAAsAAAB2AAMAAADxAP//AABeAA8AAADHAEkAAAAsABkAAABZAQUAAAABABoAAABpAQgAAAAjABoAAABLAQ0AAAAXABoAAAA=")
 tile_set = SubResource("TileSet_mf6ci")
 
 [node name="player" parent="Cam_Movement" instance=ExtResource("3_bruh4")]
@@ -832,25 +832,25 @@ shape = SubResource("RectangleShape2D_6duos")
 y_sort_enabled = true
 
 [node name="5" type="Marker2D" parent="Cam_Movement/J_Garage"]
-position = Vector2(5397, 124)
+position = Vector2(6067, 57)
 
 [node name="player_location5" type="Marker2D" parent="Cam_Movement/J_Garage"]
-position = Vector2(5098, -19)
+position = Vector2(5768, -25)
 
 [node name="Props" type="StaticBody2D" parent="Cam_Movement/J_Garage"]
-visible = false
+position = Vector2(691, -29)
 collision_layer = 16
 collision_mask = 19
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cam_Movement/J_Garage/Props"]
-polygon = PackedVector2Array(5095, -47, 5036, -49, 5036, 45, 5097, 46, 5097, 225, 5194, 226, 5195, 413, 5644, 413, 5653, 1, 5723, 2, 5723, -107, 5678, -108, 5677, -144, 5098, -142, 5096, -55, 5011, -59, 5019, -186, 5788, -181, 5783, 510, 5013, 478, 5018, -55)
+polygon = PackedVector2Array(5075, -58, 5028, -52, 5029, 55, 5075, 57, 5075, 221, 5170, 221, 5175, 414, 5634, 416, 5633, 6, 5698, 3, 5695, -108, 5669, -109, 5667, -151, 5075, -154, 5075, -62, 5011, -59, 5019, -186, 5788, -181, 5783, 510, 5013, 478, 5018, -55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Props"]
 position = Vector2(5392, 88)
 shape = SubResource("RectangleShape2D_f707s")
 
 [node name="Cam_Detector1" parent="Cam_Movement/J_Garage" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
-position = Vector2(5072, 0)
+position = Vector2(5742, -26)
 audio = NodePath("../../../AudioManager")
 SelectedSFX = "Door"
 player_location = NodePath("../../J_Living/player_location2_1")
@@ -865,7 +865,7 @@ shape = SubResource("RectangleShape2D_d36ii")
 y_sort_enabled = true
 
 [node name="Car_pills" parent="Cam_Movement/J_Garage/Interactions" instance=ExtResource("9_amb7k")]
-position = Vector2(5300, -1)
+position = Vector2(5970, 5)
 timeline = "car_pills"
 autoDestruction = false
 
@@ -874,7 +874,7 @@ position = Vector2(0, 63.5)
 shape = SubResource("RectangleShape2D_0asix")
 
 [node name="DialogueManager" parent="Cam_Movement/J_Garage/Interactions" instance=ExtResource("9_amb7k")]
-position = Vector2(5152, 272)
+position = Vector2(5822, 217)
 timeline = "workbench"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Interactions/DialogueManager"]

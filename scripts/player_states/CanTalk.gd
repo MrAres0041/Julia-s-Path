@@ -43,7 +43,6 @@ func physics_update(_delta: float) -> void:
 
 
 func _on_talking_area_area_exited(area: DialogueManager) -> void:
-	print("Idle")
 	transitioned.emit(self, "Idle")
 	
 func _on_timeline_started():

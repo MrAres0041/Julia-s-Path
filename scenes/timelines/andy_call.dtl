@@ -28,6 +28,3 @@ else:
 	Narrator: You should just hang it already.
 	Narrator: The phone...
 [background fade="1.0" wait="true"]
-[wait time="0.5"]
-[signal arg="CallEnded"]
-[signal arg="DialogueEnded"]

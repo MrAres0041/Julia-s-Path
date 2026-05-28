@@ -1,3 +1,2 @@
 [style name="DefaultStyle"]
 Narrator: "You have 215 new voice mails."
-do GPSignals.SummonPhone("Act1")

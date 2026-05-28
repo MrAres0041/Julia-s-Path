@@ -6,6 +6,4 @@ update Eric (Smiling) [length="0.3"]
 update Julia (JuliaSad1) [animation="Shake X"]
 Julia: No, please...
 leave Julia [animation="Slide To Right"]
-leave Eric [animation="Slide To Left"]
-[signal arg="DialogueEnded"]
-[signal arg="ItemAdded"]
+leave Eric [animation="Slide To Left" wait="true"]

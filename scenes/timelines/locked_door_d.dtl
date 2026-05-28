@@ -12,5 +12,3 @@ else:
 	[wait time="1.5" skippable="true"]
 	Echo: The sins of the father...[input][br]The sins of the father...[input][br]The sins of the father...
 	Echo: ...shall be visited upon the son.
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

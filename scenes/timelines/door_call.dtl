@@ -66,4 +66,3 @@ Narrator: The world blessed your [u]situation-friend[/u] with the awareness of a
 Narrator: At this point, you just wish the earth would just split open and swallow you whole…
 [wait time="3.0"]
 [signal arg="LightAgain"]
-[signal arg="DialogueEnded"]

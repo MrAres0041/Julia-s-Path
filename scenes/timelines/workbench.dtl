@@ -5,5 +5,3 @@ audio sfx_dialogic "res://assets/audio/sfx/item_collect.ogg"
 Narrator: You picked up a screwdriver!
 Narrator: Time to try one of Mom’s old tricks…
 set {Act1.pills_car} = true
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

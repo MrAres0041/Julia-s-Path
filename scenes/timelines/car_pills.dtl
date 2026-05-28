@@ -25,5 +25,3 @@ if {Act1.keys_car_m} == false:
 		Narrator: You’d better find a way to open this thing before Mom wakes up, or you’ll be cleaning bathrooms until you hit your 30s.
 else:
 	Narrator: It isn't the time to travel anywhere, dear...
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

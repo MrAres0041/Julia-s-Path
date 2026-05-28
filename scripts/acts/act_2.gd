@@ -6,11 +6,10 @@ class_name Act2
 func _ready() -> void:
 	Dialogic.start("ending")
 	Dialogic.signal_event.connect(DialogicHandler)
+	Dialogic.timeline_ended.connect(_OnFinish)
 
 func DialogicHandler(i):
 	match i:
-		"DialogueEnded":
-			get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
 		"In":
 			animation_player.play("fade_in")
 		"Andrew":
@@ -35,3 +34,6 @@ func DialogicHandler(i):
 			animation_player.play("fade_out")
 		"Bed":
 			animation_player.play("Bed")
+
+func _OnFinish():
+	get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")

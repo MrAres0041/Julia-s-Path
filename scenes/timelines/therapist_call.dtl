@@ -59,6 +59,4 @@ else:
 	Julia: Turn my head off![br]Don’t skip the medication![br]Stick to positive thoughts!
 	leave Julia
 [background fade="1.0" wait="true"]
-[wait time="0.5"]
 [signal arg="CallEnded"]
-[signal arg="DialogueEnded"]

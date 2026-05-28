@@ -20,5 +20,3 @@ else:
 	Narrator: The static is loud, but you can make out a voice beneath it.
 	Echo: 6... 2... 6...[input][br]1... 3... 3...
 	Narrator: It just keeps repeating itself.
-[wait time="0.5"]
-[signal arg="DialogueEnded"]

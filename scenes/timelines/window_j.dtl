@@ -14,5 +14,3 @@ else:
 	Narrator: It’s a beautiful day outside.
 	Narrator: On days like this...[input][br]girls like you...
 	Narrator: ...probably shouldn’t spend so much time staring out the window like a weirdo.
-[wait time="0.5"]
-[signal arg="DialogueEnded"]
