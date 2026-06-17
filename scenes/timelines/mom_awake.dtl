@@ -12,81 +12,75 @@ Gloria (Talk1): No, not at all![input][br]My back's killing me.
 update Julia (JuliaWorried)
 Gloria (Sus1): And to make things worse, my lovely daughter thinks she can make a fool out of me.
 update Gloria (Sus2)
-Julia (JuliaTalk3): What? I-It's not like that![input][br]I just forgot something in the garage...
-Julia (JuliaTalk2): My new cassette, that is....
-Julia: I was already going back to bed.
-update Julia (JuliaTalk2) center [move_time="0.4"]
-[wait time="2.0"]
-update Julia (JuliaTalk3) right [move_time="0.5"]
-[wait time="1.0" skippable="true"]
+Julia (JuliaTalk3): What? I-It's not like that![input][br]I just forgot something...
+Julia (JuliaTalk2): My walkman!
+Julia: Yes, that’s it...
+update Julia (JuliaDefault)
+Gloria (Sus2): Aha... In the garage.[input][br]And you didn't forget anything else, right?
 update Julia (JuliaWorried)
 [wait time="2.0" skippable="true"]
-update Julia (JuliaDefault)
-Gloria (Sus1): ...your pills.
-[wait time="1.0" skippable="true"]
+Julia (JuliaDefault): ...
+Julia: Ah...
+Julia (JuliaTalk2): Happy birthday!
+update Julia (JuliaTalk3)
+Gloria: Wrong.
+Julia (JuliaTalk1): Happy mother’s day!
 update Julia (JuliaWorried)
+Gloria: Try again.
 [wait time="2.0" skippable="true"]
-Narrator: Poor you, thinking you could dodge the watchful eye of the owner of this house.
+Julia: Happy...[input][br] 4 of july?
+Gloria (Talk2): Julie, we’re not even americans.
 update Gloria (Serious1)
-Julia (JuliaSad2): I’m sorry...
-Julia (JuliaSad0): I was in a hurry, I got back late last night and just needed to lie down…
-update Julia (JuliaSad1)
-Gloria (Happy1): Baby… Relax.[input][br]I knows how it goes...
+Julia (JuliaSad1): All right, I don’t know!!
+Julia (JuliaSad0): You don't need to push so hard...
+Gloria (Talk1): I’m just messing with you, girl.
 update Julia (JuliaDefault)
-Gloria (Happy1): You just met this new guy...[input][br]He’s the novelty…[input][br]Your head’s in the clouds.
-Gloria (Talk1): It may not seems like it, but your old momma have played this game aswell.
-update Gloria (GloriaDefault)
-audio music_dialogic - [fade="2.0"]
-Julia (JuliaSad0): No! It...
-update Gloria (Serious1)
-Julia (JuliaSad2): It’s not like that, mom...
-Julia: Eric is just a [u]friend[/u].[input][br]I really don't want to go further than that.
-update Gloria (Worried2)
-Julia (JuliaSad0): I like him, he's funny and distracts me...
-Julia (JuliaSad2): But with everything that’s been going on, that’s all I want right now.
-Julia: It doesn't feel right...
-audio music_dialogic "res://assets/audio/music/Exit Music.mp3" [fade="2.0" loop="true"]
-update Gloria (Worried1)
-[wait time="2.0" skippable="true"]
-Gloria (Talk2): Honey...[input][br]I'm sorry.
-Gloria: I didn't mean to bring it up, It's just...
-update Gloria (Worried1)
-[wait time="1.5"]
-Gloria (Talk2): It's been months already.
-Gloria: I know Renee's boy was important to you, but...[input][br]These things happen more often than we’d like.
-Gloria (Serious1): There was no way of knowing what would happen.
-update Julia (JuliaSad1)
-Gloria (AngryTalk): And he wasn't even a good guy to begin with.
-update Gloria (Angry)
-Julia (JuliaSad3): You never liked him...
-update Gloria (Angry2)
-[wait time="1.5"]
-Gloria (AngryTalk2): No...[input][br]No, I didn't.
-Gloria (AngryTalk): But I had my reasons.
-update Gloria (Angry)
-update Julia (JuliaSad1)
-[wait time="1.5"]
-update Gloria (Serious1)
-[wait time="1.5"]
-Gloria (Talk2): But that's beside the point
+Gloria (GloriaDefault): We gotta visit Jane in a couple of days, remember?
 update Julia (JuliaSad2)
-Gloria (Serious1): I know it's hard, I know you don’t like it, but you need to stay on your medication.
-Gloria (Talk2): Have you taken them already?
-update Gloria (Worried2)
-[wait time="1.5" skippable="true"]
-Julia (JuliaSad1): ...
-[wait time="1.5" skippable="true"]
-Gloria (Serious1): Julie...
-Gloria: Please, tell me you’re not skipping again…
-[wait time="1.5" skippable="true"]
-Julia (JuliaSad3): I...
-audio music_dialogic - [fade="2.0"]
-Julia (JuliaSad0): I’ll go in a moment, okay?
-update Gloria (Serious1)
-[wait time="1.5" skippable="true"]
-Julia (JuliaSad3): I'm so sorry...
-leave Julia [animation="Fade Out"]
-leave Gloria [animation="Fade Out"]
+[wait time="2.0" skippable="true"]
+Julia: Oh...
+Narrator: You completely forgot.[input][br]You were supposed to tell her about a week ago.
+[wait time="2.0" skippable="true"]
+Julia (JuliaDefault): I-I’ll be telling her...
+update Gloria (Happy1)
+Julia (JuliaWorried): I just need a moment and I'll call right away!
+update Julia (JuliaDefault)
+Gloria: You really think your old momma doesn't have it covered already?
+update Julia (JuliaSad2)
+Gloria (GloriaDefault): I already did, sweetie.[input][br]Don't worry about it.
+Julia: Ah jeez...
+Julia (JuliaSad0): I’m sorry. I really wanted to talk with her.[input][br]It’s just...
+Gloria (Happy1): It’s just you’re all over the place.[input][br]Yeah, I know.
+update Julia (JuliaSad1)
+update Gloria (GloriaDefault)
 [wait time="1.0" skippable="true"]
-Narrator: You didn't get grounded this time, but somehow it ended up worse than expected...
+audio music_dialogic - [fade="1.0"]
+update Gloria (Serious1)
+[wait time="2.0" skippable="true"]
+Gloria (Talk1): You can still call her, you know?
+update Gloria (Serious1)
+[wait time="2.0" skippable="true"]
+Julia (JuliaSad3): I don’t know...
+Julia (JuliaSad2): It just doesn't feel right.
+Gloria (Talk2): Baby, she loves you.
+Gloria (Worried1): Probably more than what she loves me to begin with.[input][br]Which isn’t saying much, but still...
+Gloria (Serious1): That girl would jump in front of a truck for you.
+Julia: That doesn't make it easier, mom...
+update Gloria (Worried1)
+[wait time="2.0" skippable="true"]
+Gloria (Talk2): Look, just...
+Gloria (Talk1): Try just saying hi.[input][br]Ask her how she’s doing, what did she eat today...
+Gloria (GloriaDefault): She won't eat you.
+update Gloria (Sus1) center [move_time="1.0"]
+Gloria: She might eat that new friend of your, though...
+[wait time="2.0" skippable="true"]
+update Gloria (GloriaDefault)
+Julia (JuliaDefault): You always say everything will be ok.
+Gloria (Happy1): And most of the time I’m right.
+Gloria (Worried1): Most of the time...
+update Gloria (Serious1)
+leave Gloria [animation="Fade Out"]
+leave Julia [animation="Fade Out" wait="true"]
+[wait time="1.5"]
+Gloria: Her number’s at my closet, if you want to talk to her.
 [signal arg="Mom_Awake"]

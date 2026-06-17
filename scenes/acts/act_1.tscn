@@ -257,7 +257,7 @@ size = Vector2(162, 20)
 size = Vector2(86, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f707s"]
-size = Vector2(228, 298)
+size = Vector2(228, 323)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d36ii"]
 size = Vector2(28, 82)
@@ -846,7 +846,7 @@ collision_mask = 19
 polygon = PackedVector2Array(5075, -58, 5028, -52, 5029, 55, 5075, 57, 5075, 221, 5170, 221, 5175, 414, 5634, 416, 5633, 6, 5698, 3, 5695, -108, 5669, -109, 5667, -151, 5075, -154, 5075, -62, 5011, -59, 5019, -186, 5788, -181, 5783, 510, 5013, 478, 5018, -55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cam_Movement/J_Garage/Props"]
-position = Vector2(5392, 88)
+position = Vector2(5392, 135.5)
 shape = SubResource("RectangleShape2D_f707s")
 
 [node name="Cam_Detector1" parent="Cam_Movement/J_Garage" node_paths=PackedStringArray("audio", "player_location", "cam") instance=ExtResource("6_ev3ej")]
