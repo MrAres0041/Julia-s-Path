@@ -468,6 +468,7 @@ fill_to = Vector2(1, 0.529817)
 
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
+use_parent_material = true
 collision_mask = 31
 motion_mode = 1
 script = ExtResource("1_x1lki")
@@ -477,6 +478,7 @@ Player = NodePath("..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
+use_parent_material = true
 position = Vector2(-1, -61)
 texture = ExtResource("2_wyvug")
 flip_h = true
@@ -500,10 +502,12 @@ parameters/Idle/blend_position = Vector2(0, 0.0134529)
 parameters/walk/blend_position = 0.0
 
 [node name="Shadow" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(0, -100)
 
 [node name="ShadowCast" type="Sprite2D" parent="Shadow"]
 y_sort_enabled = true
+use_parent_material = true
 position = Vector2(0, 169)
 scale = Vector2(0.772727, 0.78125)
 texture = SubResource("GradientTexture2D_4yrg8")

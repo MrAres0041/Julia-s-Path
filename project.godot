@@ -129,6 +129,8 @@ audio/channel_defaults={
 variables={
 "Act1": {
 "im_sorry": false,
+"jane_call": false,
+"jane_dark_call": false,
 "keys_car_m": false,
 "pills_can": false,
 "pills_car": false,

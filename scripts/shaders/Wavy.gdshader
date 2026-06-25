@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-// NUEVA VARIABLE: Controla el fade (0.0 = normal, 1.0 = distorsión máxima)
+// Controla el fade (0.0 = normal, 1.0 = distorsión máxima)
 uniform float effect_intensity : hint_range(0.0, 1.0) = 0.0;
 
 // Parámetros de animación y fuerza
@@ -21,16 +21,17 @@ vec2 get_swirl_uv(vec2 uv, float strength, float time) {
     return center + vec2(cos(angle), sin(angle)) * dist;
 }
 
-void fragment() {
-    vec2 uv = UV;
+void vertex() {
     float t = TIME * time_factor;
 
-    float noise_val = texture(noise_tex, uv * noise_scale + t * 0.05).r;
+    // Guardamos la UV original del vértice
+    vec2 original_uv = UV;
 
-    // Guardamos las UV deseadas con distorsión en una variable temporal
-    vec2 distorted_uv = uv;
+    // Leemos el ruido (en vertex las texturas se leen con textureLod)
+    float noise_val = textureLod(noise_tex, original_uv * noise_scale + t * 0.05, 0.0).r;
 
-    // Aplicamos las distorsiones a la variable temporal
+    // Calculamos la distorsión
+    vec2 distorted_uv = original_uv;
     distorted_uv.y += sin(distorted_uv.x * 10.0 + t) * wave_strength * noise_val;
     distorted_uv.x += cos(distorted_uv.y * 10.0 + t * 0.5) * wave_strength * noise_val;
 
@@ -38,9 +39,6 @@ void fragment() {
     distorted_uv += sin(dist_center * 20.0 - t * ripple_speed) * (wave_strength * 0.5 * noise_val);
     distorted_uv = get_swirl_uv(distorted_uv, swirl_strength, t);
 
-    // TRANSICIÓN SUAVE: Mezclamos las UV originales con las distorsionadas usando nuestra intensidad
-    uv = mix(uv, distorted_uv, effect_intensity);
-
-    vec4 tex = texture(TEXTURE, uv);
-    COLOR = tex;
+    // Mezclamos según la intensidad y sobreescribimos la UV del vértice
+    UV = mix(original_uv, distorted_uv, effect_intensity);
 }
